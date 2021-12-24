@@ -1,8 +1,14 @@
+var toggle = 0;
 function openMenuMobile() {
-    var x = document.getElementById("MenuID");
-    if (x.className === "Menu") {
-      x.className += " responsive";
-    } else {
-      x.className = "Menu";
+    var menuResponsive = document.getElementById("MenuID");
+   
+
+    if  (toggle == 0){
+    menuResponsive.className = "Menu responsive";
+    toggle = 1;
     }
-  }
+    else{
+        menuResponsive.className = "Menu";
+        toggle = 0;
+    }
+}

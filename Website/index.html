@@ -10,7 +10,7 @@
 <body>
 
 <div class="Menu" id="MenuID">
-    
+
   <a href="index.html" class="active">Home</a>
   <a href="Pages/about.html">About</a>
   <a href="http://reconops.maxinc.cf/Download/Windows/">Download</a>
@@ -18,7 +18,7 @@
     <button class="dropdownbutton">Changelog 
       <i class="fa fa-caret-down"></i>
     </button>
-    <div class="dropdown-content">
+    <div id="DropDownID" class="dropdown-content">
       <a href="Pages/changelog.html">Changelog</a>
       <a href="Pages/upcoming.html">Upcoming Features</a>
       <a href="Pages/notices.html">Notice</a>
@@ -26,17 +26,72 @@
     </div>
   </div> 
   <a href="Pages/upcoming.html">Q&A</a>
-  <button class="loginbutton">Login <i class="fa fa-user"></i></button>
+  <button >Login <i class="fa fa-user"></i></button>
   <a href="javascript:void(0);" class="icon" onclick="openMenuMobile()">
     <i class="fa fa-bars"></i>
   </a>
 </div>
+<div class="content">
+    <h3>TITLE</h3>
+    <p>sticky</p>
+    <p>TestTEX</p>
+    <p>TestTEX</p>
+    <p>TestTEX</p>
+    <p>TestTEX</p>
+    <p>TestTEX</p>
+    <p>TestTEX</p>
+    <p>TestTEX</p>
+    <p>TestTEX</p>
+    <p>TestTEX</p>
+    <p>TestTEX</p>
+    <p>TestTEX</p>
 
-<div style="padding-left:16px">
-  <h2>Recon Ops</h2>
-  <p>test</p>
+     <p>TestTEX</p>
+     <p>TestTEX</p>
+     <p>TestTEX</p> <p>TestTEX</p>
+
+     <p>TestTEX</p>
+     <p>TestTEX</p>
+     <p>TestTEX</p>
+     <p>TestTEX</p>
+     <p>TestTEX</p>
+     <p>TestTEX</p>
+     <p>TestTEX</p>
+     <p>TestTEX</p>
+     <p>TestTEX</p>
+     <p>TestTEX</p>
+     <p>TestTEX</p>
+     <p>TestTEX</p>
+     <p>TestTEX</p>
+     <p>TestTEX</p>
+     <p>TestTEX</p>
+     <p>TestTEX</p>
+     <p>TestTEX</p>
+
+      <p>TestTEX</p>
+      <p>TestTEX</p>
+    
 </div>
 
+<script> 
+//wasnt working when in external doc
+window.onscroll = function() {stickyMenu()};
 
+    var menu = document.getElementById("MenuID");
+    var dropdown = document.getElementById("DropDownID");
+
+    var sticky = menu.offsetTop;
+    
+    function stickyMenu() {
+      if (window.pageYOffset >= sticky) {
+        menu.classList.add("sticky")
+
+        dropdown.classList.add("sticky-dropdown")
+      } else {
+        menu.classList.remove("sticky");
+        dropdown.classList.remove("sticky-dropdown");
+
+      }
+    }</script>
 </body>
 </html>

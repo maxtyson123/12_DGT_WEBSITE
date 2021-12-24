@@ -90,10 +90,25 @@ body {
   .dropdown:hover .dropdown-content {
     display: block;
   }
-  
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  .sticky-dropdown {
+    position: fixed;
+    top: 0;
+ 
+  }
+  .sticky + .content {
+    padding-top: 60px;
+  }
   @media screen and (max-width: 600px) {
     .Menu a:not(:first-child), .dropdown .dropdownbutton {
       display: none;
+    }
+    .Menu button{
+        display: none;
     }
     .Menu a.icon {
       float: right;
@@ -102,7 +117,11 @@ body {
   }
   
   @media screen and (max-width: 600px) {
-    .Menu.responsive {position: relative;}
+    .Menu.responsive {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
     .Menu.responsive .icon {
       position: absolute;
       right: 0;
