@@ -1,10 +1,11 @@
 * {
-    /*  -webkit-transition: all 1s ease-in-out;
+    /*-webkit-transition: all 1s ease-in-out;
     -moz-transition: all 1s ease-in-out;
     -o-transition: all 1s ease-in-out;
     transition: all 01s ease-in-out; */
     scroll-behavior: smooth;
     box-sizing: border-box;
+    border-radius: 10px;
 }
 
 .bpandimg {
@@ -30,6 +31,15 @@ h1 {
     background: rgba(0, 0, 0, 0.5);
     padding: 10px;
     font-size: 48px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.466);
+}
+
+button {
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.466);
+}
+
+img {
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.466);
 }
 
 .Menu {
@@ -39,6 +49,7 @@ h1 {
     z-index: 2;
     width: 100%;
     top: 0px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.466);
 }
 
 .Menu a {
@@ -246,7 +257,6 @@ iframe {
 
 .qandadropdown .qheader {
     font-size: 32px;
-    border: none;
     outline: none;
     color: #fff;
     padding: 14px 16px;
@@ -254,11 +264,11 @@ iframe {
     font-family: inherit;
     margin: 0;
     width: 50%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.466);
 }
 
 .qandadropdown:hover .qheader:hover {
     font-size: 32px;
-    border: none;
     outline: none;
     color: #fff;
     padding: 14px 16px;
@@ -266,6 +276,7 @@ iframe {
     font-family: inherit;
     margin: 0;
     width: 50%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.466);
 }
 
 .awnserContent {
@@ -273,9 +284,11 @@ iframe {
     position: inherit;
     background-color: rgb(129, 125, 125);
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.466);
     z-index: 1;
     width: 50%;
+    padding: 5px;
+    border-radius: none;
 }
 
 .qandadropdown:hover .awnserContent {
