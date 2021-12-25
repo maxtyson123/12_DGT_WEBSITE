@@ -35,14 +35,18 @@
     </div>
 
 
-
+    <button onclick="topFunction()" id="scrolltotop" title="Go to top">Top</button>
     <div class="content">
         <div class="video-container">
             <iframe src="https://www.youtube.com/embed/KAzCsr4Ew70?controls=0&autoplay=1&mute=1&loop=1&playlist=KAzCsr4Ew70"></iframe>
         </div>
 
         <div id="text">
-            <h1>Recon Ops</h1>
+            <center>
+                <h1>Recon Ops</h1>
+                <button onclick="window.location.href='http://reconops.maxinc.cf/Download/Windows'" class="downloadbtn"><i class="fa fa-download"></i> Download</button>
+                <button onclick="window.location.href='http://reconops.maxinc.cf/Download/Andriod'" class="andrioddownloadbtn"><i class="fa fa-download"></i> Download</button>
+            </center>
         </div>
 
         <p>sticky</p>
@@ -87,27 +91,14 @@
     </div>
 
     <script>
-        //wasnt working when in external doc
+        var scrolltotop = document.getElementById("scrolltotop");
         window.onscroll = function() {
             stickyMenu()
+            scrollFunction()
         };
 
-        var menu = document.getElementById("MenuID");
-        var dropdown = document.getElementById("DropDownID");
 
-        var sticky = menu.offsetTop;
-
-        function stickyMenu() {
-            if (window.pageYOffset >= sticky) {
-                menu.classList.add("sticky")
-
-                dropdown.classList.add("sticky-dropdown")
-            } else {
-                menu.classList.remove("sticky");
-                dropdown.classList.remove("sticky-dropdown");
-
-            }
-        }
+        // When the user scrolls down 20px from the top of the document, show the button
     </script>
 </body>
 
