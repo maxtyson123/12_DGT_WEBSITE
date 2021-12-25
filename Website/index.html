@@ -13,9 +13,9 @@
 
     <div class="Menu" id="MenuID">
 
-        <a href="index.html" class="active">Home</a>
+        <a href="index.html" title="Current Page" class="active">Home</a>
         <a href="Pages/about.html">About</a>
-        <a href="http://reconops.maxinc.cf/Download/Windows/">Download</a>
+        <a class="windown" href="http://reconops.maxinc.cf/Download/Windows/">Download</a>
         <div class="dropdown">
             <button class="dropdownbutton">Changelog
         <i class="fa fa-caret-down"></i>
@@ -28,8 +28,8 @@
             </div>
         </div>
         <a href="Pages/qanda.html">Q&A</a>
-        <button class="loginbutton">Login <i class="fa fa-user"></i></button>
-        <a href="javascript:void(0);" class="icon" onclick="openMenuMobile()">
+        <button title="Go to login site" class="loginbutton">Login <i class="fa fa-user"></i></button>
+        <a title="Open Menu" href="javascript:void(0);" class="icon" onclick="openMenuMobile()">
             <i class="fa fa-bars"></i>
         </a>
     </div>
@@ -44,54 +44,64 @@
         <div id="text">
             <center>
                 <h1>Recon Ops</h1>
-                <button onclick="window.location.href='http://reconops.maxinc.cf/Download/Windows'" class="downloadbtn"><i class="fa fa-download"></i> Download</button>
-                <button onclick="window.location.href='http://reconops.maxinc.cf/Download/Andriod'" class="andrioddownloadbtn"><i class="fa fa-download"></i> Download</button>
+                <button title="Download the launcher for windows" onclick="window.location.href='http://reconops.maxinc.cf/Download/Windows'" class="downloadbtn"><i class="fa fa-download"></i> Download</button>
+                <button title="Download this game as an .apk" onclick="window.location.href='http://reconops.maxinc.cf/Download/Andriod'" class="andrioddownloadbtn"><i class="fa fa-download"></i> Download</button>
             </center>
         </div>
 
-        <p>sticky</p>
-        <p>TestTEX</p>
-        <p>TestTEX</p>
-        <p>TestTEX</p>
-        <p>TestTEX</p>
-        <p>TestTEX</p>
-        <p>TestTEX</p>
-        <p>TestTEX</p>
-        <p>TestTEX</p>
-        <p>TestTEX</p>
-        <p>TestTEX</p>
-        <p>TestTEX</p>
+        <center>
+            <div class="breiftext">
+                <p>Recon Ops is a fast paced fps shooter. Play with your friends or play with bots in a load of different modes or maps with a load of different guns or skins. Run down your enemy's with a car or call in an support chopper to hit 'em where
+                    it hurts.
+                </p>
 
-        <p>TestTEX</p>
-        <p>TestTEX</p>
-        <p>TestTEX</p>
-        <p>TestTEX</p>
+                <a class="breiflink" href="http://reconops.maxinc.cf/Download/Windows/">Play free now.</a>
+            </div>
+        </center>
+        <div class="bpandimg">
+            <center>
+                <h2>Features</h2>
+            </center>
+            <div class="row">
+                <div class="column">
+                    <img src="Images/img1.png" alt="Soldiers Running Up Hill" style="width:100%">
+                </div>
 
-        <p>TestTEX</p>
-        <p>TestTEX</p>
-        <p>TestTEX</p>
-        <p>TestTEX</p>
-        <p>TestTEX</p>
-        <p>TestTEX</p>
-        <p>TestTEX</p>
-        <p>TestTEX</p>
-        <p>TestTEX</p>
-        <p>TestTEX</p>
-        <p>TestTEX</p>
-        <p>TestTEX</p>
-        <p>TestTEX</p>
-        <p>TestTEX</p>
-        <p>TestTEX</p>
-        <p>TestTEX</p>
-        <p>TestTEX</p>
+                <div class="column">
+                    <ul>
+                        <li style="padding: 2%">Multiplayer</li>
+                        <li style="padding: 2%">Bots</li>
+                        <li style="padding: 2%">Cross Platform</li>
+                        <li style="padding: 2%">High definition Graphics</li>
+                        <li style="padding: 2%">Launcher w/ Patching</li>
+                    </ul>
+                </div>
+            </div>
+            <div class=" row ">
+                <div class="column ">
+                    <ul>
+                        <li style="padding: 2%">Shop</li>
+                        <li style="padding: 2%">Level system</li>
+                        <li style="padding: 2%">Multiple Operators</li>
+                        <li style="padding: 2%">Many Maps</li>
+                        <li style="padding: 2%">Many Game Modes</li>
+                    </ul>
+                </div>
 
-        <p>TestTEX</p>
-        <p>TestTEX</p>
+                <div class="column ">
+                    <img src="Images/img2.png " alt="Grenades Thrown " style="width:100% ">
+                </div>
+            </div>
 
+
+        </div>
     </div>
 
     <script>
-        var scrolltotop = document.getElementById("scrolltotop");
+        var scrolltotop = document.getElementById(" scrolltotop ");
+        var menu = document.getElementById("MenuID ");
+        var dropdown = document.getElementById("DropDownID ");
+        var sticky = menu.offsetTop;
         window.onscroll = function() {
             stickyMenu()
             scrollFunction()
@@ -99,6 +109,33 @@
 
 
         // When the user scrolls down 20px from the top of the document, show the button
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrolltotop.style.display = "block ";
+            } else {
+                scrolltotop.style.display = "none ";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+
+
+        function stickyMenu() {
+            if (window.pageYOffset >= sticky) {
+                menu.classList.add("sticky ")
+
+                dropdown.classList.add("sticky-dropdown ")
+            } else {
+                menu.classList.remove("sticky ");
+                dropdown.classList.remove("sticky-dropdown ");
+
+            }
+        }
     </script>
 </body>
 
