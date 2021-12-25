@@ -1,8 +1,8 @@
 * {
-    -webkit-transition: all 1s ease-in-out;
+    /*  -webkit-transition: all 1s ease-in-out;
     -moz-transition: all 1s ease-in-out;
     -o-transition: all 1s ease-in-out;
-    transition: all 01s ease-in-out;
+    transition: all 01s ease-in-out; */
     scroll-behavior: smooth;
     box-sizing: border-box;
 }
@@ -194,29 +194,6 @@ h1 {
     background-color: #555;
 }
 
-::-webkit-resizer {
-    display: none;
-}
-
-::-webkit-scrollbar {
-    right: 0px;
-    width: 20px;
-}
-
- ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey;
-    border-radius: 10px;
-}
-
- ::-webkit-scrollbar-thumb {
-    background: #CC5500;
-    border-radius: 10px;
-}
-
- ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
-
 iframe {
     position: absolute;
     top: 50%;
@@ -244,6 +221,65 @@ iframe {
     content: "";
     clear: both;
     display: table;
+}
+
+.download_button {
+    padding: 5%;
+}
+
+.download_button button {
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.qanda {
+    padding: 5%;
+    font-size: 32px;
+}
+
+.question {
+    padding: 2%;
+}
+
+.qandadropdown .qheader {
+    font-size: 32px;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 14px 16px;
+    background-color: #CC5500;
+    font-family: inherit;
+    margin: 0;
+    width: 50%;
+}
+
+.qandadropdown:hover .qheader:hover {
+    font-size: 32px;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 14px 16px;
+    background-color: #555;
+    font-family: inherit;
+    margin: 0;
+    width: 50%;
+}
+
+.awnserContent {
+    display: none;
+    position: inherit;
+    background-color: rgb(129, 125, 125);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: 50%;
+}
+
+.qandadropdown:hover .awnserContent {
+    display: block;
 }
 
 @media screen and (max-width: 600px) {
