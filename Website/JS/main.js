@@ -9,7 +9,7 @@ function openMenuMobile() {
         menuResponsive.className = "Menu responsive";
         toggle = 1;
     } else {
-        menuResponsive.className = "Menu";
+        menuResponsive.className = "Menu sticky";
         toggle = 0;
     }
 }

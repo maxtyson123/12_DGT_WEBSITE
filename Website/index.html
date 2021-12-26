@@ -6,21 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="CSS/styles.css">
-    <script src="JS/main.js"></script>
+    <link rel="icon" href="Images/ico.ico">
+    <script src="JS/main.js">
+    </script>
 </head>
 
 <body>
 
-    <div class="Menu" id="MenuID">
+    <div class="Menu sticky" id="MenuID">
 
         <a href="index.html" title="Current Page" class="active">Home</a>
         <a href="Pages/about.html">About</a>
         <a class="windown" href="http://reconops.maxinc.cf/Download/Windows/">Download</a>
         <div class="dropdown">
-            <button class="dropdownbutton">Changelog
+            <button class="dropdownbutton">Changes
                 <i class="fa fa-caret-down"></i>
             </button>
             <div id="DropDownID" class="dropdown-content sticky-dropdown">
+                <a>Please Choose A Page</a>
                 <a href="Pages/changelog.html">Changelog</a>
                 <a href="Pages/upcoming.html">Upcoming Features</a>
                 <a href="Pages/notices.html">Notice</a>
@@ -181,9 +184,34 @@
     <center>
         <img src="Images/img4.png" width="80%" height="auto">
     </center>
-    <div class="footer">
+    <br>
+    <br>
+    <footer>
+        <div class="footer-content">
+            <br>
+            <marquee> Website designed by Max Tyson. &MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace; Recon Ops desgined by Max Inc </marquee>
+            <p> Good job you have scrolled all the way to the bottom! That must mean your intrested, Click the button below to download the game or if you want to learn more vist a different page!</p>
+            <ul class="footer-social">
+                <li> <a href="https://www.youtube.com/channel/UCQZBTFpZsGM15w_7hHG6MCw"><i class="fa fa-youtube"></i></a></li>
+                <li>
+                    <a href="github.com/maxtyson123"> <i class="fa fa-github"></i> </a>
+                </li>
+                <li>
+                    <a href="https://max-inc.itch.io/"> <i class="fa fa-gamepad"></i> </a>
+                </li>
+                <li>
+                    <a href="reddit.com/r/Maxinc_Game"> <i class="fa fa-reddit"></i> </a>
+                </li>
+            </ul>
+            <div class="footer-download">
 
-    </div>
+                <button title="Download the launcher for windows" onclick="window.location.href='http://reconops.maxinc.cf/Download/Windows'" class="downloadbtn"><iclass="fa fa-download"></i> Download</button>
+                <button title="Download this game as an .apk" onclick="window.location.href='http://reconops.maxinc.cf/Download/Andriod'" class="andrioddownloadbtn"><i class="fa fa-download"></i> Download</button>
+                <br>
+                <br>
+            </div>
+        </div>
+    </footer>
     <script>
         var scrolltotop = document.getElementById(" scrolltotop ");
         var menu = document.getElementById("MenuID ");
