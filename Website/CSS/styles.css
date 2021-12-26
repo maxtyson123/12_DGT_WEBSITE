@@ -42,6 +42,12 @@ img {
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.466);
 }
 
+li {
+    position: relative;
+    text-align: center;
+    padding: none;
+}
+
 .Menu {
     overflow: hidden;
     background-color: rgb(0, 0, 0);
@@ -293,6 +299,11 @@ iframe {
 
 .qandadropdown:hover .awnserContent {
     display: block;
+}
+
+.whyro {
+    padding: 5%;
+    font-size: 32px;
 }
 
 @media screen and (max-width: 600px) {
