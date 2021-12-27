@@ -53,6 +53,22 @@
                 <button title="Download this game as an .apk" onclick="window.location.href='http://reconops.maxinc.cf/Download/Andriod'" class="andrioddownloadbtn"><i class="fa fa-download"></i> Download</button>
             </center>
         </div>
+        <div class="midpage-iframe">
+            <center>
+                <h2>
+                    Changelog
+                </h2>
+
+                <iframe class="midpage-iframe-content" src="../External/changelog.html" frameborder="0"></iframe>
+            </center>
+        </div>
+        <div class="medpara">
+            <center>
+                <h2> Summary </h2>
+                <p> Here you can veiw the changelog of Recon Ops. This only accounts from version 0.6 onwards, and only display public patches and not minor hotfixes. + means Item Added, - Means Item Removed. The version system goes like this BigUpdate.Patch.bugfix/editorsave,
+                    for example 6.2.1</p>
+            </center>
+        </div>
         <footer>
             <div class="footer-content">
                 <br>
@@ -80,23 +96,24 @@
             </div>
         </footer>
         <script>
-            var scrolltotop = document.getElementById(" scrolltotop ");
+            var scrolltotopbutton = document.getElementById("scrolltotopID");
             var menu = document.getElementById("MenuID ");
             var dropdown = document.getElementById("DropDownID ");
             var sticky = menu.offsetTop;
             window.onscroll = function() {
                 stickyMenu()
-                scrollFunction()
             };
-
+            window.onscroll = function() {
+                scrollFunction()
+            }
 
             // When the user scrolls down 20px from the top of the document, show the button
 
             function scrollFunction() {
-                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                    scrolltotop.style.display = "block ";
+                if (document.body.scrolltotop > 20 || document.documentElement.scrolltotop > 20) {
+                    scrolltotopbutton.style.display = "block ";
                 } else {
-                    scrolltotop.style.display = "none ";
+                    scrolltotopbutton.style.display = "none ";
                 }
             }
 
@@ -104,6 +121,8 @@
                 document.body.scrollTop = 0;
                 document.documentElement.scrollTop = 0;
             }
+
+
 
 
 
