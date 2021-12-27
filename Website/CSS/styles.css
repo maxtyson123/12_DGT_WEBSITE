@@ -229,7 +229,7 @@
             transform: translate(-50%, -50%);
         }
         
-        #text {
+        #titeltext {
             position: absolute;
             color: #FFFFFF;
             left: 50%;
@@ -310,7 +310,7 @@
             display: block;
         }
         
-        .whyro {
+        .medpara {
             padding: 5%;
             font-size: 32px;
         }
