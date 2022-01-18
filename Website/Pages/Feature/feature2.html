@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Recon Ops | Maxinc</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../CSS/styles.css">
+    <link rel="icon" href="../../../../Images/ico.ico">
+    <script src="../../JS/main.js">
+    </script>
+</head>
+
+<body>
+
+    <div class="Menu sticky" id="MenuID">
+
+        <a href="../../index.html" title="Current Page" class="active">Home</a>
+        <a href="../../Pages/about.html">About</a>
+        <a class="windown" href="http://reconops.maxinc.cf/Download/Windows/">Download</a>
+        <div class="dropdown">
+            <button class="dropdownbutton">Changes
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div id="DropDownID" class="dropdown-content sticky-dropdown">
+                <a>Please Choose A Page</a>
+                <a href="../../Pages/changelog.html">Changelog</a>
+                <a href="../../Pages/upcoming.html">Upcoming Features</a>
+                <a href="../../Pages/notices.html">Notice</a>
+                <a href="../../Pages/status.html">Status</a>
+            </div>
+        </div>
+        <a href="../../Pages/qanda.html">Q&A</a>
+        <button title="Go to login site" class="loginbutton">Login <i class="fa fa-user"></i></button>
+
+        <a title="Open Menu" href="javascript:void(0);" class="icon" onclick="openMenuMobile()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+
+    <button onclick="topFunction()" id="scrolltotop" title="Go to top">Top</button>
+    <div class="content">
+        <div class="video-container">
+            <iframe class="hero-iframe" src="https://www.youtube.com/embed/KAzCsr4Ew70?controls=0&autoplay=1&mute=1&loop=1&playlist=KAzCsr4Ew70"></iframe>
+        </div>
+
+        <div id="titeltext">
+            <center>
+                <h1>Recon Ops</h1>
+                <button title="Download the launcher for windows" onclick="window.location.href='http://reconops.maxinc.cf/Download/Windows'" class="downloadbtn"><i
+                        class="fa fa-download"></i> Download</button>
+                <button title="Download this game as an .apk" onclick="window.location.href='http://reconops.maxinc.cf/Download/Andriod'" class="andrioddownloadbtn"><i class="fa fa-download"></i> Download</button>
+            </center>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="bpandimg">
+            <center>
+                <h2>FEATURE #2</h2>
+            </center>
+            <div class="row">
+                <div class="column">
+                    <img src="../../Images/feat-2-2.jpg" alt="Soldiers Running Up Hill" style="width:100%; height: auto;">
+                </div>
+
+                <div class="column">
+                    <ul>
+                        <li style="padding: 2%">ID: 2</li>
+                        <li style="padding: 2%">Name: Social Login</li>
+                        <li style="padding: 2%">Status: Under Planning </li>
+                        <li style="padding: 2%">Expected realse version: 6.5-6.7</li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class=" row ">
+                <div class="column ">
+                    <h3>Details</h3>
+                    <p>The feature Social Login is Under Planning and will be expected to realse in version 6.5-6.7. Social Login is just the ablitly to login in using google and/or facebook using firebase. </p>
+                </div>
+
+                <div class="column ">
+                    <img src="../../Images/feat-2-2.jpg " alt="Grenades Thrown " style="width:100%; height: auto;">
+                </div>
+            </div>
+
+
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <center>
+            <img src="../../Images/img15.png" width="80%" height="auto">
+        </center>
+        <br>
+        <br> <br>
+        <br>
+
+        <footer>
+            <div class="footer-content">
+                <br>
+                <marquee> Website designed by Max Tyson. &MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace; Recon Ops desgined by Max Inc </marquee>
+                <p> Good job you have scrolled all the way to the bottom! That must mean your intrested, Click the button below to download the game or if you want to learn more vist a different page!</p>
+                <ul class="footer-social">
+                    <li> <a href="https://www.youtube.com/channel/UCQZBTFpZsGM15w_7hHG6MCw"><i class="fa fa-youtube"></i></a></li>
+                    <li>
+                        <a href="https://github.com/maxtyson123"> <i class="fa fa-github"></i> </a>
+                    </li>
+                    <li>
+                        <a href="https://max-inc.itch.io/"> <i class="fa fa-gamepad"></i> </a>
+                    </li>
+                    <li>
+                        <a href="https://reddit.com/r/Maxinc_Game"> <i class="fa fa-reddit"></i> </a>
+                    </li>
+                </ul>
+                <div class="footer-download">
+
+                    <button title="Download the launcher for windows" onclick="window.location.href='http://reconops.maxinc.cf/Download/Windows'" class="downloadbtn"><iclass="fa fa-download"></i> Download</button>
+                    <button title="Download this game as an .apk" onclick="window.location.href='http://reconops.maxinc.cf/Download/Andriod'" class="andrioddownloadbtn"><i class="fa fa-download"></i> Download</button>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </footer>
+        <script>
+            var scrolltotop = document.getElementById(" scrolltotop ");
+            var menu = document.getElementById("MenuID ");
+            var dropdown = document.getElementById("DropDownID ");
+            var sticky = menu.offsetTop;
+            window.onscroll = function() {
+                stickyMenu()
+                scrollFunction()
+            };
+
+
+            // When the user scrolls down 20px from the top of the document, show the button
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    scrolltotop.style.display = "block ";
+                } else {
+                    scrolltotop.style.display = "none ";
+                }
+            }
+
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+
+
+
+            function stickyMenu() {
+                if (window.pageYOffset >= sticky) {
+                    menu.classList.add("sticky ")
+
+                    dropdown.classList.add("sticky-dropdown ")
+                } else {
+                    menu.classList.remove("sticky ");
+                    dropdown.classList.remove("sticky-dropdown ");
+
+                }
+            }
+        </script>
+</body>
+
+</html>
