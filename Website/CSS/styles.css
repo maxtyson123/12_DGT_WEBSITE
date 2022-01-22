@@ -193,6 +193,40 @@
             cursor: pointer;
             font-size: 20px;
         }
+
+        .service-check {
+            background-color: #ddd;
+            border: none;
+            color: black;
+            padding: 2.5%;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .sercvieUp {
+            background-color: green;
+            border: none;
+            color: black;
+            padding: 2.5%;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .serviceDown {
+            background-color: red;
+            border: none;
+            color: black;
+            padding: 2.5%;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .serviceMat{
+            background-color: red;
+            border: none;
+            color: black;
+            padding: 2.5%;
+            cursor: pointer;
+            font-size: 20px;
+        }
         
         .andrioddownloadbtn {
             display: none;
@@ -219,7 +253,7 @@
             border-radius: 4px;
         }
         
-        #scrolltotop:hover {
+        #scrolltotop:hover, .sercvieUp:hover, .service-check:hover, .serviceDown:hover, .serviceMat:hover {
             background-color: #555;
         }
         
@@ -408,6 +442,10 @@
             border-radius: 0px;
         }
         
+        .mobileNavDrop{
+            display: none;
+        }
+
         #tabelID tr:nth-child(even) {
             background-color: gray;
         }
@@ -437,7 +475,7 @@
         
         @media screen and (max-width: 600px) {
             .Menu a:not(:first-child),
-            .dropdown .dropdownbutton,
+            .dropdown, .dropdownbutton,
             .downloadbtn {
                 display: none;
             }
@@ -473,18 +511,18 @@
                 display: block;
                 text-align: left;
             }
-            .Menu.responsive .dropdown {
+            .Menu.responsive {
                 float: none;
             }
-            .Menu.responsive .dropdown-content {
+            .Menu.responsive{
                 position: relative;
             }
-            .Menu.responsive .dropdown .dropdownbutton {
+            .Menu.responsive {
                 display: block;
                 width: 100%;
                 text-align: left;
             }
-            .andrioddownloadbtn {
+            .andrioddownloadbtn, .mobileNavDrop {
                 display: block;
             }
         }
