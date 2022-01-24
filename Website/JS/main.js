@@ -129,7 +129,7 @@ function Checkro(){
 
 function Checkls(){
     var buttontochange = document.getElementById("ls")
-    var url = 'https://www.maxserver.ml/download.png';
+    var url = 'http://www.maxserver.ml/ReconOpsLogin/ico.ico';
     var img = new Image();
     img.src = url;
     img.onload = function() {
@@ -178,7 +178,7 @@ function Checkpatch(){
 
 function Checkbl(){
     var buttontochange = document.getElementById("bul")
-    var url = 'https://mfpsatmaxinc.mygamesonline.org/download.png';
+    var url = 'http://mfpsatmaxinc.mygamesonline.org/download.png';
     var img = new Image();
     img.src = url;
     img.onload = function() {

@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html>
 
 <head>
     <title>Recon Ops | Maxinc</title>
@@ -15,16 +13,16 @@
 
     <div class="Menu sticky" id="MenuID">
 
-        <a href="../index.html">Home</a>
+        <a href="../index.html" title="Current Page" class="active">Home</a>
         <a href="../Pages/about.html">About</a>
         <a class="windown" href="http://reconops.maxinc.cf/Download/Windows/">Download</a>
         <div class="dropdown">
-            <button title="Current Page" class="active" class="dropdownbutton">Changes
+            <button class="dropdownbutton">Changes
                 <i class="fa fa-caret-down"></i>
             </button>
             <div id="DropDownID" class="dropdown-content sticky-dropdown">
                 <a>Please Choose A Page</a>
-                <a href="../Pages/changelog.html" title="Current Page" class="active">Changelog</a>
+                <a href="../Pages/changelog.html">Changelog</a>
                 <a href="../Pages/upcoming.html">Upcoming Features</a>
                 <a href="../Pages/notices.html">Notice</a>
                 <a href="../Pages/status.html">Status</a>
@@ -37,38 +35,25 @@
             <i class="fa fa-bars"></i>
         </a>
     </div>
+    <style>
+        body, html{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        .content{
+            position: absolute;
+            left: 0;
+            overflow: hidden;
+        }
+    </style>
+    <iframe width="100%" height="100%" frameborder="0" src="http://maxserver.ml/ReconOpsLogin/login.php"></iframe>
 
 
     <button onclick="topFunction()" id="scrolltotop" title="Go to top">Top</button>
     <div class="content">
-        <div class="video-container">
-            <iframe class="hero-iframe" src="https://www.youtube.com/embed/KAzCsr4Ew70?controls=0&autoplay=1&mute=1&loop=1&playlist=KAzCsr4Ew70"></iframe>
-        </div>
 
-        <div id="titeltext">
-            <center>
-                <h1>Recon Ops</h1>
-                <button title="Download the launcher for windows" onclick="window.location.href='http://reconops.maxinc.cf/Download/Windows'" class="downloadbtn"><i
-                        class="fa fa-download"></i> Download</button>
-                <button title="Download this game as an .apk" onclick="window.location.href='http://reconops.maxinc.cf/Download/Andriod'" class="andrioddownloadbtn"><i class="fa fa-download"></i> Download</button>
-            </center>
-        </div>
-        <div class="midpage-iframe">
-            <center>
-                <h2>
-                    Changelog
-                </h2>
-
-                <iframe class="midpage-iframe-content" src="../External/changelog.html" frameborder="0"></iframe>
-            </center>
-        </div>
-        <div class="medpara">
-            <center>
-                <h2> Summary </h2>
-                <p> Here you can veiw the changelog of Recon Ops. This only accounts from version 0.6 onwards, and only display public patches and not minor hotfixes. + means Item Added, - Means Item Removed. The version system goes like this BigUpdate.Patch.bugfix/editorsave,
-                    for example 6.2.1</p>
-            </center>
-        </div>
         <footer>
             <div class="footer-content">
                 <br>
@@ -87,7 +72,7 @@
                     </li>
                 </ul>
                 <div class="footer-download">
-
+    
                     <button title="Download the launcher for windows" onclick="window.location.href='http://reconops.maxinc.cf/Download/Windows'" class="downloadbtn"><iclass="fa fa-download"></i> Download</button>
                     <button title="Download this game as an .apk" onclick="window.location.href='http://reconops.maxinc.cf/Download/Andriod'" class="andrioddownloadbtn"><i class="fa fa-download"></i> Download</button>
                     <br>
@@ -96,48 +81,45 @@
             </div>
         </footer>
         <script>
-            var scrolltotopbutton = document.getElementById("scrolltotopID");
+            var scrolltotop = document.getElementById(" scrolltotop ");
             var menu = document.getElementById("MenuID ");
             var dropdown = document.getElementById("DropDownID ");
             var sticky = menu.offsetTop;
             window.onscroll = function() {
                 stickyMenu()
-            };
-            window.onscroll = function() {
                 scrollFunction()
-            }
-
+            };
+    
+    
             // When the user scrolls down 20px from the top of the document, show the button
-
+    
             function scrollFunction() {
-                if (document.body.scrolltotop > 20 || document.documentElement.scrolltotop > 20) {
-                    scrolltotopbutton.style.display = "block ";
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    scrolltotop.style.display = "block ";
                 } else {
-                    scrolltotopbutton.style.display = "none ";
+                    scrolltotop.style.display = "none ";
                 }
             }
-
+    
             function topFunction() {
                 document.body.scrollTop = 0;
                 document.documentElement.scrollTop = 0;
             }
-
-
-
-
-
+    
+    
+    
             function stickyMenu() {
                 if (window.pageYOffset >= sticky) {
                     menu.classList.add("sticky ")
-
+    
                     dropdown.classList.add("sticky-dropdown ")
                 } else {
                     menu.classList.remove("sticky ");
                     dropdown.classList.remove("sticky-dropdown ");
-
+    
                 }
             }
         </script>
-</body>
-
-</html>
+    </body>
+    
+    </html>
