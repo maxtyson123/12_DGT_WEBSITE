@@ -9,6 +9,11 @@
     <link rel="icon" href="../Images/ico.ico">
     <script src="../JS/main.js">
     </script>
+    <script>
+        function resizeIframe(obj){
+                obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+        }
+    </script>
 </head>
 
 <body>
@@ -59,7 +64,7 @@
                     Notices
                 </h2>
 
-                <iframe class="midpage-iframe-content" src="../External/notice.html" frameborder="0"></iframe>
+                <iframe onload="resizeIframe(this);" scrolling="no" height="auto" class="midpage-iframe-content" src="../External/notice.html" frameborder="0"></iframe>
             </center>
         </div>
         <div class="medpara">
@@ -83,11 +88,11 @@
                         <a href="https://max-inc.itch.io/"> <i class="fa fa-gamepad"></i> </a>
                     </li>
                     <li>
-                        <a href="https://reddit.com/r/Maxinc_Game"> <i class="fa fa-reddit"></i> </a>
+                        <a href="https://reddit.com/r/Max_Inc"> <i class="fa fa-reddit"></i> </a>
                     </li>
                 </ul>
                 <div class="footer-download">
-
+    
                     <button title="Download the launcher for windows" onclick="window.location.href='http://reconops.maxinc.cf/Download/Windows'" class="downloadbtn"><iclass="fa fa-download"></i> Download</button>
                     <button title="Download this game as an .apk" onclick="window.location.href='http://reconops.maxinc.cf/Download/Andriod'" class="andrioddownloadbtn"><i class="fa fa-download"></i> Download</button>
                     <br>
