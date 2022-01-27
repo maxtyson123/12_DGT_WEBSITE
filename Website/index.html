@@ -1,28 +1,55 @@
 <!DOCTYPE html>
 <html>
+<!--THEESE PAGES INCULDE COMMENTS-->
+<!--
+    index.html
+    changelog.hmtl
+    changelog.html (EXTERNAL)
+    notices.html
+    notice.html (EXTERNAL)
+    auth.php
+    status.html
+    upcoming.html
+    styles.css
+    main.js
+    index.php
+    login.php
+    style.css (EXTERNAL)
+-->
+<!--THEESE PAGES DO NOT INCULDE COMMENTS TO EXLUDE DUPLICATE COMMENTING OR OTHERWISE EXPLAINED-->
+<!--
+    About - just basic text and images
+    qanda - q and content explainded in index.html
+    db.php - too differnt from externally hosted one
+    logout.php - just destorys the sesion and redirects
 
+-->
+<!--
+    TO MAXAMISE PRODUCTIVITY ONLY THINGS THAT NEED EXPLAINING WILL BE 
+    e.g on index.html <link rel="icon" href="Images/ico.ico"> will be commented on but not on about.html or any other pages
+-->
 <head>
     <title>Recon Ops | Maxinc</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--ICONS-->
     <link rel="stylesheet" href="CSS/styles.css">
-    <link rel="icon" href="Images/ico.ico">
+    <link rel="icon" href="Images/ico.ico"><!--ICON THAT GETS DISPLAYED IN THE TOP CORNER NEXT TO PAGE TITLE-->
     <script src="JS/main.js">
     </script>
-</head>
+</head> 
 
 <body>
 
-    <div class="Menu sticky" id="MenuID">
+    <div class="Menu sticky" id="MenuID"> <!--Sticky menu-->
 
-        <a href="index.html" title="Current Page" class="active">Home</a>
+        <a href="index.html" title="Current Page" </a> class="active">Home</a><!--title="Current Page", activate the css that higlights the page that the user is on-->
         <a href="Pages/about.html">About</a>
         <a class="windown" href="http://reconops.maxinc.cf/Download/Windows/">Download</a>
-        <a class="additionalLinksCSS" href="Pages/changelog.html">Changelog</a>
+        <a class="additionalLinksCSS" href="Pages/changelog.html">Changelog</a><
                 <a class="additionalLinksCSS" href="Pages/upcoming.html">Upcoming Features</a>
                 <a class="additionalLinksCSS" href="Pages/notices.html">Notice</a>
                 <a class="additionalLinksCSS" href="Pages/status.html">Status</a>
-        <div id="mobileDD" class="dropdown">
+        <div id="mobileDD" class="dropdown"> <!-- when hovered on dropdown content is shown-->
             <button class="dropdownbutton">Changes
                 <i class="fa fa-caret-down"></i>
             </button>
@@ -35,26 +62,25 @@
             </div>
         </div>
         <a href="Pages/qanda.html">Q&A</a>
-        <button onclick="window.location.href='http://maxserver.ml/ReconOpsLogin/login.php'" title="Go to login site" class="loginbutton">Login <i class="fa fa-user"></i></button>
+        <button onclick="window.location.href='http://maxserver.ml/ReconOpsLogin/login.php'" title="Go to login site" class="loginbutton">Login <i class="fa fa-user"></i></button><!--Link to external login page, i tried to keep it all local by embeding this page in login.html but header redircts and sessions dont work when in a iframe-->
 
-        <a title="Open Menu" href="javascript:void(0);" class="icon" onclick="openMenuMobile()">
+        <a title="Open Menu" href="javascript:void(0);" class="icon" onclick="openMenuMobile()"><!--Button that triggers the js in main.js-->
             <i class="fa fa-bars"></i>
         </a>
     </div>
 
 
-    <button onclick="topFunction()" id="scrolltotop" title="Go to top">Top</button>
+    <button onclick="topFunction()" id="scrolltotop" title="Go to top">Top</button><!-- easy way for the user to get to the top of the page-->
     <div class="content">
-        <div class="video-container">
-            <iframe class="hero-iframe" src="https://www.youtube.com/embed/KAzCsr4Ew70?controls=0&autoplay=1&mute=1&loop=1&playlist=KAzCsr4Ew70"></iframe>
+        <div class="video-container"><!--Div that holds the css-->
+            <iframe class="hero-iframe" src="https://www.youtube.com/embed/KAzCsr4Ew70?controls=0&autoplay=1&mute=1&loop=1&playlist=KAzCsr4Ew70"></iframe> <!--Background video--->
         </div>
 
-        <div id="titeltext">
+        <div id="titeltext"><!--a way for the css to know what to show ontop of the iframe -->
             <center>
                 <h1>Recon Ops</h1>
-                <button title="Download the launcher for windows" onclick="window.location.href='http://reconops.maxinc.cf/Download/Windows'" class="downloadbtn"><i
-                        class="fa fa-download"></i> Download</button>
-                <button title="Download this game as an .apk" onclick="window.location.href='http://reconops.maxinc.cf/Download/Andriod'" class="andrioddownloadbtn"><i class="fa fa-download"></i> Download</button>
+                <!-- shown on displays bigger than 600px (assumes this this a pc sized display) -->       <button title="Download the launcher for windows" onclick="window.location.href='http://reconops.maxinc.cf/Download/Windows'" class="downloadbtn"><i class="fa fa-download"></i> Download</button>
+                <!-- shown on displays small than or eqaul to 600px (assumes this this a tablet or phone sized display) -->   <button title="Download this game as an .apk" onclick="window.location.href='http://reconops.maxinc.cf/Download/Andriod'" class="andrioddownloadbtn"><i class="fa fa-download"></i> Download</button>
             </center>
         </div>
 
@@ -71,12 +97,12 @@
             <center>
                 <h2>Features</h2>
             </center>
-            <div class="row">
-                <div class="column">
+            <div class="row"> <!-- the row that all this is on -->   
+                <div class="column"> <!-- a collum takes up 50% width -->
                     <img src="Images/img1.png" alt="Soldiers Running Up Hill" style="width:100%; height: auto;">
                 </div>
 
-                <div class="column">
+                <div class="column"> <!-- they have to be equal for them to work properly -->
                     <ul>
                         <li style="padding: 2%">Multiplayer</li>
                         <li style="padding: 2%">Bots</li>
@@ -87,7 +113,7 @@
                 </div>
             </div>
             <div class=" row ">
-                <div class="column ">
+                <div class="column "> <!--They are set to 100% on mobile screens for a responsive design-->
                     <ul>
                         <li style="padding: 2%">Shop</li>
                         <li style="padding: 2%">Level system</li>
@@ -112,7 +138,7 @@
             </center>
         </div>
     </div>
-    <div class="qanda">
+    <div class="qanda"> <!-- this is an edited version of the dropdown that has a bigger width and colouring -->
         <center>
             <a href="Pages/qanda.html" style="text-decoration: none; color: black;">
                 <h2> Questions And Awnsers </h2>
@@ -122,7 +148,7 @@
                     <button class="qheader">What devices can I play this game on?
                     <i class="fa fa-caret-down"></i>
                 </button>
-                    <div id="awnser1" class="awnserContent">
+                    <div id="awnser1" class="awnserContent"> <!-- Like above this is shown on qandadropdown is hovered over -->
                         <p> Recon ops is currently only avlible for windows via a
                             <a href="http://reconops.maxinc.cf/Download/Windows/"> launcher.</a> But we are working on bringing it to the xbox via WebGl. Mobile develolpment is also underway and may soon be published to the google play store.</p>
                     </div>
@@ -175,7 +201,7 @@
             <p> Recon op's aspire to be your #1, go to game for the FPS category, we strive to improve the game at every update. We take user feedback into consideration at all times because no-one knows the game better than you. Still, not convinced? Great
                 just read the list below, and we garentuee you will be.(Hover on list item for more info) </p>
             <ul style="padding: none;">
-                <li title="Recon Ops is free to play which is quite amazing for a game of its quality!"> Free </li>
+                <li title="Recon Ops is free to play which is quite amazing for a game of its quality!"> Free </li> <!-- basic list i dont think this needs explaining-->
                 <li title=" Recon Ops has scalable Graphics which means it can be played on most low end devices. "> Usable </li>
                 <li title="Recon OPs has online capabiltiys which means you can play with your friends across devices."> Online </li>
                 <li title="Recon Ops's Graphics Use the unity HDRP engine to bring you crisp quality"> AAA Graphics </li>
@@ -194,7 +220,7 @@
     <footer>
         <div class="footer-content">
             <br>
-            <marquee> Website designed by Max Tyson. &MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace; Recon Ops desgined by Max Inc </marquee>
+            <!--Scrolling text as a header to the footer content--> <marquee> Website designed by Max Tyson. <!--spacing so that the text seems apart, cant use keyboard spaces so i had to use the sybol type--> &MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace; Recon Ops desgined by Max Inc </marquee>
             <p> Good job you have scrolled all the way to the bottom! That must mean your intrested, Click the button below to download the game or if you want to learn more vist a different page!</p>
             <ul class="footer-social">
                 <li> <a href="https://www.youtube.com/channel/UCQZBTFpZsGM15w_7hHG6MCw"><i class="fa fa-youtube"></i></a></li>
@@ -218,11 +244,12 @@
         </div>
     </footer>
     <script>
+        //get the items from the document
         var scrolltotop = document.getElementById(" scrolltotop ");
         var menu = document.getElementById("MenuID ");
         var dropdown = document.getElementById("DropDownID ");
         var sticky = menu.offsetTop;
-        window.onscroll = function() {
+        window.onscroll = function() { //when the page scrolls do this, has to be inpage becuase external pages cant detect scrolling
             stickyMenu()
             scrollFunction()
         };
@@ -238,13 +265,14 @@
             }
         }
 
+        // go to the top off the page when button clicked
         function topFunction() {
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
         }
 
 
-
+        //make the navbar sticky when the user scrolls
         function stickyMenu() {
             if (window.pageYOffset >= sticky) {
                 menu.classList.add("sticky ")

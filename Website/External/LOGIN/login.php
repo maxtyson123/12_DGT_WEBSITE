@@ -12,6 +12,7 @@ if (isset($_POST['username'])){
 	//Checking is user existing in the database or not
         $query = "SELECT * FROM `bl_game_users` WHERE name='$username'
 and password='$password'";
+// BELOW HAS CHANGE TO WORK WITH PASSWORD HASHING WITH SECURITY
 	$result = mysqli_query($con,$query) or die(mysql_error());
 	$rows = mysqli_num_rows($result);
         if($rows==1){

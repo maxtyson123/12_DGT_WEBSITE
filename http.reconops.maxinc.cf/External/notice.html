@@ -1,0 +1,127 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- This is a copy of the index.html page hosted at https://reconops.maixnc.cf/Status/  -->
+</head>
+<body>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .noticeslides-container{
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+        .slide{
+            display: none;
+        }
+        .prev, .next{
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: #CC5500;
+            font-weight: bold;
+            font-size: 32px;
+            transition: 0.5s;
+            user-select: none;
+        }
+        
+        .prev:hover, .next:hover{
+            background-color: #cc5500a9;
+        }
+        .next{
+            right: 0px;
+
+        }
+        .ontoptext{
+            color: white;
+            position: absolute;
+            width: 100%;
+            text-align: center;
+        }
+        .dot{
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: gray;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.5s;
+        }
+
+        .active, .dot:hover{
+            background-color: darkgray;
+        }
+
+        .fade{
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1s;
+            animation-name: fade;
+            animation-duration: 1s;
+        }
+
+        @-webkit-keyframes fade{
+            from{opacity: 0.5}
+            to{opacity: 1}
+        }
+
+        @keyframes fade{
+            from{opacity: 0.5}
+            to{opacity: 1}
+        }
+
+    </style>
+
+<div class="noticeslides-container">
+    <div class="slide fade">
+        <img width="100%" src="../Images/free-s-skin-notice.png"
+        <div class="ontoptext">
+            <h1>Notice Title</h1>
+
+        </div>
+    </div>    
+   
+    <a class="prev" onclick="plusSlides(-1)"> < </a>
+    <a class="next" onclick="plusSlides(1)"> > </a>
+    </div>
+    
+</div>
+<script>
+    var slideIndex = 1;
+    showSlide(slideIndex);
+
+    function plusSlides(n){
+        showSlide(slideIndex += n);
+    }
+
+    function showSlide(n){
+        var i;
+        var slides = document.getElementsByClassName("slide");
+        var dots = document.getElementsByClassName("dot");
+
+        if (n > slides.length){
+            slideIndex = 1;
+        }
+        if (n < 1){
+            slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++){
+            slides[i].style.display = "none";
+
+        }
+        for (i = 0; i < dots.length; i++){
+            dots[i].className.replace(" active","");
+
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className +=" active";
+    }
+</script>
+
+</body>

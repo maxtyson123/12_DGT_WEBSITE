@@ -3,6 +3,8 @@
 include("auth.php");
 include("db.php");
 
+//REMOVED PHP TO BE SECURE
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -50,8 +52,8 @@ include("db.php");
     <div class="column">
         <h3><?php
 
-$query1 = mysql_query("SELECT coins FROM `bl_game_users` WHERE name='{$_SESSION["username"]}'");
-
+$query1 = mysql_query("SELECT coins FROM `bl_game_users` WHERE name='{$_SESSION["username"]}'"); //USES SQL TO GET COINS FROM DB WHERE THE USERNAME IS THE ONE STORED IN THE SESSION,
+// NOTE: THIS IS NO LONGER USED IN THE PAGE BECAUSE IT WAS INEFFECIENT AND I DONT EVEN KNOW IF IT WORKS
 while($results = mysql_fetch_array($query1)){
     echo $result['COINS'];
 }
@@ -59,7 +61,7 @@ while($results = mysql_fetch_array($query1)){
 ?> </h3>
     </div>
     <div class="column">
-        <h3>DEATHS</h3>
+        <h3>DEATHS</h3><!--Same WOOULD GO IN THEESE -->
     </div>
     <div class="column">
         <h3>KILLS</h3>

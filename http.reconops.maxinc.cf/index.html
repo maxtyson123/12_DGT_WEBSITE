@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<!--THEESE PAGES INCULDE COMMENTS-->
+<!--
+    index.html
+    changelog.hmtl
+    notices.html
+    notice.html (EXTERNAL)
+    auth.php
+    status.html
+    upcoming.html
+    styles.css
+    main.js
+    index.php
+    login.php
+    style.css (EXTERNAL)
+-->
+<!--THEESE PAGES DO NOT INCULDE COMMENTS TO EXLUDE DUPLICATE COMMENTING OR OTHERWISE EXPLAINED-->
+<!--
+    About - just basic text and images
+    qanda - q and content explainded in index.html
+    db.php - too differnt from externally hosted one
+    logout.php - just destorys the sesion and redirects
+
+-->
+<head>
+    <title>Recon Ops | Maxinc</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="icon" href="Images/ico.ico">
+    <script src="JS/main.js">
+    </script>
+</head>
+
+<body>
+
+    <div class="Menu sticky" id="MenuID">
+
+        <a href="index.html" title="Current Page" class="active">Home</a>
+        <a href="Pages/about.html">About</a>
+        <a class="windown" href="http://reconops.maxinc.cf/Download/Windows/">Download</a>
+        <a class="additionalLinksCSS" href="Pages/changelog.html">Changelog</a>
+                <a class="additionalLinksCSS" href="Pages/upcoming.html">Upcoming Features</a>
+                <a class="additionalLinksCSS" href="Pages/notices.html">Notice</a>
+                <a class="additionalLinksCSS" href="Pages/status.html">Status</a>
+        <div id="mobileDD" class="dropdown">
+            <button class="dropdownbutton">Changes
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div id="DropDownID" class="dropdown-content sticky-dropdown">
+                <a>Please Choose A Page</a>
+                <a href="Pages/changelog.html">Changelog</a>
+                <a href="Pages/upcoming.html">Upcoming Features</a>
+                <a href="Pages/notices.html">Notice</a>
+                <a href="Pages/status.html">Status</a>
+            </div>
+        </div>
+        <a href="Pages/qanda.html">Q&A</a>
+        <button onclick="window.location.href='http://maxserver.ml/ReconOpsLogin/login.php'" title="Go to login site" class="loginbutton">Login <i class="fa fa-user"></i></button>
+
+        <a title="Open Menu" href="javascript:void(0);" class="icon" onclick="openMenuMobile()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+
+    <button onclick="topFunction()" id="scrolltotop" title="Go to top">Top</button>
+    <div class="content">
+        <div class="video-container">
+            <iframe class="hero-iframe" src="https://www.youtube.com/embed/KAzCsr4Ew70?controls=0&autoplay=1&mute=1&loop=1&playlist=KAzCsr4Ew70"></iframe>
+        </div>
+
+        <div id="titeltext">
+            <center>
+                <h1>Recon Ops</h1>
+                <button title="Download the launcher for windows" onclick="window.location.href='http://reconops.maxinc.cf/Download/Windows'" class="downloadbtn"><i
+                        class="fa fa-download"></i> Download</button>
+                <button title="Download this game as an .apk" onclick="window.location.href='http://reconops.maxinc.cf/Download/Andriod'" class="andrioddownloadbtn"><i class="fa fa-download"></i> Download</button>
+            </center>
+        </div>
+
+        <center>
+            <div class="breiftext">
+                <p>Recon Ops is a fast paced fps shooter. Play with your friends or play with bots in a load of different modes or maps with a load of different guns or skins. Run down your enemy's with a car or call in an support chopper to hit 'em where
+                    it hurts.
+                </p>
+
+                <a class="breiflink" href="http://reconops.maxinc.cf/Download/Windows/">Play free now.</a>
+            </div>
+        </center>
+        <div class="bpandimg">
+            <center>
+                <h2>Features</h2>
+            </center>
+            <div class="row">
+                <div class="column">
+                    <img src="Images/img1.png" alt="Soldiers Running Up Hill" style="width:100%; height: auto;">
+                </div>
+
+                <div class="column">
+                    <ul>
+                        <li style="padding: 2%">Multiplayer</li>
+                        <li style="padding: 2%">Bots</li>
+                        <li style="padding: 2%">Cross Platform</li>
+                        <li style="padding: 2%">High definition Graphics</li>
+                        <li style="padding: 2%">Launcher w/ Patching</li>
+                    </ul>
+                </div>
+            </div>
+            <div class=" row ">
+                <div class="column ">
+                    <ul>
+                        <li style="padding: 2%">Shop</li>
+                        <li style="padding: 2%">Level system</li>
+                        <li style="padding: 2%">Multiple Operators</li>
+                        <li style="padding: 2%">Many Maps</li>
+                        <li style="padding: 2%">Many Game Modes</li>
+                    </ul>
+                </div>
+
+                <div class="column ">
+                    <img src="Images/img2.png " alt="Grenades Thrown " style="width:100%; height: auto;">
+                </div>
+            </div>
+
+
+        </div>
+        <div class="download_button">
+            <center>
+                <button title="Download the launcher for windows" onclick="window.location.href='http://reconops.maxinc.cf/Download/Windows'" class="downloadbtn"><i
+                        class="fa fa-download"></i> Download</button>
+                <button title="Download this game as an .apk" onclick="window.location.href='http://reconops.maxinc.cf/Download/Andriod'" class="andrioddownloadbtn"><i class="fa fa-download"></i> Download</button>
+            </center>
+        </div>
+    </div>
+    <div class="qanda">
+        <center>
+            <a href="Pages/qanda.html" style="text-decoration: none; color: black;">
+                <h2> Questions And Awnsers </h2>
+            </a>
+            <div class="question">
+                <div class="qandadropdown">
+                    <button class="qheader">What devices can I play this game on?
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                    <div id="awnser1" class="awnserContent">
+                        <p> Recon ops is currently only avlible for windows via a
+                            <a href="http://reconops.maxinc.cf/Download/Windows/"> launcher.</a> But we are working on bringing it to the xbox via WebGl. Mobile develolpment is also underway and may soon be published to the google play store.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="question">
+                <div class="qandadropdown">
+                    <button class="qheader">How much does this game cost?
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                    <div id="awnser1" class="awnserContent">
+                        <p> As of now recon ops is free but the price may change in the future once it is out of its BETA phase. It is recomened to create an account now so that you can own it while it is free to play. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="question">
+                <div class="qandadropdown">
+                    <button class="qheader">What sort of features can I expect?
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                    <div id="awnser1" class="awnserContent">
+                        <p> In Recon Ops you can expect many features that you would find in your other popular FPS games such as Bots, Multiplay, In-Game Shop, levels and much more. You can read more about the game <a href="Pages/about.html">HERE</a> and
+                            about up coming features
+                            <a href="Pages/upcoming.html"> HERE</a> </p>
+                    </div>
+                </div>
+            </div>
+            <div class="question">
+                <div class="qandadropdown">
+                    <button class="qheader">Is my progress saved?
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                    <div id="awnser1" class="awnserContent">
+                        <p> Your progress is saved if you have an account and are logged in, however if you choose to play as a guest then only some info will be saved locally and you wont have acess to all of the features Recon Ops has to offer. </p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <p> If you have more questions that you want awnsering you can check out the <a href="Pages/qanda.html"> Questions and awnsers page </a> or if your question is awnsered on there you can <a href="mailto:98maxt98@gmail.com"> contact support. </a></p>
+        </center>
+
+
+    </div>
+    <center>
+        <img src="Images/img3.png" width="80%" height="auto">
+    </center>
+    <div class="medpara">
+        <center>
+            <h2>Why Recon Ops?</h2>
+            <p> Recon op's aspire to be your #1, go to game for the FPS category, we strive to improve the game at every update. We take user feedback into consideration at all times because no-one knows the game better than you. Still, not convinced? Great
+                just read the list below, and we garentuee you will be.(Hover on list item for more info) </p>
+            <ul style="padding: none;">
+                <li title="Recon Ops is free to play which is quite amazing for a game of its quality!"> Free </li>
+                <li title=" Recon Ops has scalable Graphics which means it can be played on most low end devices. "> Usable </li>
+                <li title="Recon OPs has online capabiltiys which means you can play with your friends across devices."> Online </li>
+                <li title="Recon Ops's Graphics Use the unity HDRP engine to bring you crisp quality"> AAA Graphics </li>
+                <li title="Recon OPs Utilizes AI Technology to cut back on match making times and bring the action to you."> Bots </li>
+                <li title="Compared to other FPS Shooters Recon Ops is relativity low sized with  32mb launcher and 1-3gb game."> Low Size </li>
+                <li title="Recon Ops is updated very frequently so that game can be in its best posible state."> Frequently updated </li>
+
+            </ul>
+        </center>
+    </div>
+    <center>
+        <img src="Images/img4.png" width="80%" height="auto">
+    </center>
+    <br>
+    <br>
+    <footer>
+        <div class="footer-content">
+            <br>
+            <marquee> Website designed by Max Tyson. &MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace; Recon Ops desgined by Max Inc </marquee>
+            <p> Good job you have scrolled all the way to the bottom! That must mean your intrested, Click the button below to download the game or if you want to learn more vist a different page!</p>
+            <ul class="footer-social">
+                <li> <a href="https://www.youtube.com/channel/UCQZBTFpZsGM15w_7hHG6MCw"><i class="fa fa-youtube"></i></a></li>
+                <li>
+                    <a href="https://github.com/maxtyson123"> <i class="fa fa-github"></i> </a>
+                </li>
+                <li>
+                    <a href="https://max-inc.itch.io/"> <i class="fa fa-gamepad"></i> </a>
+                </li>
+                <li>
+                    <a href="https://reddit.com/r/Max_Inc"> <i class="fa fa-reddit"></i> </a>
+                </li>
+            </ul>
+            <div class="footer-download">
+
+                <button title="Download the launcher for windows" onclick="window.location.href='http://reconops.maxinc.cf/Download/Windows'" class="downloadbtn"><iclass="fa fa-download"></i> Download</button>
+                <button title="Download this game as an .apk" onclick="window.location.href='http://reconops.maxinc.cf/Download/Andriod'" class="andrioddownloadbtn"><i class="fa fa-download"></i> Download</button>
+                <br>
+                <br>
+            </div>
+        </div>
+    </footer>
+    <script>
+        var scrolltotop = document.getElementById(" scrolltotop ");
+        var menu = document.getElementById("MenuID ");
+        var dropdown = document.getElementById("DropDownID ");
+        var sticky = menu.offsetTop;
+        window.onscroll = function() {
+            stickyMenu()
+            scrollFunction()
+        };
+
+
+        // When the user scrolls down 20px from the top of the document, show the button
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrolltotop.style.display = "block ";
+            } else {
+                scrolltotop.style.display = "none ";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+
+
+        function stickyMenu() {
+            if (window.pageYOffset >= sticky) {
+                menu.classList.add("sticky ")
+
+                dropdown.classList.add("sticky-dropdown ")
+            } else {
+                menu.classList.remove("sticky ");
+                dropdown.classList.remove("sticky-dropdown ");
+
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,5 +1,5 @@
         * {
-            -webkit-transition: all 0.5s ease-in-out;
+            -webkit-transition: all 0.5s ease-in-out; /* Add an animation to everything, gives a cool loading style */
             -moz-transition: all 0.5s ease-in-out;
             -o-transition: all 0.5s ease-in-out;
             transition: all 0.5s ease-in-out;
@@ -9,7 +9,7 @@
         }
         
         .bpandimg {
-            font-size: 32px;
+            font-size: 32px; /* Font size has to be set induvially */
         }
         
         .breiftext {
@@ -24,11 +24,11 @@
         
         body {
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Arial, Helvetica, sans-serif; /*Sets the fonts */
         }
         
         h1 {
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.5); /* Gives a shadow effect, looks 2.5d ish */
             padding: 10px;
             font-size: 48px;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.466);
@@ -64,13 +64,13 @@
             overflow: hidden;
             background-color: rgb(0, 0, 0);
             position: absolute;
-            z-index: 2;
+            z-index: 2; /* Displays above iframe*/
             width: 100%;
             top: 0px;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.466);
         }
         
-        .Menu a {
+        .Menu a { /* setting the nav links to look more like a button rather than a text link */
             float: left;
             display: block;
             color: #f2f2f2;
@@ -80,17 +80,17 @@
             font-size: 17px;
         }
         
-        .Menu a:hover {
+        .Menu a:hover { /* Hover effect */
             background-color: #ddd;
             color: black;
         }
         
-        .Menu a.active {
+        .Menu a.active { /* Shows what page you are on */
             background-color: #CC5500;
             color: white;
         }
         
-        .Menu button {
+        .Menu button { /* Makes the login button (and others) look like the links for theming purposes */
             float: right;
             display: block;
             text-align: center;
@@ -101,12 +101,12 @@
             border: none;
         }
         
-        .Menu button:hover {
+        .Menu button:hover { /*Same with the hovering */
             background-color: #cc5500b6;
             color: black;
         }
         
-        .Menu .icon {
+        .Menu .icon { /* hides the button the shows the mobile nav*/
             display: none;
         }
         
@@ -115,7 +115,7 @@
             overflow: hidden;
         }
         
-        .dropdown .dropdownbutton {
+        .dropdown .dropdownbutton { /* Dropdown content and button styling */
             font-size: 17px;
             border: none;
             outline: none;
@@ -148,7 +148,7 @@
         .dropdown:hover,
         .dropdownbutton,
         .downloadbtn:hover,
-        .andrioddownloadbtn:hover {
+        .andrioddownloadbtn:hover { /*  Group hover effect*/
             background-color: #555;
             color: white;
         }
@@ -158,18 +158,18 @@
             color: black;
         }
         
-        .dropdown:hover .dropdown-content {
+        .dropdown:hover .dropdown-content { /*Sets the dropdown content's display to block when the dropdown is hovered */
             display: block;
         }
         
-        .sticky {
+        .sticky { /* Class for any thing that wants to be sticky */
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 2;
         }
         
-        .sticky-dropdown {
+        .sticky-dropdown { /* Used for the dropdown to be sticky when the nav bar is*/
             position: fixed;
             top: 0;
             z-index: 1;
@@ -180,12 +180,12 @@
             padding-bottom: 0px;
         }
         
-        .video-container {
+        .video-container { /*Video */
             width: 100vw;
             height: 100vh;
         }
         
-        .downloadbtn {
+        .downloadbtn { /* Stylize the download button */
             background-color: #CC5500;
             border: none;
             color: white;
@@ -194,7 +194,7 @@
             font-size: 20px;
         }
 
-        .service-check {
+        .service-check { /*When the service is not set */
             background-color: #ddd;
             border: none;
             color: black;
@@ -202,7 +202,7 @@
             cursor: pointer;
             font-size: 20px;
         }
-        .sercvieUp {
+        .sercvieUp { /* When the service is up*/
             background-color: green;
             border: none;
             color: black;
@@ -210,7 +210,7 @@
             cursor: pointer;
             font-size: 20px;
         }
-        .serviceDown {
+        .serviceDown {/* When the service is down*/
             background-color: red;
             border: none;
             color: black;
@@ -219,8 +219,8 @@
             font-size: 20px;
         }
 
-        .serviceMat{
-            background-color: red;
+        .serviceMat{/*when the service is under matinence */
+            background-color: orange;
             border: none;
             color: black;
             padding: 2.5%;
@@ -228,7 +228,7 @@
             font-size: 20px;
         }
         
-        .andrioddownloadbtn {
+        .andrioddownloadbtn { /*Hidden by default*/
             display: none;
             background-color: #CC5500;
             border: none;
@@ -238,7 +238,7 @@
             font-size: 20px;
         }
         
-        #scrolltotop {
+        #scrolltotop { /*Hidden scroll to top button */
             position: fixed;
             bottom: 20px;
             right: 30px;
@@ -253,11 +253,11 @@
             border-radius: 4px;
         }
         
-        #scrolltotop:hover, .sercvieUp:hover, .service-check:hover, .serviceDown:hover, .serviceMat:hover {
+        #scrolltotop:hover, .sercvieUp:hover, .service-check:hover, .serviceDown:hover, .serviceMat:hover { /* More hover effects that were added later */
             background-color: #555;
         }
         
-        .hero-iframe {
+        .hero-iframe { /* iframe as hero image*/
             position: absolute;
             top: 50%;
             left: 50%;
@@ -266,7 +266,7 @@
             transform: translate(-50%, -50%);
         }
         
-        #titeltext {
+        #titeltext { /*Text that goes ontop of hero vido */
             position: absolute;
             color: #FFFFFF;
             left: 50%;
@@ -276,7 +276,7 @@
         
         .column {
             float: left;
-            width: 50%;
+            width: 50%; /* Has to eqaul to the amount of collums you have */
             padding: 5px;
         }
         
@@ -295,10 +295,10 @@
         }
         
          ::-webkit-scrollbar {
-            display: none;
+            display: none; /* Hide the scroll bar becuase it makes some of the curves look bad*/
         }
         
-        .qanda {
+        .qanda { /* Restylized dropdown */
             padding: 5%;
             font-size: 32px;
         }
@@ -352,7 +352,7 @@
             font-size: 32px;
         }
         
-        footer {
+        footer { /* Footer */
             bottom: 0px;
             left: 0;
             right: 0;
@@ -364,7 +364,7 @@
             border-radius: 0;
         }
         
-        .footer-content {
+        .footer-content { /* Flexible for mobile*/
             display: flex;
             align-items: center;
             justify-content: center;
@@ -384,7 +384,7 @@
             font-size: 14px;
         }
         
-        .footer-social {
+        .footer-social { /*Style the icons */
             list-style: none;
             display: flex;
             align-items: center;
@@ -412,7 +412,7 @@
             color: #CC5500;
         }
         
-        .footer-download {
+        .footer-download { /*Make the footer download button also center */
             align-items: center;
         }
         
@@ -426,7 +426,7 @@
             height: 500px;
         }
         
-        #tabelID {
+        #tabelID { /*As an ID incase I wanted to have multiple */
             width: 100%;
             padding: 20%;
             border-collapse: collapse;
@@ -467,27 +467,27 @@
             font-size: 32px;
         }
         
-        .additionalLinksCSS{
+        .additionalLinksCSS{ /*Links that are instead of the dropdown*/
             display: none !important;
         }
 
-        @media screen and (max-hieght: 800px) {
+        @media screen and (max-hieght: 800px) { /*change this on a hieght of 800px*/
             .footer {
                 position: static;
             }
         }
         
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 600px) { /* change this on a hieght of 800px eg mobile displays*/
             .Menu a:not(:first-child),
             
             .additionalLinksCSS, .dropdown{
-                display: none;
+                display: none; /*Hide on mobile*/
             }
 
             .downloadbtn {
                 display: none;
             }
-            .Menu a.icon {
+            .Menu a.icon { /*Show the nav button to the right*/
                 float: right;
                 display: block;
             }
@@ -498,18 +498,18 @@
         }
         
         @media screen and (max-width: 600px) {
-            .Menu.responsive {
+            .Menu.responsive { /*Make the menu responsive */
                 position: fixed;
                 top: 0;
                 width: 100%;
             }
 
-            #tabelID{
+            #tabelID{  /*Fix it on mobile*/
                 padding: 0;
                 left: 0;
             }
    
-            .Menu.responsive .icon {
+            .Menu.responsive .icon { /*Make sure the menu icon is on top*/
                 position: absolute;
                 right: 0;
                 top: 0;
@@ -547,6 +547,6 @@
                 text-align: left;
             }
             .andrioddownloadbtn  {
-                display: block;
+                display: block; /*Show the download button with the andriod link.*/
             }
         }

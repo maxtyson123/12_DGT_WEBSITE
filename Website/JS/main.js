@@ -1,3 +1,4 @@
+//Varibles
 var toggle = 0;
 var doneB4 = 0;
 MainSite = "ms"
@@ -7,74 +8,7 @@ Multi = "gs"
 Patcher = "ps"
 BackUp = "bul"
 
-function checkServicesOnload(){
-    let x = getCookie("intial-check");
-    if (x != 1){
-        Checkmaxinc()
-        Checkro()
-        Checkls()
-        Checkpun()
-        Checkpatch()
-        Checkbl()   
-        setCookie("intial-check", 1, 1);
-    }
-    if (x == 1){
-
-        
-        setStatus(MainSite)
-        setStatus(ReconOps)
-        setStatus(Login)
-        setStatus(Multi)
-        setStatus(Patcher)
-        setStatus(BackUp)
-
-    }
-    
-
-}
-
-
-function forceRecheck(){
-    Checkmaxinc()
-    Checkro()
-    Checkls()
-    Checkpun()
-    Checkpatch()
-    Checkbl() 
-}
-
-function setCookie(cname, cvalue, exdays) {
-    const d = new Date();
-    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-    let expires = "expires="+d.toUTCString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-  }
-  
-function setStatus(buttonStatId){
-    let cookieID = getCookie(buttonStatId);
-    
- if (cookieID == 1){
-   
-    var buttontochange = document.getElementById(buttonStatId)
-    buttontochange.className = "sercvieUp";
- }
-    if (cookieID == 2){
-   
-     var buttontochange = document.getElementById(buttonStatId)
-        buttontochange.className = "serviceDown";
-  }
-}
-
-function getCookie(cookieName) {
-    let cookie = {};
-    document.cookie.split(';').forEach(function(el) {
-      let [key,value] = el.split('=');
-      cookie[key.trim()] = value;
-    })
-    return cookie[cookieName];
-  }
-
-function openMenuMobile() {
+function openMenuMobile() { // this is run when the user clicks on the nav button on mobile
     var menuResponsive = document.getElementById("MenuID");
     
 
@@ -93,21 +27,88 @@ function openMenuMobile() {
 }
 
 
+function checkServicesOnload(){
+    let x = getCookie("intial-check"); //get the cookie stored 
+    if (x != 1){ //If it doesnt exist or equal 1 run all the checks
+        Checkmaxinc()
+        Checkro()
+        Checkls()
+        Checkpun()
+        Checkpatch()
+        Checkbl()   
+        setCookie("intial-check", 1, 1); //change it to one so thant when reloaded it wont run again
+    }
+    if (x == 1){
+
+        
+        setStatus(MainSite)
+        setStatus(ReconOps)
+        setStatus(Login)
+        setStatus(Multi)
+        setStatus(Patcher)
+        setStatus(BackUp)
+
+    }
+    
+
+}
+
+
+function forceRecheck(){ //used in the console when testing, may become a button later
+    Checkmaxinc()
+    Checkro()
+    Checkls()
+    Checkpun()
+    Checkpatch()
+    Checkbl() 
+}
+
+function setCookie(cname, cvalue, exdays ) { //(cname, cvalue, exdays ) get cokkie info
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000)); // convert the date
+    let expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/"; //add it all together
+  }
+  
+function setStatus(buttonStatId){ // function to set a status from cookie, used to make it more efficent.
+let cookieID = getCookie(buttonStatId);    
+ if (cookieID == 1){
+   
+    var buttontochange = document.getElementById(buttonStatId)
+    buttontochange.className = "sercvieUp";
+ }
+    if (cookieID == 2){
+   
+     var buttontochange = document.getElementById(buttonStatId)
+        buttontochange.className = "serviceDown";
+  }
+}
+
+function getCookie(cookieName) { //gets the cookie
+    let cookie = {};
+    document.cookie.split(';').forEach(function(el) {
+      let [key,value] = el.split('=');
+      cookie[key.trim()] = value;
+    })
+    return cookie[cookieName];
+  }
+
+
 
 function Checkmaxinc(){
-    var buttontochange = document.getElementById("ms")
-    var url = 'http://maxinc.cf/logo.png';
+    var buttontochange = document.getElementById("ms") //get the button
+    var url = 'http://maxinc.cf/logo.png'; //sites url
     var img = new Image();
     img.src = url;
-    img.onload = function() {
-        buttontochange.className = "sercvieUp";
-        setCookie("ms", 1, 1);
-        alert('MAIN SITE IS UP AND RUNNING')
+    img.onload = function() {//if the image loads
+        buttontochange.className = "sercvieUp"; //cange it to active
+        setCookie("ms", 1, 1); //set the cookie so it can be loaded and not have to be rerun
+        alert('MAIN SITE IS UP AND RUNNING') // alert the user
         
     }
     img.onerror = function() {
         setCookie("ms", 1, 1);
-    alert('MAIN SITE IS DOWN AND NOT-RUNNING')
+    alert('MAIN SITE IS DOWN AND NOT-RUNNING') // if site is down for a reason then it will be added like this  alert('MAIN SITE IS DOWN AND NOT-RUNNING BECAUSE OF DDOS')
     buttontochange.className = "serviceDown";
     
     }
