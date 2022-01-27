@@ -76,14 +76,17 @@ function getCookie(cookieName) {
 
 function openMenuMobile() {
     var menuResponsive = document.getElementById("MenuID");
+    
 
 
     if (toggle == 0) {
         menuResponsive.className = "Menu responsive";
+
         toggle = 1;
         topFunction()
     } else {
         menuResponsive.className = "Menu sticky";
+
         toggle = 0;
         topFunction()
     }

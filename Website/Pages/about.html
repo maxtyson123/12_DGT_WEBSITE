@@ -15,10 +15,14 @@
 
     <div class="Menu sticky" id="MenuID">
 
-        <a href="../index.html">Home</a>
-        <a href="../Pages/about.html" title="Current Page" class="active">About</a>
+        <a href="../index.html" title="Current Page" class="active">Home</a>
+        <a href="../Pages/about.html">About</a>
         <a class="windown" href="http://reconops.maxinc.cf/Download/Windows/">Download</a>
-        <div class="dropdown">
+        <a class="additionalLinksCSS" href="../Pages/changelog.html">Changelog</a>
+                <a class="additionalLinksCSS" href="../Pages/upcoming.html">Upcoming Features</a>
+                <a class="additionalLinksCSS" href="../Pages/notices.html">Notice</a>
+                <a class="additionalLinksCSS" href="../Pages/status.html">Status</a>
+        <div id="mobileDD" class="dropdown">
             <button class="dropdownbutton">Changes
                 <i class="fa fa-caret-down"></i>
             </button>
@@ -31,14 +35,12 @@
             </div>
         </div>
         <a href="../Pages/qanda.html">Q&A</a>
-        <button title="Go to login site" class="loginbutton">Login <i class="fa fa-user"></i></button>
+        <button onclick="window.location.href='http://maxserver.ml/ReconOpsLogin/login.php'" title="Go to login site" class="loginbutton">Login <i class="fa fa-user"></i></button>
 
         <a title="Open Menu" href="javascript:void(0);" class="icon" onclick="openMenuMobile()">
             <i class="fa fa-bars"></i>
         </a>
     </div>
-
-
     <button onclick="topFunction()" id="scrolltotop" title="Go to top">Top</button>
     <div class="content">
         <div class="video-container">

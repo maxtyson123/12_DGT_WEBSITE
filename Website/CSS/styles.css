@@ -427,8 +427,8 @@
         }
         
         #tabelID {
-            width: 50%;
-            padding: 5%;
+            width: 100%;
+            padding: 20%;
             border-collapse: collapse;
             box-shadow: 0px 8px 16px 0pb rgba(0, 0, 0, 0.466);
             display: block;
@@ -463,10 +463,14 @@
         }
         
         .midtabel {
-            padding: 5%;
+            width: 50%;
             font-size: 32px;
         }
         
+        .additionalLinksCSS{
+            display: none !important;
+        }
+
         @media screen and (max-hieght: 800px) {
             .footer {
                 position: static;
@@ -475,7 +479,11 @@
         
         @media screen and (max-width: 600px) {
             .Menu a:not(:first-child),
-            .dropdown, .dropdownbutton,
+            
+            .additionalLinksCSS, .dropdown{
+                display: none;
+            }
+
             .downloadbtn {
                 display: none;
             }
@@ -495,17 +503,33 @@
                 top: 0;
                 width: 100%;
             }
+
+            #tabelID{
+                padding: 0;
+                left: 0;
+            }
+   
             .Menu.responsive .icon {
                 position: absolute;
                 right: 0;
                 top: 0;
                 z-index: 2;
             }
-            .Menu.responsive a {
+
+            .Menu.responsive{
                 float: none;
                 display: block;
                 text-align: left;
             }
+
+            .Menu.responsive a{
+                float: none;
+                display: block !important;
+                text-align: left  !important;
+            }
+
+
+          
             .Menu.responsive button {
                 width: 100%;
                 display: block;
@@ -522,7 +546,7 @@
                 width: 100%;
                 text-align: left;
             }
-            .andrioddownloadbtn, .mobileNavDrop {
+            .andrioddownloadbtn  {
                 display: block;
             }
         }
