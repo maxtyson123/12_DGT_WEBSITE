@@ -18,6 +18,9 @@ var page_name = page[0]
 if(page_name == "index"){
     page_name = "home"
 }
+else if(page_name == "qanda"){
+    page_name = "Q and A"
+}
 page_name = page_name.charAt(0).toUpperCase() + page_name.slice(1);
 var current_page_title = document.title;
 document.title = current_page_title +" | "+page_name;

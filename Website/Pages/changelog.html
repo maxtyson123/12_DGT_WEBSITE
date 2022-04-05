@@ -49,6 +49,7 @@
         </div>
 
         <div id="titeltext">
+            <div class="anim-left">
             <center>
                 <h1>Recon Ops</h1>
                 <button title="Download the launcher for windows" onclick="window.location.href='http://reconops.maxinc.cf/Download/Windows'" class="downloadbtn"><i
@@ -56,7 +57,8 @@
                 <button title="Download this game as an .apk" onclick="window.location.href='http://reconops.maxinc.cf/Download/Andriod'" class="andrioddownloadbtn"><i class="fa fa-download"></i> Download</button>
             </center>
         </div>
-        <div class="midpage-iframe">
+    </div>
+        <div class="midpage-iframe add_anim_zoom">
             <center>
                 <h2>
                     Changelog
@@ -65,7 +67,7 @@
                 <iframe class="midpage-iframe-content" src="../External/changelog.html" frameborder="0"></iframe> <!--This page is external becuase it IS be called on other sites and apps, and the css would disrupt some of those functions. Why not just have 2 pages? Well that wont be efficent-->
             </center>
         </div>
-        <div class="medpara">
+        <div class="medpara add_anim_bottom">
             <center>
                 <h2> Summary </h2>
                 <p> Here you can veiw the changelog of Recon Ops. This only accounts from version 0.6 onwards, and only display public patches and not minor hotfixes. + means Item Added, - Means Item Removed. The version system goes like this BigUpdate.Patch.bugfix/editorsave,
@@ -99,47 +101,15 @@
             </div>
         </footer>
         <script>
-            var scrolltotopbutton = document.getElementById("scrolltotopID");
-            var menu = document.getElementById("MenuID ");
-            var dropdown = document.getElementById("DropDownID ");
-            var sticky = menu.offsetTop;
-            window.onscroll = function() {
+
+            window.onscroll = function () {
                 stickyMenu()
-            };
-            window.onscroll = function() {
                 scrollFunction()
-            }
+            };
 
-            // When the user scrolls down 20px from the top of the document, show the button
+            window.addEventListener("scroll", check_anim);
+            add_anim();
 
-            function scrollFunction() {
-                if (document.body.scrolltotop > 20 || document.documentElement.scrolltotop > 20) {
-                    scrolltotopbutton.style.display = "block ";
-                } else {
-                    scrolltotopbutton.style.display = "none ";
-                }
-            }
-
-            function topFunction() {
-                document.body.scrollTop = 0;
-                document.documentElement.scrollTop = 0;
-            }
-
-
-
-
-
-            function stickyMenu() {
-                if (window.pageYOffset >= sticky) {
-                    menu.classList.add("sticky ")
-
-                    dropdown.classList.add("sticky-dropdown ")
-                } else {
-                    menu.classList.remove("sticky ");
-                    dropdown.classList.remove("sticky-dropdown ");
-
-                }
-            }
         </script>
 </body>
 

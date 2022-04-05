@@ -64,6 +64,29 @@
             padding: none;
         }
 
+        .launcher{
+            border-radius: 5px;
+            position: absolute;
+            left: 45%;
+            background: rgb(2,0,36);
+            background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 62%, rgba(0,212,255,1) 100%);
+        }
+        .launcher:hover{
+            animation: grandent 1s;
+            background: rgb(2,0,36);
+            background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 13%, rgba(0,212,255,1) 100%);
+        }
+   
+        @keyframes grandent {
+            from{
+                background: rgb(2,0,36);
+                background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 62%, rgba(0,212,255,1) 100%);
+            }
+            to{
+                background: rgb(2,0,36);
+                background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 13%, rgba(0,212,255,1) 100%);
+            }
+        }
         .Menu {
             overflow: hidden;
             background-color: rgb(0, 0, 0);
@@ -85,6 +108,7 @@
             text-decoration: none;
             font-size: 17px;
         }
+  
 
         .Menu a:hover {
             /* Hover effect */
@@ -653,6 +677,12 @@
             .column {
                 width: 100%;
                 height: auto;
+            }
+        }
+
+        @media screen and (max-width: 1000px){
+            .launcher{
+                display: none !important;
             }
         }
 
