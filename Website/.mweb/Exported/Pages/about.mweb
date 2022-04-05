@@ -1,0 +1,13 @@
+../reconops.json
+^html
+^head
+^body
+^navbar
+^breifText&exampleText
+^builetPointAndImage&BulletPoint and Images&C:\Users\98max\OneDrive\Desktop\12_DGT_WEBSITE\Website\Images\img1.png&C:\Users\98max\OneDrive\Desktop\12_DGT_WEBSITE\Website\Images\img2.png&Right 1&Right 2&Right 3&Right 4&Left 1&Left 2&Left 3&Left 4
+^download_button
+^qanda&Questions and awnsers&Question1&Awnser1&Question2&Awnser2&Question3&Awnser3&Question4&Awnser4
+^medpara&Medium Sized Paragrpah and link&A medium amount of writing here, folllowed by a list in bulletpoints&1&2&3&4&5
+^footer
+^endjs
+^end

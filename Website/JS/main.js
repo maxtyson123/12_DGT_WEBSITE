@@ -1,12 +1,42 @@
-//Varibles
+//      Varibles
+//cookie-states
 var toggle = 0;
 var doneB4 = 0;
-MainSite = "ms"
-ReconOps = "ro"
-Login = "ls"
-Multi = "gs"
-Patcher = "ps"
-BackUp = "bul"
+//site-data
+var MainSite = "ms"
+var ReconOps = "ro"
+var Login = "ls"
+var Multi = "gs"
+var Patcher = "ps"
+var BackUp = "bul"
+
+//page-name
+var path = window.location.pathname;
+var page = path.split("/").pop();
+page = page.split(".")
+var page_name = page[0]
+if(page_name == "index"){
+    page_name = "home"
+}
+page_name = page_name.charAt(0).toUpperCase() + page_name.slice(1);
+var current_page_title = document.title;
+document.title = current_page_title +" | "+page_name;
+
+
+//scroll to top and sticky
+var scrolltotop = document.getElementById("scrolltotop");
+var menu = document.getElementById("MenuID ");
+var dropdown = document.getElementById("DropDownID ");
+var sticky = menu.offsetTop;
+
+//scroll function
+window.onscroll = function () { //when the page scrolls do this, has to be inpage becuase external pages cant detect scrolling
+    stickyMenu()
+    scrollFunction()
+};
+
+window.addEventListener("scroll", check_anim);
+add_anim();
 
 function openMenuMobile() { // this is run when the user clicks on the nav button on mobile
     var menuResponsive = document.getElementById("MenuID");
@@ -94,108 +124,92 @@ function getCookie(cookieName) { //gets the cookie
   }
 
 
+  function check_site(id, site_url,site_name){
+    var buttontochange = document.getElementById(id)
+    var url = site_url //sites url
+    var img = new Image();
+    img.src = url;
+    img.onload = function() {
+        setCookie(id, 1, 1);
+        buttontochange.className = "sercvieUp";
+        alert(site_name + ' IS UP AND RUNNING')
+    }
+    img.onerror = function() {
+        setCookie(id, 2, 1);
+        alert(site_name + ' IS DOWN AND NOT-RUNNING')
+        buttontochange.className = "serviceDown";
+    }
+}
 
 function Checkmaxinc(){
-    var buttontochange = document.getElementById("ms") //get the button
-    var url = 'http://maxinc.cf/logo.png'; //sites url
-    var img = new Image();
-    img.src = url;
-    img.onload = function() {//if the image loads
-        buttontochange.className = "sercvieUp"; //cange it to active
-        setCookie("ms", 1, 1); //set the cookie so it can be loaded and not have to be rerun
-        alert('MAIN SITE IS UP AND RUNNING') // alert the user
-        
-    }
-    img.onerror = function() {
-        setCookie("ms", 1, 1);
-    alert('MAIN SITE IS DOWN AND NOT-RUNNING') // if site is down for a reason then it will be added like this  alert('MAIN SITE IS DOWN AND NOT-RUNNING BECAUSE OF DDOS')
-    buttontochange.className = "serviceDown";
-    
-    }
+    check_site("ms",'http://maxinc.cf/logo.png',"MAIN")
 }
-
 function Checkro(){
-    var buttontochange = document.getElementById("ro")
-    var url = 'http://reconops.maxinc.cf/Images/ico.ico';
-    var img = new Image();
-    img.src = url;
-    img.onload = function() {
-        setCookie("ro", 1, 1);
-        buttontochange.className = "sercvieUp";
-        alert('RECON OPS SITE IS UP AND RUNNING')
-    }
-    img.onerror = function() {
-        setCookie("ro", 2, 1);
-    alert('RECON OPS SITE IS DOWN AND NOT-RUNNING')
-    buttontochange.className = "serviceDown";
-    }
+    check_site("ro",'http://reconops.maxinc.cf/Images/ico.ico',"RECON OPS SITE")
 }
-
 function Checkls(){
-    var buttontochange = document.getElementById("ls")
-    var url = 'http://www.maxserver.ml/ReconOpsLogin/ico.ico';
-    var img = new Image();
-    img.src = url;
-    img.onload = function() {
-        setCookie("ls", 1, 1);
-        buttontochange.className = "sercvieUp";
-        alert('LOGIN SERVICE IS UP AND RUNNING')
-    }
-    img.onerror = function() {
-        setCookie("ls", 2, 1);
-    alert('LOGIN SERVICE IS DOWN AND NOT-RUNNING')
-    buttontochange.className = "serviceDown";
-    }
+    check_site("ls",'http://www.maxserver.ml/ReconOpsLogin/ico.ico',"LOGIN SITE")
 }
 function Checkpun(){
-    var buttontochange = document.getElementById("gs")
-    var url = 'https://www.photonengine.com/Content/img/nav-logo-photon.png';
-    var img = new Image();
-    img.src = url;
-    img.onload = function() {
-        setCookie("gs", 1, 1);
-        buttontochange.className = "sercvieUp";
-        alert('MULTIPLAYR SERVICES ARE UP AND RUNNING')
-    }
-    img.onerror = function() {
-        setCookie("gs", 2, 1);
-    alert('MULTIPLAYER SERVICES ARE DOWN AND NOT-RUNNING')
-    buttontochange.className = "serviceDown";
-    }
+    check_site("gs",'https://www.photonengine.com/Content/img/nav-logo-photon.png',"MULTIPLAYR SERVICE")
+   
 }
 function Checkpatch(){
-    var buttontochange = document.getElementById("ps")
-    var url = 'https://patchkit.net/img/patchkit_logo_black.png';
-    var img = new Image();
-    img.src = url;
-    img.onload = function() {
-        setCookie("ps", 1, 1);
-        buttontochange.className = "sercvieUp";
-        alert('LAUNCHER & DOWNLOAD  SERVICES ARE IS UP AND RUNNING')
-    }
-    img.onerror = function() {
-        setCookie("ps", 2, 1);
-    alert('LAUNCHER & DOWNLOAD  SERVICES ARE DOWN AND NOT-RUNNING')
-    buttontochange.className = "serviceDown";
-    }
+    check_site("ps",'https://patchkit.net/img/patchkit_logo_black.png',"LAUNCHER & DOWNLOAD SERVICE")
 }
-
 function Checkbl(){
-    var buttontochange = document.getElementById("bul")
-    var url = 'http://mfpsatmaxinc.mygamesonline.org/download.png';
-    var img = new Image();
-    img.src = url;
-    img.onload = function() {
-        setCookie("bul", 1, 1);
-        buttontochange.className = "sercvieUp";
-        alert('BACK UP LOGIN SERVICE IS UP AND RUNNING')
-    }
-    img.onerror = function() {
-        setCookie("bul", 2, 1);
-    alert('BACK UP LOGIN SERVICE IS DOWN AND NOT-RUNNING')
-    buttontochange.className = "serviceDown";
+    check_site("bul",'http://mfpsatmaxinc.mygamesonline.org/download.png',"BACK UP LOGIN SERVICE")
+
+}
+
+function check_anim() {
+    run_anim("bottom")
+    run_anim("left")
+    run_anim("right")
+    run_anim("zoom")
+    run_anim("top")
+  }
+
+function run_anim(type){
+    var add_anims = document.querySelectorAll(".add_anim_"+type);
+    for (var i = 0; i < add_anims.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = add_anims[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+      if (elementTop < windowHeight - elementVisible) {
+        add_anims[i].classList.add("anim-"+type);
+        add_anims[i].classList.remove("hidden");
+      } else {
+        add_anims[i].classList.remove("anim-"+type);
+        add_anims[i].classList.add("hidden");
+      }
     }
 }
 
+  function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          scrolltotop.style.display = "block ";
+      } else {
+          scrolltotop.style.display = "none ";
+      }
+  }
+
+  // go to the top off the page when button clicked
+  function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+  }
 
 
+  //make the navbar sticky when the user scrolls
+  function stickyMenu() {
+      if (window.pageYOffset >= sticky) {
+          menu.classList.add("sticky ")
+
+          dropdown.classList.add("sticky-dropdown ")
+      } else {
+          menu.classList.remove("sticky ");
+          dropdown.classList.remove("sticky-dropdown ");
+
+      }
+  }

@@ -13,27 +13,32 @@
 
 <body>
 
-    <div class="Menu sticky" id="MenuID">
+    <div  class="Menu sticky" id="MenuID" >
 
-        <a href="../index.html">Home</a>
+        <a href="../index.html" >Home</a>
         <a href="../Pages/about.html">About</a>
         <a class="windown" href="http://reconops.maxinc.cf/Download/Windows/">Download</a>
-        <div class="dropdown">
-            <button class=“active” class=“dropdownbutton”> Changes
-                <i class=" fa fa-caret-down "></i>
+                <a class="additionalLinksCSS" href="../Pages/changelog.html">Changelog</a>
+                <a class="additionalLinksCSSActive" href="../Pages/upcoming.html">Upcoming Features</a>
+                <a class="additionalLinksCSS" href="../Pages/notices.html">Notice</a>
+                <a class="additionalLinksCSS" href="../Pages/status.html">Status</a>
+        <div id="mobileDD" class="dropdown">
+            <button title="Current Page" class="active" class="dropdownbutton">Changes
+                <i class="fa fa-caret-down"></i>
             </button>
-            <div id="DropDownID " class="dropdown-content sticky-dropdown ">
+            <div id="DropDownID" class="dropdown-content sticky-dropdown">
                 <a>Please Choose A Page</a>
-                <a href="../Pages/changelog.html ">Changelog</a>
-                <a href="../Pages/upcoming.html" title="Current Page" class="active">Upcoming Features</a>
-                <a href=" ../Pages/notices.html ">Notice</a>
-                <a href="../Pages/status.html ">Status</a>
+                <a href="../Pages/changelog.html">Changelog</a>
+                <a title="Current Page" class="active" href="../Pages/upcoming.html">Upcoming Features</a>
+                <a href="../Pages/notices.html">Notice</a>
+                <a href="../Pages/status.html">Status</a>
             </div>
         </div>
-        <a href="../Pages/qanda.html ">Q&A</a>
+        <a href="../Pages/qanda.html">Q&A</a>
         <button onclick="window.location.href='http://maxserver.ml/ReconOpsLogin/login.php'" title="Go to login site" class="loginbutton">Login <i class="fa fa-user"></i></button>
-        <a title="Open Menu " href="javascript:void(0); " class="icon " onclick="openMenuMobile() ">
-            <i class="fa fa-bars "></i>
+
+        <a title="Open Menu" href="javascript:void(0);" class="icon" onclick="openMenuMobile()">
+            <i class="fa fa-bars"></i>
         </a>
     </div>
 
@@ -44,7 +49,7 @@
             <iframe class="hero-iframe " src="https://www.youtube.com/embed/KAzCsr4Ew70?controls=0&autoplay=1&mute=1&loop=1&playlist=KAzCsr4Ew70 "></iframe>
         </div>
 
-        <div id="titeltext">
+        <div id="titeltext" class="slide-from-top">
             <center>
                 <h1>Recon Ops</h1>
                 <button title="Download the launcher for windows " onclick="window.location.href='http://reconops.maxinc.cf/Download/Windows' " class="downloadbtn "><i
@@ -57,10 +62,9 @@
         <br>
         <center>
         
-        <div  style="text-align: center;  overflow-x: auto !important;
-        overflow: scroll !important;" class="midtable"><!-- RESPONSIVE TABLE IN THE WAY THAT WHEN IT GETS TO SMALL A SCROLL BAR POPS UP AND YOU CAN SCROLL ACROSS -->
+            <div class="slide-from-left"  style="overflow: scroll;" ><!-- RESPONSIVE TABLE IN THE WAY THAT WHEN IT GETS TO SMALL A SCROLL BAR POPS UP AND YOU CAN SCROLL ACROSS -->
             
-                <table style="width: 100%;" id="tabelID">
+                <table id="tabelID">
                     <tr>
                         <th>ID</th>
                         <th>FEATURE</th>
