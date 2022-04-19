@@ -7,33 +7,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../CSS/styles.css">
     <link rel="icon" href="../Images/ico.ico">
-    <script src="../JS/main.js">
-    </script>
+    <script src="../JS/main.js"></script>
 </head>
 
 <body>
 
-    <div class="Menu sticky" id="MenuID">
+    <div  class="Menu sticky" id="MenuID" >
 
-        <a href="../index.html">Home</a>
+        <a href="../index.html" >Home</a>
         <a href="../Pages/about.html">About</a>
         <a class="windown" href="http://reconops.maxinc.cf/Download/Windows/">Download</a>
-        <div class="dropdown">
-            <button class=“active” class=“dropdownbutton”> Changes
-                <i class=" fa fa-caret-down "></i>
+                <a class="additionalLinksCSS" href="../Pages/changelog.html">Changelog</a>
+                <a class="additionalLinksCSSActive" href="../Pages/upcoming.html">Upcoming Features</a>
+                <a class="additionalLinksCSS" href="../Pages/notices.html">Notice</a>
+                <a class="additionalLinksCSS" href="../Pages/status.html">Status</a>
+        <div id="mobileDD" class="dropdown">
+            <button title="Current Page" class="active" class="dropdownbutton">Changes
+                <i class="fa fa-caret-down"></i>
             </button>
-            <div id="DropDownID " class="dropdown-content sticky-dropdown ">
+            <div id="DropDownID" class="dropdown-content sticky-dropdown">
                 <a>Please Choose A Page</a>
-                <a href="../Pages/changelog.html ">Changelog</a>
-                <a href="../Pages/upcoming.html" title="Current Page" class="active">Upcoming Features</a>
-                <a href=" ../Pages/notices.html ">Notice</a>
-                <a href="../Pages/status.html ">Status</a>
+                <a href="../Pages/changelog.html">Changelog</a>
+                <a title="Current Page" class="active" href="../Pages/upcoming.html">Upcoming Features</a>
+                <a href="../Pages/notices.html">Notice</a>
+                <a href="../Pages/status.html">Status</a>
             </div>
         </div>
-        <a href="../Pages/qanda.html ">Q&A</a>
+        <a href="../Pages/qanda.html">Q&A</a>
         <button onclick="window.location.href='http://maxserver.ml/ReconOpsLogin/login.php'" title="Go to login site" class="loginbutton">Login <i class="fa fa-user"></i></button>
-        <a title="Open Menu " href="javascript:void(0); " class="icon " onclick="openMenuMobile() ">
-            <i class="fa fa-bars "></i>
+
+        <a title="Open Menu" href="javascript:void(0);" class="icon" onclick="openMenuMobile()">
+            <i class="fa fa-bars"></i>
         </a>
     </div>
 
@@ -46,10 +50,12 @@
 
         <div id="titeltext">
             <center>
+                <div class="anim-left">
                 <h1>Recon Ops</h1>
                 <button title="Download the launcher for windows " onclick="window.location.href='http://reconops.maxinc.cf/Download/Windows' " class="downloadbtn "><i
                         class="fa fa-download "></i> Download</button>
                 <button title="Download this game as an .apk " onclick="window.location.href='http://reconops.maxinc.cf/Download/Andriod' " class="andrioddownloadbtn "><i class="fa fa-download "></i> Download</button>
+            </div>
             </center>
         </div>
         <br>
@@ -57,14 +63,14 @@
         <br>
         <center>
         
-        <div  style="text-align: center;  overflow-x: auto !important;
-        overflow: scroll !important;" class="midtable">
-            
-                <table style="width: 100%;" id="tabelID">
+            <div class="table-container add_anim_zoom"><!-- RESPONSIVE TABLE IN THE WAY THAT WHEN IT GETS TO SMALL A SCROLL BAR POPS UP AND YOU CAN SCROLL ACROSS -->
+                <h2> Upcoming Features </h2>
+                <table id="tabelID">
+                    
                     <tr>
                         <th>ID</th>
                         <th>FEATURE</th>
-                        <th>STATUS</th>
+                        <th id="status-col">STATUS</th>
                         <th>EXPECTED REALSE VERISION</th>
                         <th>DEATAILS</th>
                     </tr>
@@ -119,10 +125,10 @@
         <br>
         <center> <img src="../Images/img19.png" width="80% " height="auto ">
         </center>
-        <div class="medpara">
+        <div class="medpara add_anim_top">
             <center>
                 <h2>Up coming Features</h2>
-                <p> In the tabel above you can a have a look over features that MAY come to the game, the fact that they are listed here means that they are LIKELY to come to Recon Ops but isnt certain. Below are states [Refer to status collum in table above]
+                <p> In the tabel above you can a have a look over features that MAY come to the game, the fact that they are listed here means that they are LIKELY to come to Recon Ops but isnt certain. Below are states [Refer to <a href="#status-col"> status collum </a> in table above]
                     are listed, hover over them to reveal what they mean more indepth. </p>
                 <ul style="padding: none; ">
                     <li title="Feature was confirmed but has been temporarly paused">Put on hold</li>
@@ -140,7 +146,7 @@
             </center>
         </div>
         <center>
-            <img src="../Images/img10.png" width="80% " height="auto ">
+            <img class="add_anim_zoom" src="../Images/img10.png" width="80% " height="auto ">
         </center>
         <br>
         <br>
@@ -170,46 +176,17 @@
             </div>
         </div>
     </footer>
-        <script>
-            var scrolltotop = document.getElementById(" scrolltotop ");
-            var menu = document.getElementById("MenuID ");
-            var dropdown = document.getElementById("DropDownID ");
-            var sticky = menu.offsetTop;
-            window.onscroll = function() {
-                stickyMenu()
-                scrollFunction()
-            };
+    <script>
 
+        window.onscroll = function () {
+            stickyMenu()
+            scrollFunction()
+        };
 
-            // When the user scrolls down 20px from the top of the document, show the button
+        window.addEventListener("scroll", check_anim);
+        check_anim();
 
-            function scrollFunction() {
-                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                    scrolltotop.style.display = "block ";
-                } else {
-                    scrolltotop.style.display = "none ";
-                }
-            }
-
-            function topFunction() {
-                document.body.scrollTop = 0;
-                document.documentElement.scrollTop = 0;
-            }
-
-
-
-            function stickyMenu() {
-                if (window.pageYOffset >= sticky) {
-                    menu.classList.add("sticky ")
-
-                    dropdown.classList.add("sticky-dropdown ")
-                } else {
-                    menu.classList.remove("sticky ");
-                    dropdown.classList.remove("sticky-dropdown ");
-
-                }
-            }
-        </script>
+    </script>
 </body>
 
 </html>

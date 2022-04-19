@@ -11,18 +11,19 @@
     </script>
 </head>
 
-<body onload="checkServicesOnload()">
+<body onload="checkServicesOnload()"> <!-- Run the ping function when the page loads. Note this uses cookies to check if the page has run the check before, this is so that the load times are cut back and that the use doesnt have to go thru all those alerts every load rather once a day--->
+ <!--READ THIS: COOKIES CANT BE STORED LOCALLY, IT WILL WORK IF YOU ARE USING LIVE SERVER ON VS CODE OR VISTING THE PAGE AT RECONOPS.MAXINC.CF -->
     <div class="Menu sticky" id="MenuID">
 
-        <a href="../index.html" title="Current Page" class="active">Home</a>
+        <a href="../index.html" >Home</a>
         <a href="../Pages/about.html">About</a>
         <a class="windown" href="http://reconops.maxinc.cf/Download/Windows/">Download</a>
         <a class="additionalLinksCSS" href="../Pages/changelog.html">Changelog</a>
                 <a class="additionalLinksCSS" href="../Pages/upcoming.html">Upcoming Features</a>
                 <a class="additionalLinksCSS" href="../Pages/notices.html">Notice</a>
-                <a class="additionalLinksCSS" href="../Pages/status.html">Status</a>
+                <a class="additionalLinksCSSActive" href="../Pages/status.html">Status</a>
         <div id="mobileDD" class="dropdown">
-            <button class="dropdownbutton">Changes
+            <button title="Current Page" class="active" class="dropdownbutton">Changes
                 <i class="fa fa-caret-down"></i>
             </button>
             <div id="DropDownID" class="dropdown-content sticky-dropdown">
@@ -30,7 +31,7 @@
                 <a href="../Pages/changelog.html">Changelog</a>
                 <a href="../Pages/upcoming.html">Upcoming Features</a>
                 <a href="../Pages/notices.html">Notice</a>
-                <a href="../Pages/status.html">Status</a>
+                <a title="Current Page" class="active" href="../Pages/status.html">Status</a>
             </div>
         </div>
         <a href="../Pages/qanda.html">Q&A</a>
@@ -61,12 +62,12 @@
                 </h2>
                 <center>
                     <div class="breiftext">
-                        <p>Green means site is up and Red means site is down, Orange means under matnence. You can also click on desired service to force a recheck.</p>
+                        <p>Green means site is up and Red means site is down, Orange means under matnence <!--Orange has to be mannually set-->. You can also click on desired service to force a recheck.</p>
                         </p>
                         
         
                         
-                        <button id="ms" class="service-check" title="https://maxinc.cf" onclick="Checkmaxinc()"> Main Site </button>
+                        <button id="ms" class="service-check" title="https://maxinc.cf" onclick="Checkmaxinc()"> Main Site </button> <!--[ id="ms"] id for the js to change the css of. [onclick="Checkmaxinc()"] if button is clicked run the function mannully  -->
                         <button id="ro" class="service-check" title="https://reconops.maxinc.cf" onclick="Checkro()"> Recon Ops Site </button>
                         <button id="ls" class="service-check" title="https://maxserver.ml/" onclick="Checkls()"> Login Servers </button>
                         <button id="gs" class="service-check" title="https://maxinc.cf" onclick="Checkpun()"> Game Servers </button>

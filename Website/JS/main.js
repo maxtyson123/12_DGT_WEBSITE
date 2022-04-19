@@ -4,7 +4,7 @@ var toggle = 0;
 var doneB4 = 0;
 //site-data
 var MainSite = "ms"
-var ReconOps = "ro"
+var sunnyland = "ro"
 var Login = "ls"
 var Multi = "gs"
 var Patcher = "ps"
@@ -24,7 +24,12 @@ else if(page_name == "qanda"){
 page_name = page_name.charAt(0).toUpperCase() + page_name.slice(1);
 var current_page_title = document.title;
 document.title = current_page_title +" | "+page_name;
-
+function checkDownloadedBefore(){
+    let x = getCookie("downloaded-check"); //get the cookie stored 
+    if (x != 1){ 
+    // Display question check
+    }
+}
 
 //scroll to top and sticky
 var scrolltotop = document.getElementById("scrolltotop");
@@ -39,7 +44,7 @@ window.onscroll = function () { //when the page scrolls do this, has to be inpag
 };
 
 window.addEventListener("scroll", check_anim);
-add_anim();
+check_anim();
 
 function openMenuMobile() { // this is run when the user clicks on the nav button on mobile
     var menuResponsive = document.getElementById("MenuID");
@@ -75,7 +80,7 @@ function checkServicesOnload(){
 
         
         setStatus(MainSite)
-        setStatus(ReconOps)
+        setStatus(sunnyland)
         setStatus(Login)
         setStatus(Multi)
         setStatus(Patcher)
@@ -135,7 +140,7 @@ function getCookie(cookieName) { //gets the cookie
     img.onload = function() {
         setCookie(id, 1, 1);
         buttontochange.className = "sercvieUp";
-        alert(site_name + ' IS UP AND RUNNING')
+       // alert(site_name + ' IS UP AND RUNNING')
     }
     img.onerror = function() {
         setCookie(id, 2, 1);
@@ -148,10 +153,10 @@ function Checkmaxinc(){
     check_site("ms",'http://maxinc.cf/logo.png',"MAIN")
 }
 function Checkro(){
-    check_site("ro",'http://reconops.maxinc.cf/Images/ico.ico',"RECON OPS SITE")
+    check_site("ro",'http://sunnyland.maxinc.cf/Images/ico.ico',"SUNNY LAND SITE")
 }
 function Checkls(){
-    check_site("ls",'http://www.maxserver.ml/ReconOpsLogin/ico.ico',"LOGIN SITE")
+    check_site("ls",'http://www.maxserver.ml/SunnyLandLogin/ico.ico',"LOGIN SITE")
 }
 function Checkpun(){
     check_site("gs",'https://www.photonengine.com/Content/img/nav-logo-photon.png',"MULTIPLAYR SERVICE")
@@ -161,8 +166,8 @@ function Checkpatch(){
     check_site("ps",'https://patchkit.net/img/patchkit_logo_black.png',"LAUNCHER & DOWNLOAD SERVICE")
 }
 function Checkbl(){
-    check_site("bul",'http://mfpsatmaxinc.mygamesonline.org/download.png',"BACK UP LOGIN SERVICE")
-
+    //check_site("bul",'http://mfpsatmaxinc.mygamesonline.org/download.png',"BACK UP LOGIN SERVICE") 
+    console.log("Back Up Login not active");
 }
 
 function check_anim() {
@@ -174,17 +179,17 @@ function check_anim() {
   }
 
 function run_anim(type){
-    var add_anims = document.querySelectorAll(".add_anim_"+type);
-    for (var i = 0; i < add_anims.length; i++) {
+    var check_anims = document.querySelectorAll(".check_anim_"+type);
+    for (var i = 0; i < check_anims.length; i++) {
       var windowHeight = window.innerHeight;
-      var elementTop = add_anims[i].getBoundingClientRect().top;
+      var elementTop = check_anims[i].getBoundingClientRect().top;
       var elementVisible = 150;
       if (elementTop < windowHeight - elementVisible) {
-        add_anims[i].classList.add("anim-"+type);
-        add_anims[i].classList.remove("hidden");
+        check_anims[i].classList.add("anim-"+type);
+        check_anims[i].classList.remove("hidden");
       } else {
-        add_anims[i].classList.remove("anim-"+type);
-        add_anims[i].classList.add("hidden");
+        check_anims[i].classList.remove("anim-"+type);
+        check_anims[i].classList.add("hidden");
       }
     }
 }
@@ -207,12 +212,12 @@ function run_anim(type){
   //make the navbar sticky when the user scrolls
   function stickyMenu() {
       if (window.pageYOffset >= sticky) {
-          menu.classList.add("sticky ")
+          menu.classList.add("sticky")
 
-          dropdown.classList.add("sticky-dropdown ")
+          dropdown.classList.add("sticky-dropdown")
       } else {
           menu.classList.remove("sticky ");
-          dropdown.classList.remove("sticky-dropdown ");
+          dropdown.classList.remove("sticky-dropdown");
 
       }
   }
