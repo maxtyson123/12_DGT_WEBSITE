@@ -220,6 +220,27 @@ li {
     display: block;
 }
 
+.loader {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.loader-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
 .sticky {
     /* Class for any thing that wants to be sticky */
     position: fixed;
@@ -602,6 +623,34 @@ th {
 .anim-left {
     position: relative;
     animation: slideleft 0.4s
+}
+
+.left_to_right {
+    bottom: 3%;
+    position: absolute;
+    animation: linear infinite;
+    animation-name: left_to_right;
+    animation-duration: 5s;
+}
+
+@keyframes left_to_right {
+    0% {
+        left: 32.5%;
+    }
+    48% {
+        -webkit-transform: rotateY(0deg);
+    }
+    50% {
+        left: 65%;
+        -webkit-transform: rotateY(180deg);
+    }
+    98% {
+        -webkit-transform: rotateY(180deg);
+    }
+    100% {
+        left: 32.5%;
+        -webkit-transform: rotateY(0deg);
+    }
 }
 
 @keyframes slideleft {

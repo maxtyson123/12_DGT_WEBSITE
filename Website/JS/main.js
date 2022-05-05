@@ -26,9 +26,8 @@ page_name = page_name.charAt(0).toUpperCase() + page_name.slice(1);
 var current_page_title = document.title;
 document.title = current_page_title + " | " + page_name;
 
-function playedGame() {
-    setCookie("downloaded-check", 1, 999);
-}
+
+
 
 function checkDownloadedBefore() {
     let x = getCookie("downloaded-check"); //get the cookie stored 
@@ -39,9 +38,18 @@ function checkDownloadedBefore() {
     }
 }
 
-function resetdownloadcheck() {
-    setCookie("downloaded-check", 0, 999);
+function ready() {
+    document.getElementById("loader").style.width = "100%";
 }
+
+
+window.onload = function() { // can also use window.addEventListener('load', (event) => {
+    document.getElementById("loader").style.width = "0%";
+    checkDownloadedBefore()
+};
+
+document.addEventListener("DOMContentLoaded", ready);
+
 
 function hideClasses(className) {
     var buttons = document.querySelectorAll("." + className);
