@@ -17,7 +17,7 @@
 
         <a href="../index.html">Home</a>
         <a href="../Pages/about.html">About</a>
-        <a class="windown" href="http://sunnyland.maxinc.cf/Download/Windows/">Download</a>
+        <a class="windown download" href="http://sunnyland.maxinc.cf/Download/Windows/">Download</a>
         <a class="additionalLinksCSSActive" href="../Pages/changelog.html">Changelog</a>
         <a class="additionalLinksCSS" href="../Pages/upcoming.html">Upcoming Features</a>
         <a class="additionalLinksCSS" href="../Pages/notices.html">Notice</a>
@@ -37,7 +37,7 @@
         <a href="../Pages/qanda.html">Q&A</a>
         <button onclick="window.location.href='http://maxserver.ml/SunnyLandLogin/login.php'" title="Go to login site"
             class="loginbutton">Login <i class="fa fa-user"></i></button>
-        <a class="launcher" href="SunnyLand://Launch(Launcher)?FromWebsite"><i class="fa fa-gamepad"></i> Launch
+        <a class="launcher launch" href="SunnyLand://Launch(Launcher)?FromWebsite"><i class="fa fa-gamepad"></i> Launch
             Game</a>
         <a title="Open Menu" href="javascript:void(0);" class="icon" onclick="openMenuMobile()">
             <i class="fa fa-bars"></i>
@@ -56,13 +56,11 @@
         <div id="titeltext" class="slide-from-top">
             <center>
                 <h1>SunnyLand</h1>
-                <button title="Download the launcher for windows "
-                    onclick="window.location.href='http://sunnyland.maxinc.cf/Download/Windows' "
-                    class="downloadbtn "><i class="fa fa-download "></i> Download</button>
-                <button title="Download this game as an .apk "
-                    onclick="window.location.href='http://sunnyland.maxinc.cf/Download/Andriod' "
-                    class="andrioddownloadbtn "><i class="fa fa-download "></i> Download</button>
-            </center>
+                 <button title="Download the launcher for windows" onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Windows'" class="downloadbtn download"><i class="fa fa-download"></i> Download</button>
+                    <!-- shown on displays small than or eqaul to 600px (assumes this this a tablet or phone sized display) -->
+                    <button title="Download this game as an .apk" onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Andriod'" class="andrioddownloadbtn download"><i class="fa fa-download"></i> Download</button>
+                    <button title="Download this game as an .apk" onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Andriod'" class="launchbtn launch"><i class="fa fa-gamepad"></i> Play Now</button>
+  </center>
         </div>
         <br>
         <br>
@@ -81,10 +79,7 @@
             <div class="medpara add_anim_bottom">
                 <center>
                     <h2> Summary </h2>
-                    <p> Here you can veiw the changelog of Sunny Land. This only accounts from version 0.6 onwards, and
-                        only display public patches and not minor hotfixes. + means Item Added, - Means Item Removed.
-                        The version system goes like this BigUpdate.Patch.bugfix/editorsave,
-                        for example 6.2.1</p>
+                    <p> Here you can veiw the changelog of Sunny Land, this changelog can also be veiwed in the launcher. Key: {N}: New feature, {F}: fixed feature, {R}: Removed feature. </p>
                 </center>
             </div>
             <footer>
@@ -109,17 +104,10 @@
                         </li>
                     </ul>
                     <div class="footer-download">
+ <button title="Download the launcher for windows" onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Windows '" class="downloadbtn download"><i class="fa fa-download"></i> Download </button>
+                <button title="Download this game as an .apk" onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Andriod '" class="andrioddownloadbtn download"><i class="fa fa-download"></i> Download</button> <br> <br> </div>
+            <button title="Launch the game" onclick="window.location.href='Sunnyland://Launch(Launcher)?FromWebsite'" class="launchbtn launch"><i class=" fa fa-gamepad "></i> Play Now</button>
 
-                        <button title="Download the launcher for windows"
-                            onclick="window.location.href='http://sunnyland.maxinc.cf/Download/Windows'"
-                            class="downloadbtn">
-                            <iclass="fa fa-download"></i> Download
-                        </button>
-                        <button title="Download this game as an .apk"
-                            onclick="window.location.href='http://sunnyland.maxinc.cf/Download/Andriod'"
-                            class="andrioddownloadbtn"><i class="fa fa-download"></i> Download</button>
-                        <br>
-                        <br>
                     </div>
                 </div>
             </footer>

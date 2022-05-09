@@ -12,12 +12,20 @@
 </head>
 
 <body>
-
+     <!--Make sure this is loaded first-->
+      <div id="loader" class="loader">
+        <div class="loader-content">
+            <h1>LOADING...</h1>
+            <img width="60" height="60" class="left_to_right" src="Images/PlayerOnPlatform.png">
+            <img width="30%" height="20px" src="Images/platform.png">
+        </div>
+    </div>
     <div class="Menu sticky" id="MenuID">
         <div class="anim-top">
             <a href="../index.html">Home</a>
             <a href="../Pages/about.html" title="Current Page" class="active">About</a>
-            <a class="windown" href="http://sunnyland.maxinc.cf/Download/Windows/">Download</a>
+            <a class="windown download" href="http://sunnyland.maxinc.cf/Download/Windows/">Download</a>
+            <a class="launcher launch" href="Sunnyland://Launch(Launcher)?FromWebsite"><i class="fa fa-gamepad"></i> Launch Game</a>
             <a class="additionalLinksCSS" href="../Pages/changelog.html">Changelog</a>
             <a class="additionalLinksCSS" href="../Pages/upcoming.html">Upcoming Features</a>
             <a class="additionalLinksCSS" href="../Pages/notices.html">Notice</a>
@@ -54,13 +62,10 @@
             <center>
                 <div class="anim-left">
                     <h1>Sunny Land</h1>
-                    <button title="Download the launcher for windows"
-                        onclick="window.location.href='http://sunnyland.maxinc.cf/Download/Windows'"
-                        class="downloadbtn"><i class="fa fa-download"></i> Download</button>
-                    <button title="Download this game as an .apk"
-                        onclick="window.location.href='http://sunnyland.maxinc.cf/Download/Andriod'"
-                        class="andrioddownloadbtn"><i class="fa fa-download"></i> Download</button>
-                </div>
+                    <button title="Download the launcher for windows" onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Windows'" class="downloadbtn download"><i class="fa fa-download"></i> Download</button>
+                <button title="Download this game as an .apk" onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Andriod'" class="andrioddownloadbtn download"><i class="fa fa-download"></i> Download</button>
+                <button title="Launch the game" onclick="window.location.href='Sunnyland://Launch(Launcher)?FromWebsite'" class="launchbtn launch"><i class=" fa fa-gamepad "></i> Play Now</button>
+              </div>
             </center>
         </div>
         <center>
@@ -68,14 +73,10 @@
                 <p>Sunnyland is a peaceful 2d platformer. Play as a fox and explore multiple levels, collect gems, berries and dodge enimies like frogs and eagles. Join your friends in multiplayer races or speedrun through the main levels against the clock.</p>
                 <div class="download_button">
                     <center>
-                        <button title="Download the launcher for windows"
-                            onclick="window.location.href='http://sunnyland.maxinc.cf/Download/Windows'"
-                            class="downloadbtn"><i class="fa fa-download"></i> Download</button>
-                        <button title="Download this game as an .apk"
-                            onclick="window.location.href='http://sunnyland.maxinc.cf/Download/Andriod'"
-                            class="andrioddownloadbtn"><i class="fa fa-download"></i> Download</button>
-                    </center>
-                </div>
+                        <button title="Download the launcher for windows" onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Windows'" class="downloadbtn download"><i class="fa fa-download"></i> Download</button>
+                        <button title="Download this game as an .apk" onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Andriod'" class="andrioddownloadbtn download"><i class="fa fa-download"></i> Download</button>
+                        <button title="Launch the game" onclick="window.location.href='Sunnyland://Launch(Launcher)?FromWebsite'" class="launchbtn launch"><i class=" fa fa-gamepad "></i> Play Now</button>
+                     </div>
             </div>
             <center>
                 <img class="add_anim_zoom" src="../Images/img5.png" width="80%" height="auto">
@@ -84,7 +85,7 @@
                 <center>
                     <h2>SunnyLand's Backstory</h2>
                     <p> SunnyLand began all the way back in mid 2020 as a first trail of game development in unity, following this tutorial LINK. The very first version of SunnyLand
-                        (back then named Foxy: A platformer) can be found <a href="OLD LINK">Here</a>. After moving on to other types of games and game engines I decied to come back to the game and completly re do it. It went from a simple one level game to what it is now.
+                        (back then named Foxy: A platformer) can be found <a href="http://sunnyland.maxinc.cf/Download/Old/">Here</a>. After moving on to other types of games and game engines I decied to come back to the game and completly re do it. It went from a simple one level game to what it is now.
                     </p>
                 </center>
             </div>
@@ -131,30 +132,13 @@
                     </ul>
                     <div class="footer-download">
 
-                        <button title="Download the launcher for windows"
-                            onclick="window.location.href='http://reconops.maxinc.cf/Download/Windows'"
-                            class="downloadbtn">
-                            <iclass="fa fa-download"></i> Download
-                        </button>
-                        <button title="Download this game as an .apk"
-                            onclick="window.location.href='http://reconops.maxinc.cf/Download/Andriod'"
-                            class="andrioddownloadbtn"><i class="fa fa-download"></i> Download</button>
-                        <br>
-                        <br>
+                        <button title="Download the launcher for windows" onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Windows '" class="downloadbtn download"><i class="fa fa-download"></i> Download </button>
+                <button title="Download this game as an .apk" onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Andriod '" class="andrioddownloadbtn download"><i class="fa fa-download"></i> Download</button> <br> <br> </div>
+            <button title="Launch the game" onclick="window.location.href='Sunnyland://Launch(Launcher)?FromWebsite'" class="launchbtn launch"><i class=" fa fa-gamepad "></i> Play Now</button>
+
                     </div>
                 </div>
             </footer>
-            <script>
-
-                window.onscroll = function () {
-                    stickyMenu()
-                    scrollFunction()
-                };
-
-                window.addEventListener("scroll", check_anim);
-                check_anim();
-
-            </script>
 </body>
 
 </html>

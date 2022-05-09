@@ -11,23 +11,30 @@ var Login = "ls"
 var Multi = "gs"
 var Patcher = "ps"
 var BackUp = "bul"
+//scroll to top and sticky
+var scrolltotop = document.getElementById("scrolltotop");
+var menu = document.getElementById("MenuID");
+var dropdown = document.getElementById("DropDownID ");
+//var sticky = menu.offsetTop;
 
-//page-name
-var path = window.location.pathname;
-var page = path.split("/").pop();
-page = page.split(".")
-var page_name = page[0]
-if (page_name == "index") {
-    page_name = "home"
-} else if (page_name == "qanda") {
-    page_name = "Q and A"
+function updatePageName(){
+
+    //page-name
+    var path = window.location.pathname;
+    var page = path.split("/").pop();
+    page = page.split(".")
+    var page_name = page[0]
+    if (page_name == "index") {
+        page_name = "home"
+    } else if (page_name == "qanda") {
+        page_name = "Q and A"
+    }
+    page_name = page_name.charAt(0).toUpperCase() + page_name.slice(1);
+    var current_page_title = document.title;
+    document.title = current_page_title + " | " + page_name;
+
+
 }
-page_name = page_name.charAt(0).toUpperCase() + page_name.slice(1);
-var current_page_title = document.title;
-document.title = current_page_title + " | " + page_name;
-
-
-
 
 function checkDownloadedBefore() {
     let x = getCookie("downloaded-check"); //get the cookie stored 
@@ -38,17 +45,6 @@ function checkDownloadedBefore() {
     }
 }
 
-function ready() {
-    document.getElementById("loader").style.width = "100%";
-}
-
-
-window.onload = function() { // can also use window.addEventListener('load', (event) => {
-    document.getElementById("loader").style.width = "0%";
-    checkDownloadedBefore()
-};
-
-document.addEventListener("DOMContentLoaded", ready);
 
 
 function hideClasses(className) {
@@ -57,20 +53,7 @@ function hideClasses(className) {
         buttons[i].remove();
     }
 }
-//scroll to top and sticky
-var scrolltotop = document.getElementById("scrolltotop");
-var menu = document.getElementById("MenuID");
-var dropdown = document.getElementById("DropDownID ");
-var sticky = menu.offsetTop;
 
-//scroll function
-window.onscroll = function() { //when the page scrolls do this, has to be inpage becuase external pages cant detect scrolling
-    stickyMenu()
-    scrollFunction()
-};
-
-window.addEventListener("scroll", check_anim);
-check_anim();
 
 function openMenuMobile() { // this is run when the user clicks on the nav button on mobile
     var menuResponsive = document.getElementById("MenuID");
@@ -226,21 +209,39 @@ function run_anim(type) {
 }
 
 function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        scrolltotop.style.display = "block ";
-    } else {
-        scrolltotop.style.display = "none ";
-    }
+  scrolltotop = document.getElementById("scrolltotop");
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrolltotop.style.display = "block";
+  } else {
+    scrolltotop.style.display = "none";
+  }
 }
 
 // go to the top off the page when button clicked
 function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+    document.body.scrollTop  = 0;
+    document.documentElement.scrollTop  = 0;
+}
+
+function ready() {
+    document.getElementById("loader").style.width = "100%";
+       document.body.style.overflow = "hidden";
 }
 
 
-//make the navbar sticky when the user scrolls
-function stickyMenu() {
+document.addEventListener("DOMContentLoaded", ready);
 
-}
+window.onload = function() {
+    document.getElementById("loader").style.width = "0%";
+    document.body.style.overflow = "scroll";
+    checkDownloadedBefore();
+    check_anim();
+    updatePageName()
+};
+
+
+//scroll function
+window.onscroll = function() { //when the page scrolls do this, has to be inpage becuase external pages cant detect scrolling
+    scrollFunction();
+    check_anim();
+};

@@ -19,6 +19,14 @@
 </head>
 
 <body>
+         <!--Make sure this is loaded first-->
+      <div id="loader" class="loader">
+        <div class="loader-content">
+            <h1>LOADING...</h1>
+            <img width="60" height="60" class="left_to_right" src="Images/PlayerOnPlatform.png">
+            <img width="30%" height="20px" src="Images/platform.png">
+        </div>
+    </div>
     <div class="Menu sticky" id="MenuID">
         <!--Sticky menu-->
         <div class="anim-top"> <a href="index.html" title="Current Page" class="active">Home</a>
@@ -207,22 +215,9 @@
 
         </div>
     </footer>
-    <div id="loader" class="loader">
-        <div class="loader-content">
-            <h1>LOADING...</h1>
-            <img width="75" height="75" class="left_to_right" src="Images/PlayerOnPlatform.png">
-            <img width="30%" height="20px" src="Images/platform.png">
-        </div>
-    </div>
 
-    <script>
-        window.onscroll = function() { //when the page scrolls do this, has to be inpage becuase external pages cant detect scrolling 
-            stickyMenu();
-            scrollFunction();
-        };
-        window.addEventListener("scroll", check_anim);
-        check_anim();
-    </script>
+
+ 
 </body>
 
 </html>
