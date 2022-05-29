@@ -228,6 +228,10 @@ function ready() {
        document.body.style.overflow = "hidden";
 }
 
+function loadjsonData(){
+const jsonData=JSON.parse('../External/changelog.json'); 
+console.log(jsonData.versions[0]);
+}
 
 document.addEventListener("DOMContentLoaded", ready);
 
@@ -238,8 +242,6 @@ window.onload = function() {
     check_anim();
     updatePageName()
 };
-
-
 //scroll function
 window.onscroll = function() { //when the page scrolls do this, has to be inpage becuase external pages cant detect scrolling
     scrollFunction();
