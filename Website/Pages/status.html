@@ -21,7 +21,7 @@
         <a class="windown" href="http://sunnyland.maxinc.cf/Download/Windows/">Download</a>
         <a class="additionalLinksCSS" href="../Pages/changelog.html">Changelog</a>
         <a class="additionalLinksCSS" href="../Pages/upcoming.html">Upcoming Features</a>
-        <a class="additionalLinksCSS" href="../Pages/notices.html">Notice</a>
+        
         <a class="additionalLinksCSSActive" href="../Pages/status.html">Status</a>
         <div id="mobileDD" class="dropdown">
             <button title="Current Page" class="active" class="dropdownbutton">Changes
@@ -31,7 +31,7 @@
                 <a>Please Choose A Page</a>
                 <a href="../Pages/changelog.html">Changelog</a>
                 <a href="../Pages/upcoming.html">Upcoming Features</a>
-                <a href="../Pages/notices.html">Notice</a>
+            
                 <a title="Current Page" class="active" href="../Pages/status.html">Status</a>
             </div>
         </div>
@@ -49,19 +49,19 @@
         </div>
 
         <div id="titeltext">
-            <center>
+            <div class="center">
                 <h1>Sunny Land</h1>
                 <button title="Download the launcher for windows" onclick="window.location.href='http://sunnyland.maxinc.cf/Download/Windows'" class="downloadbtn"><i
                         class="fa fa-download"></i> Download</button>
                 <button title="Download this game as an .apk" onclick="window.location.href='http://sunnyland.maxinc.cf/Download/Andriod'" class="andrioddownloadbtn"><i class="fa fa-download"></i> Download</button>
-            </center>
+             </div>
         </div>
         <div class="midpage-iframe">
-            <center>
+            <div class="center">
                 <h2>
                     Status
                 </h2>
-                <center>
+                <div class="center">
                     <div class="breiftext">
                         <p>Green means site is up and Red means site is down, Orange means under matnence
                             <!--Orange has to be mannually set-->. You can also click on desired service to force a recheck.</p>
@@ -77,17 +77,17 @@
                         <button id="ps" class="service-check" title="https://patchkit.net/" onclick="Checkpatch()"> Launcher Servers </button>
                         <!--   <button id="bul"class="service-check" title="https://www.maxserver.ml/" onclick="Checkbl()"> Back Up Login </button> -->
                     </div>
-                </center>
+                 </div>
                 <p>NOTICE: WE USE COOKIES TO STORE THE STATUS OF THE SERVICES AND BY VISTING THIS PAGE YOU AGREE TO THIS*.</p>
                 <P>*Our cookies do NOT track you</P>
-            </center>
+             </div>
         </div>
         <div class="medpara">
-            <center>
+            <div class="center">
                 <h2> Summary </h2>
                 <p> Come here to check if our services are offline, online, under matnence or secuduled for matnence.
                 </p>
-            </center>
+             </div>
         </div>
         <footer>
             <div class="footer-content">
@@ -115,57 +115,6 @@
                 </div>
             </div>
         </footer>
-        <script>
-            var scrolltotopbutton = document.getElementById("scrolltotopID");
-            var menu = document.getElementById("MenuID ");
-            var dropdown = document.getElementById("DropDownID ");
-            var sticky = menu.offsetTop;
-            window.onscroll = function() {
-                stickyMenu()
-            };
-            window.onscroll = function() {
-                scrollFunction()
-            }
-
-            // When the user scrolls down 20px from the top of the document, show the button
-
-
-            function scrollFunction() {
-                if (document.body.scrolltotop > 20 || document.documentElement.scrolltotop > 20) {
-                    scrolltotopbutton.style.display = "block ";
-                } else {
-                    scrolltotopbutton.style.display = "none ";
-                }
-            }
-
-            function topFunction() {
-                document.body.scrollTop = 0;
-                document.documentElement.scrollTop = 0;
-            }
-
-
-
-
-
-            function stickyMenu() {
-                if (window.pageYOffset >= sticky) {
-                    menu.classList.add("sticky ")
-
-                    dropdown.classList.add("sticky-dropdown ")
-                } else {
-                    menu.classList.remove("sticky ");
-                    dropdown.classList.remove("sticky-dropdown ");
-
-                }
-            }
-        </script>
-        <div id="loader" class="loader">
-            <div class="loader-content">
-                <h1>LOADING...</h1>
-                <img width="75" height="75" class="left_to_right" src="../Images/PlayerOnPlatform.png">
-                <img width="30%" height="20px" src="../Images/platform.png">
-            </div>
-        </div>
 </body>
 
 </html>

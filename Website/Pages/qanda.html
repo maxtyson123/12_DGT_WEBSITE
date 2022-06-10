@@ -12,7 +12,14 @@
 </head>
 
 <body>
-
+  <!--Make sure this is loaded first-->
+  <div id="loader" class="loader">
+    <div class="loader-content">
+        <h1>LOADING...</h1>
+        <img class="check_anim_bottom" width="60" height="60" class="left_to_right" src="../Images/PlayerOnPlatform.png">
+        <img class="check_anim_bottom" width="30%" height="20px" src="../Images/platform.png">
+    </div>
+</div>
     <div class="Menu sticky" id="MenuID">
 
         <a href="../index.html" >Home</a>
@@ -20,7 +27,6 @@
         <a class="windown" href="http://sunnyland.maxinc.cf/Download/Windows/">Download</a>
         <a class="additionalLinksCSS" href="../Pages/changelog.html">Changelog</a>
                 <a class="additionalLinksCSS" href="../Pages/upcoming.html">Upcoming Features</a>
-                <a class="additionalLinksCSS" href="../Pages/notices.html">Notice</a>
                 <a class="additionalLinksCSS" href="../Pages/status.html">Status</a>
         <div id="mobileDD" class="dropdown">
             <button class="dropdownbutton">Changes
@@ -30,7 +36,7 @@
                 <a>Please Choose A Page</a>
                 <a href="../Pages/changelog.html">Changelog</a>
                 <a href="../Pages/upcoming.html">Upcoming Features</a>
-                <a href="../Pages/notices.html">Notice</a>
+              
                 <a href="../Pages/status.html">Status</a>
             </div>
         </div>
@@ -87,7 +93,7 @@
                     <i class="fa fa-caret-down"></i>
                 </button>
                     <div id="awnser1" class="awnserContent">
-                        <p>Sunny Land utilizes the clasic controls for a FPS shoot but theese can be changed in settings.</p>
+                        <p>Use WASD, or Arrow Keys to move the player on keyboard, esc to open the pause menu in-game, controler movement is underdevelopment with joystick to move and y to jump. </p>
                     </div>
                 </div>
             </div>
@@ -97,7 +103,7 @@
                     <i class="fa fa-caret-down"></i>
                 </button>
                     <div id="awnser1" class="awnserContent">
-                        <p>To report a bug you can contact us at our email, use in game suppport or post on our reddit.</p>
+                        <p>To report a bug you can contact us using email.</p>
                     </div>
                 </div>
             </div>
@@ -107,7 +113,7 @@
                     <i class="fa fa-caret-down"></i>
                 </button>
                     <div id="awnser1" class="awnserContent">
-                        <p>Yes you can play with your friends by adding the in the friends menu in the lobby and joing the room the they create.</p>
+                        <p>Yes you can play with your friends by creating a multiplayer lobby and they join it.</p>
                     </div>
                 </div>
             </div>
@@ -117,14 +123,14 @@
                     <i class="fa fa-caret-down"></i>
                 </button>
                     <div id="awnser1" class="awnserContent">
-                        <p>You can support the game by reporting bugs, sharing it with friends or on social media. We higly encourage making youtube videos about it or fan content.</p>
+                        <p>You can support the game by reporting bugs, sharing it with friends or on social media.</p>
                     </div>
                 </div>
             </div>
         </center>
     </div>
     <center>
-        <img src="../Images/img21.png" width="80%" height="auto">
+        <img class="check_anim_bottom" src="../Images/img21.png" width="80%" height="auto">
     </center>
     <div class="download_button">
         <center>
@@ -134,7 +140,7 @@
         </center>
     </div>
     <center>
-        <img src="../Images/img22.png" width="80%" height="auto">
+        <img class="check_anim_bottom" src="../Images/img22.png" width="80%" height="auto">
     </center>
     <div class="qanda">
         <center>
@@ -147,7 +153,7 @@
                     <i class="fa fa-caret-down"></i>
                 </button>
                     <div id="awnser1" class="awnserContent">
-                        <p>All updates are free in the BETA program. There may be a one time price at Recon Op's launch but once youve paid it will be free forever.</p>
+                        <p>The game is completly free to play, meaing you wont need to pay to join in on the fun.</p>
                     </div>
                 </div>
             </div>
@@ -157,7 +163,7 @@
                     <i class="fa fa-caret-down"></i>
                 </button>
                     <div id="awnser1" class="awnserContent">
-                        <p>We aim to patch bugs as they are discovered which results in small random updates. Big content updates take months to devlop so dont expect a lot of updates. </p>
+                        <p>Game Development takes time so updates occur once or twice a month. Multiplayer updates are very anoyying to implement so dont expect a lot of those.</p>
                     </div>
                 </div>
             </div>
@@ -167,7 +173,7 @@
                     <i class="fa fa-caret-down"></i>
                 </button>
                     <div id="awnser1" class="awnserContent">
-                        <p>If playing on pc the launcher will automaticly patch the game when there is a update posted to our servers. If on mobile check your App/Play Store. *The game will force you to play on the latest version.
+                        <p>If your playing on pc the launcher will automaticly patch the game when there is a update posted to our servers. If on mobile check your App/Play Store. *Multiplayer requires the latest version.
                         </p>
                     </div>
                 </div>
@@ -175,7 +181,7 @@
         </center>
     </div>
     <center>
-    <img src="../Images/img28.png" width="80%" height="auto">
+    <img class="check_anim_bottom" src="../Images/img28.png" width="80%" height="auto">
 </center>
     <div class="qanda">
         <center>
@@ -184,11 +190,11 @@
             </a>
             <div class="question">
                 <div class="qandadropdown">
-                    <button class="qheader">Is Sunny Land still supported by the devs?
+                    <button class="qheader">Is Sunny Land still supported by the dev?
                     <i class="fa fa-caret-down"></i>
                 </button>
                     <div id="awnser1" class="awnserContent">
-                        <p>Yes we are still working on the game while its in it's BETA phase</p>
+                        <p>Yes its still underdevelopment, however once version 2.0 is released with the launch of level creator there will be less frequent updates</p>
                     </div>
                 </div>
             </div>
@@ -198,14 +204,14 @@
                     <i class="fa fa-caret-down"></i>
                 </button>
                     <div id="awnser1" class="awnserContent">
-                        <p>We plan to continue to add content and features until its 1.0 release.</p>
+                        <p>We plan to continue to add content and features until its 2.0 release.</p>
                     </div>
                 </div>
             </div>
         </center>
     </div>
     <center>
-        <img src="../Images/img23.png" width="80%" height="auto">
+        <img class="check_anim_bottom" src="../Images/img23.png" width="80%" height="auto">
     </center>
     <div class="qanda">
         <center>
@@ -218,7 +224,7 @@
                     <i class="fa fa-caret-down"></i>
                 </button>
                     <div id="awnser1" class="awnserContent">
-                        <p>As of the BETA you can only play on Windows, but MAC and Linux are coming soon. So are Andriod and IOS</p>
+                        <p>As of now you can only play on Windows, but MAC and Linux are coming soon. So are Andriod and IOS. WebGL demo also exists</p>
                     </div>
                 </div>
             </div>
@@ -228,7 +234,7 @@
                     <i class="fa fa-caret-down"></i>
                 </button>
                     <div id="awnser1" class="awnserContent">
-                        <p>The game is optimized for pc so for Win, Lin and Mac you should have quite steady gameplay but for Mobile and WebGL we recomend playing on lower graphics settings</p>
+                        <p>The game is highly optimisized so most modern devices should run the game steadly</p>
                     </div>
                 </div>
             </div>
@@ -238,14 +244,14 @@
                     <i class="fa fa-caret-down"></i>
                 </button>
                     <div id="awnser1" class="awnserContent">
-                        <p>We aim to keep the game the same across all builds but mobile may have lower res textures and less maps.</p>
+                        <p>The game wont change across platforms, however in the demo there is a limit to how much you can play.</p>
                     </div>
                 </div>
             </div>
         </center>
     </div>
     <center>
-        <img src="../Images/img24.png" width="80%" height="auto">
+        <img class="check_anim_bottom" src="../Images/img24.png" width="80%" height="auto">
     </center>
     <div class="qanda">
         <center>
@@ -289,7 +295,7 @@
     
     
     <center>
-        <img src="../Images/img29.png" width="80%" height="auto">
+        <img class="check_anim_bottom" src="../Images/img29.png" width="80%" height="auto">
     </center>
     <br>
     <br>
@@ -320,46 +326,7 @@
             </div>
         </div>
     </footer>
-    <script>
-        var scrolltotop = document.getElementById(" scrolltotop ");
-        var menu = document.getElementById("MenuID ");
-        var dropdown = document.getElementById("DropDownID ");
-        var sticky = menu.offsetTop;
-        window.onscroll = function() {
-            stickyMenu()
-            scrollFunction()
-        };
-
-
-        // When the user scrolls down 20px from the top of the document, show the button
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                scrolltotop.style.display = "block ";
-            } else {
-                scrolltotop.style.display = "none ";
-            }
-        }
-
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-
-
-
-        function stickyMenu() {
-            if (window.pageYOffset >= sticky) {
-                menu.classList.add("sticky ")
-
-                dropdown.classList.add("sticky-dropdown ")
-            } else {
-                menu.classList.remove("sticky ");
-                dropdown.classList.remove("sticky-dropdown ");
-
-            }
-        }
-    </script>
+    
 </body>
 
 </html>

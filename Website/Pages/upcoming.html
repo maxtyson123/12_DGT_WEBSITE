@@ -12,6 +12,14 @@
 </head>
 
 <body>
+  <!--Make sure this is loaded first-->
+  <div id="loader" class="loader">
+    <div class="loader-content">
+        <h1>LOADING...</h1>
+        <img width="60" height="60" class="left_to_right" src="../Images/PlayerOnPlatform.png">
+        <img width="30%" height="20px" src="../Images/platform.png">
+    </div>
+</div>
 
     <div class="Menu sticky" id="MenuID">
 
@@ -20,7 +28,7 @@
         <a class="windown" href="http://sunnyland.maxinc.cf/Download/Windows/">Download</a>
         <a class="additionalLinksCSS" href="../Pages/changelog.html">Changelog</a>
         <a class="additionalLinksCSSActive" href="../Pages/upcoming.html">Upcoming Features</a>
-        <a class="additionalLinksCSS" href="../Pages/notices.html">Notice</a>
+        
         <a class="additionalLinksCSS" href="../Pages/status.html">Status</a>
         <div id="mobileDD" class="dropdown">
             <button title="Current Page" class="active" class="dropdownbutton">Changes
@@ -30,7 +38,7 @@
                 <a>Please Choose A Page</a>
                 <a href="../Pages/changelog.html">Changelog</a>
                 <a  title="Current Page" class="active" href="../Pages/upcoming.html">Upcoming Features</a>
-                <a href="../Pages/notices.html">Notice</a>
+              
                 <a href="../Pages/status.html">Status</a>
             </div>
         </div>
@@ -46,7 +54,7 @@
 
 
 
-    <button onclick="topFunction() " id="scrolltotop " title="Go to top ">Top</button>
+    <button onclick="topFunction()" id="scrolltotop" title="Go to top">Top</button>
     <div class="content ">
         <div class="video-container ">
             <iframe class="hero-iframe "
@@ -54,7 +62,7 @@
         </div>
 
         <div id="titeltext" class="slide-from-top">
-            <center>
+        
                 <h1>SunnyLand</h1>
                 <button title="Download the launcher for windows "
                     onclick="window.location.href='http://sunnyland.maxinc.cf/Download/Windows' "
@@ -62,12 +70,21 @@
                 <button title="Download this game as an .apk "
                     onclick="window.location.href='http://sunnyland.maxinc.cf/Download/Andriod' "
                     class="andrioddownloadbtn "><i class="fa fa-download "></i> Download</button>
-            </center>
+        
         </div>
         <br>
         <br>
         <br>
-        <center>
+        <div class="medpara check_anim_top">
+          <div class="center">
+                <h1>Version Plans</h1>
+                <p>1.6: Ghost character of best scores for advernture mode, replays of speed runs</p>
+                <p>1.7: 10 new levels in a undergorund sort of world - maybe caves</p>
+                <p>1.8/1.9: Either multiplayer rehaul or another world </p>
+                <p>2.0: Level editor</p>
+          </div>
+        </div>
+      <div class="center">
 
             <div class="table-container">
                 <!-- RESPONSIVE TABLE IN THE WAY THAT WHEN IT GETS TO SMALL A SCROLL BAR POPS UP AND YOU CAN SCROLL ACROSS -->
@@ -83,24 +100,24 @@
                     <tr>
                         <td>1</td>
                         <td>Multiplayer</td>
-                        <td>Under Development</td>
-                        <td>1.5-1.6</td>
+                        <td>Released</td>
+                        <td>1.5</td>
                         <td><a href="../Pages/Feature/feature1.html">Details</a> </td>
                     </tr>
 
                     <tr>
                         <td>2</td>
-                        <td>Linking Acount to game</td>
-                        <td>Upcoming</td>
-                        <td>1.4-1.6</td>
+                        <td>Linking Acount to game (fully)</td>
+                        <td>Under Planning</td>
+                        <td>1.8/1.9</td>
                         <td><a href="../Pages/Feature/feature2.html">Details</a> </td>
                     </tr>
 
                     <tr>
                         <td>3</td>
                         <td>Cosmetics</td>
-                        <td>Under Development</td>
-                        <td>L-0.1.7</td>
+                        <td>Under Planning</td>
+                        <td>1.8/1.9</td>
                         <td><a href="../Pages/Feature/feature3.html">Details</a> </td>
                     </tr>
 
@@ -108,32 +125,32 @@
                         <td>4</td>
                         <td>Multiple Worlds / New levels</td>
                         <td>Under Planning</td>
-                        <td>7.0 +</td>
+                        <td>1.7</td>
                         <td><a href="../Pages/Feature/feature4.html">Details</a> </td>
                     </tr>
 
                     <tr>
                         <td>5</td>
                         <td>Replay System for Speedrunning</td>
-                        <td>Pending</td>
-                        <td>1.7-1.8</td>
+                        <td>Under Development</td>
+                        <td>1.6</td>
                         <td><a href="../Pages/Feature/feature5.html">Details</a> </td>
                     </tr>
                 </table>
 
             </div>
 
-        </center>
+      </div>
         <br>
         <br>
         <br>
         <br>
         <br>
-        <center>
-            <img class="add_anim_zoom" src="../Images/img19.png" width="80% " height="auto ">
-        </center>
-        <div class="medpara add_anim_top">
-            <center>
+      <div class="center">
+            <img class="check_anim_zoom" src="../Images/img19.png" width="80% " height="auto ">
+      </div>
+        <div class="medpara check_anim_top">
+          <div class="center">
                 <h2>Up coming Features</h2>
                 <p> In the tabel above you can a have a look over features that MAY come to the game, the fact that they
                     are listed here means that they are LIKELY to come to Sunny Land but isnt certain. Below are states
@@ -153,11 +170,11 @@
                     <li title="Patched out becuase of bugs, should be in next version or two">Rolled Back</li>
 
                 </ul>
-            </center>
+          </div>
         </div>
-        <center>
-            <img class="add_anim_zoom" src="../Images/img10.png" width="80% " height="auto ">
-        </center>
+      <div class="center">
+            <img class="check_anim_zoom" src="../Images/img10.png" width="80% " height="auto ">
+      </div>
         <br>
         <br>
         <footer>
@@ -196,17 +213,6 @@
             </div>
         </footer>
 
-        <script>
-
-            window.onscroll = function () {
-                stickyMenu()
-                scrollFunction()
-            };
-
-            window.addEventListener("scroll", check_anim);
-            add_anim();
-
-        </script>
 </body>
 
 </html>

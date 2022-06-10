@@ -1,4 +1,9 @@
 //      Varibles
+
+
+
+//JS WILL BE REDONE
+
 //cookie-states
 var toggle = 0;
 var doneB4 = 0;
@@ -17,6 +22,12 @@ var menu = document.getElementById("MenuID");
 var dropdown = document.getElementById("DropDownID ");
 //var sticky = menu.offsetTop;
 
+var script = document.createElement('script');
+script.src = 'https://requirejs.org/docs/release/2.3.6/minified/require.js';
+document.getElementsByTagName('head')[0].appendChild(script);
+
+var dontloader = false;
+
 function updatePageName(){
 
     //page-name
@@ -28,6 +39,8 @@ function updatePageName(){
         page_name = "home"
     } else if (page_name == "qanda") {
         page_name = "Q and A"
+    }else if (page_name == "status"){
+        dontloader = true;
     }
     page_name = page_name.charAt(0).toUpperCase() + page_name.slice(1);
     var current_page_title = document.title;
@@ -224,14 +237,41 @@ function topFunction() {
 }
 
 function ready() {
-    document.getElementById("loader").style.width = "100%";
-       document.body.style.overflow = "hidden";
+    updatePageName()
+    if(dontloader){
+        checkDownloadedBefore();
+        check_anim();
+    }else{
+        document.getElementById("loader").style.width = "100%";
+        document.body.style.overflow = "hidden";
+    }
+   
+}
+async function setchangelog() {
+    const response = await fetch("../External/changelog.json");
+    const json = await response.json();
+
+    const changelogdisplay = document.querySelector("#changelog_id")
+    for (let x = 0; x < json.versions.length; x++) {
+        changelogelemt = document.createElement('div');
+        title = document.createElement("h2");
+        title.innerHTML = json.versions[x].label;
+        changelogelemt.appendChild(title)
+        text = document.createElement("div");
+        changelogsplit = json.versions[x].changelog.split("\r\n")
+        console.log(changelogsplit);
+        for (let x = 0; x < changelogsplit.length; x++) {
+        text_lines = document.createElement("p");
+        text_lines.innerHTML = "- "+changelogsplit[x];
+       
+        text.appendChild(text_lines)
+        }
+        changelogelemt.appendChild(text)
+        changelogdisplay.appendChild(changelogelemt);
+    }
+    
 }
 
-function loadjsonData(){
-const jsonData=JSON.parse('../External/changelog.json'); 
-console.log(jsonData.versions[0]);
-}
 
 document.addEventListener("DOMContentLoaded", ready);
 
@@ -240,7 +280,7 @@ window.onload = function() {
     document.body.style.overflow = "scroll";
     checkDownloadedBefore();
     check_anim();
-    updatePageName()
+    
 };
 //scroll function
 window.onscroll = function() { //when the page scrolls do this, has to be inpage becuase external pages cant detect scrolling
