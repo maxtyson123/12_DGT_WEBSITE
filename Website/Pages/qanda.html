@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <div id="transition" class="transitioncontainer">
   <!--Make sure this is loaded first-->
   <div id="loader" class="loader">
     <div class="loader-content">
@@ -24,7 +25,9 @@
 
         <a href="../index.html" >Home</a>
         <a href="../Pages/about.html">About</a>
-        <a class="windown" href="http://sunnyland.maxinc.cf/Download/Windows/">Download</a>
+        <a class="windown download" href="http://sunnyland.maxinc.cf/Download/Windows/">Download</a>
+        <a class="launcher launch" href="SunnyLand://Launch(Launcher)?FromWebsite"><i class="fa fa-gamepad"></i> Launch
+            Game</a>
         <a class="additionalLinksCSS" href="../Pages/changelog.html">Changelog</a>
                 <a class="additionalLinksCSS" href="../Pages/upcoming.html">Upcoming Features</a>
                 <a class="additionalLinksCSS" href="../Pages/status.html">Status</a>
@@ -41,6 +44,7 @@
             </div>
         </div>
         <a title="Current Page" class="active" href="../Pages/qanda.html">Q&A</a>
+        <a href="../Pages/demo.html">Demo</a>
         <button onclick="window.location.href='http://maxserver.ml/sunnylandLogin/login.php'" title="Go to login site" class="loginbutton">Login <i class="fa fa-user"></i></button>
 
         <a title="Open Menu" href="javascript:void(0);" class="icon" onclick="openMenuMobile()">
@@ -56,12 +60,19 @@
         </div>
 
         <div id="titeltext">
-            <center>
-                <h1>Sunny Land</h1>
-                <button title="Download the launcher for windows" onclick="window.location.href='http://sunnyland.maxinc.cf/Download/Windows'" class="downloadbtn"><i
-                        class="fa fa-download"></i> Download</button>
-                <button title="Download this game as an .apk" onclick="window.location.href='http://sunnyland.maxinc.cf/Download/Andriod'" class="andrioddownloadbtn"><i class="fa fa-download"></i> Download</button>
-            </center>
+            <div class="center">
+                <h1>SunnyLand</h1>
+                <button title="Download the launcher for windows"
+                    onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Windows'"
+                    class="downloadbtn download"><i class="fa fa-download"></i> Download</button>
+                <!-- shown on displays small than or eqaul to 600px (assumes this this a tablet or phone sized display) -->
+                <button title="Download this game as an .apk"
+                    onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Andriod'"
+                    class="andrioddownloadbtn download"><i class="fa fa-download"></i> Download</button>
+                <button title="Download this game as an .apk"
+                    onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Andriod'"
+                    class="launchbtn launch"><i class="fa fa-gamepad"></i> Play Now</button>
+            </div>
         </div>
 
        
@@ -132,12 +143,12 @@
     <center>
         <img class="check_anim_bottom" src="../Images/img21.png" width="80%" height="auto">
     </center>
-    <div class="download_button">
-        <center>
-            <button title="Download the launcher for windows" onclick="window.location.href='http://sunnyland.maxinc.cf/Download/Windows'" class="downloadbtn"><i
-                    class="fa fa-download"></i> Download</button>
-            <button title="Download this game as an .apk" onclick="window.location.href='http://sunnyland.maxinc.cf/Download/Andriod'" class="andrioddownloadbtn"><i class="fa fa-download"></i> Download</button>
-        </center>
+    <div class="download_button check_anim_bottom">
+        <div class="center">
+            <button title="Download the launcher for windows" onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Windows'" class="downloadbtn download"><i class="fa fa-download"></i> Download</button>
+            <button title="Download this game as an .apk" onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Andriod'" class="andrioddownloadbtn download"><i class="fa fa-download"></i> Download</button>
+            <button title="Launch the game" onclick="window.location.href='Sunnyland://Launch(Launcher)?FromWebsite'" class="launchbtn launch"><i class=" fa fa-gamepad "></i> Play Now</button>
+         </div>
     </div>
     <center>
         <img class="check_anim_bottom" src="../Images/img22.png" width="80%" height="auto">
@@ -204,7 +215,7 @@
                     <i class="fa fa-caret-down"></i>
                 </button>
                     <div id="awnser1" class="awnserContent">
-                        <p>We plan to continue to add content and features until its 2.0 release.</p>
+                        <p>I plan to continue to add content and features until its 2.0 release.</p>
                     </div>
                 </div>
             </div>
@@ -274,7 +285,7 @@
                     <i class="fa fa-caret-down"></i>
                 </button>
                     <div id="awnser1" class="awnserContent">
-                        <p>We will try to implment accounts into games where its nessacary and most will connect to our main database.</p>
+                        <p>I will try to implment accounts into games where its nessacary and most will connect to our main database.</p>
                     </div>
                 </div>
             </div>
@@ -284,7 +295,7 @@
                     <i class="fa fa-caret-down"></i>
                 </button>
                     <div id="awnser1" class="awnserContent">
-                        <p>We plan to implment that in the future but as of now, no.</p>
+                        <p>I plan to implment that in the future but as of now, no.</p>
                     </div>
                 </div>
             </div>
@@ -326,7 +337,7 @@
             </div>
         </div>
     </footer>
-    
+</div>
 </body>
 
 </html>

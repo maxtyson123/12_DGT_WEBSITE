@@ -12,126 +12,129 @@
 </head>
 
 <body>
-    <!--Make sure this is loaded first-->
-    <div id="loader" class="loader">
-        <div class="loader-content">
-            <h1>LOADING...</h1>
-            <img width="60" height="60" class="left_to_right" src="../Images/PlayerOnPlatform.png">
-            <img width="30%" height="20px" src="../Images/platform.png">
-        </div>
-    </div>
-    <div class="Menu sticky" id="MenuID">
-
-        <a href="../index.html">Home</a>
-        <a href="../Pages/about.html">About</a>
-        <a class="windown download" href="http://sunnyland.maxinc.cf/Download/Windows/">Download</a>
-        <a class="additionalLinksCSSActive" href="../Pages/changelog.html">Changelog</a>
-        <a class="additionalLinksCSS" href="../Pages/upcoming.html">Upcoming Features</a>
-        <a class="additionalLinksCSS" href="../Pages/status.html">Status</a>
-        <div id="mobileDD" class="dropdown">
-            <button title="Current Page" class="active" class="dropdownbutton">Changes
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div id="DropDownID" class="dropdown-content sticky-dropdown">
-                <a>Please Choose A Page</a>
-                <a title="Current Page" class="active" href="../Pages/changelog.html">Changelog</a>
-                <a href="../Pages/upcoming.html">Upcoming Features</a>
-                <a href="../Pages/status.html">Status</a>
+    <div id="transition" class="transitioncontainer">
+        <!--Make sure this is loaded first-->
+        <div id="loader" class="loader">
+            <div class="loader-content">
+                <h1>LOADING...</h1>
+                <img width="60" height="60" class="left_to_right" src="../Images/PlayerOnPlatform.png">
+                <img width="30%" height="20px" src="../Images/platform.png">
             </div>
         </div>
-        <a href="../Pages/qanda.html">Q&A</a>
-        <button onclick="window.location.href='http://maxserver.ml/SunnyLandLogin/login.php'" title="Go to login site"
-            class="loginbutton">Login <i class="fa fa-user"></i></button>
-        <a class="launcher launch" href="SunnyLand://Launch(Launcher)?FromWebsite"><i class="fa fa-gamepad"></i> Launch
-            Game</a>
-        <a title="Open Menu" href="javascript:void(0);" class="icon" onclick="openMenuMobile()">
-            <i class="fa fa-bars"></i>
-        </a>
-    </div>
+        <div class="Menu sticky" id="MenuID">
 
+            <a href="../index.html">Home</a>
+            <a href="../Pages/about.html">About</a>
+            <a class="windown download" href="http://sunnyland.maxinc.cf/Download/Windows/">Download</a>
+            <a class="launcher launch" href="SunnyLand://Launch(Launcher)?FromWebsite"><i class="fa fa-gamepad"></i>
+                Launch
+                Game</a>
+            <a class="additionalLinksCSSActive" href="../Pages/changelog.html">Changelog</a>
+            <a class="additionalLinksCSS" href="../Pages/upcoming.html">Upcoming Features</a>
+            <a class="additionalLinksCSS" href="../Pages/status.html">Status</a>
+            <div id="mobileDD" class="dropdown">
+                <button title="Current Page" class="active" class="dropdownbutton">Changes
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div id="DropDownID" class="dropdown-content sticky-dropdown">
+                    <a>Please Choose A Page</a>
+                    <a title="Current Page" class="active" href="../Pages/changelog.html">Changelog</a>
+                    <a href="../Pages/upcoming.html">Upcoming Features</a>
+                    <a href="../Pages/status.html">Status</a>
+                </div>
+            </div>
+            <a href="../Pages/qanda.html">Q&A</a>
+            <a href="../Pages/demo.html">Demo</a>
+            <button onclick="window.location.href='http://maxserver.ml/SunnyLandLogin/login.php'"
+                title="Go to login site" class="loginbutton">Login <i class="fa fa-user"></i></button>
 
-
-    <button onclick="topFunction()" id="scrolltotop" title="Go to top">Top</button>
-    <div class="content ">
-        <div class="video-container ">
-            <iframe class="hero-iframe "
-                src="https://www.youtube.com/embed/NpFjtGn99qk?controls=0&autoplay=1&mute=1&loop=1&playlist=NpFjtGn99qk "></iframe>
+            <a title="Open Menu" href="javascript:void(0);" class="icon" onclick="openMenuMobile()">
+                <i class="fa fa-bars"></i>
+            </a>
         </div>
-
-        <div id="titeltext" class="slide-from-top">
+        <button onclick="topFunction()" id="scrolltotop" title="Go to top">Top</button>
+        <div class="content ">
+            <div class="video-container ">
+                <iframe class="hero-iframe "
+                    src="https://www.youtube.com/embed/NpFjtGn99qk?controls=0&autoplay=1&mute=1&loop=1&playlist=NpFjtGn99qk "></iframe>
+            </div>
+            <div id="titeltext" class="slide-from-top">
+                <div class="center">
+                    <h1>SunnyLand</h1>
+                    <button title="Download the launcher for windows"
+                        onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Windows'"
+                        class="downloadbtn download"><i class="fa fa-download"></i> Download</button>
+                    <!-- shown on displays small than or eqaul to 600px (assumes this this a tablet or phone sized display) -->
+                    <button title="Download this game as an .apk"
+                        onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Andriod'"
+                        class="andrioddownloadbtn download"><i class="fa fa-download"></i> Download</button>
+                    <button title="Download this game as an .apk"
+                        onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Andriod'"
+                        class="launchbtn launch"><i class="fa fa-gamepad"></i> Play Now</button>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
             <div class="center">
-                <h1>SunnyLand</h1>
-                <button title="Download the launcher for windows"
-                    onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Windows'"
-                    class="downloadbtn download"><i class="fa fa-download"></i> Download</button>
-                <!-- shown on displays small than or eqaul to 600px (assumes this this a tablet or phone sized display) -->
-                <button title="Download this game as an .apk"
-                    onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Andriod'"
-                    class="andrioddownloadbtn download"><i class="fa fa-download"></i> Download</button>
-                <button title="Download this game as an .apk"
-                    onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Andriod'"
-                    class="launchbtn launch"><i class="fa fa-gamepad"></i> Play Now</button>
-            </div>
-        </div>
-        <br>
-        <br>
-        <br>
-        <div class="center">
-            <div class="midpage-iframe add_anim_zoom">
-     
+                <div class="midpage-iframe add_anim_zoom">
+
                     <h2>
                         Changelog
                     </h2>
 
-                <div id="changelog_id"></div>
-            </div>
-      
-            <div class="medpara add_anim_bottom">
+                    <div id="changelog_id"></div>
+                </div>
+                <div class="medpara add_anim_bottom">
 
                     <h2> Summary </h2>
                     <p> Here you can veiw the changelog of Sunny Land, this changelog can also be veiwed in the
                         launcher. Key: {N}: New feature, {F}: fixed feature, {R}: Removed feature. </p>
 
-            </div>
-            <footer>
-                <div class="footer-content">
-                    <br>
-                    <marquee> Website designed by Max Tyson.
-                        &MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;
-                        Sunny Land desgined by Max Inc </marquee>
-                    <p> Good job you have scrolled all the way to the bottom! That must mean your intrested, Click the
-                        button below to download the game or if you want to learn more vist a different page!</p>
-                    <ul class="footer-social">
-                        <li> <a href="https://www.youtube.com/channel/UCQZBTFpZsGM15w_7hHG6MCw"><i
-                                    class="fa fa-youtube"></i></a></li>
-                        <li>
-                            <a href="https://github.com/maxtyson123"> <i class="fa fa-github"></i> </a>
-                        </li>
-                        <li>
-                            <a href="https://max-inc.itch.io/"> <i class="fa fa-gamepad"></i> </a>
-                        </li>
-                        <li>
-                            <a href="https://reddit.com/r/Max_Inc"> <i class="fa fa-reddit"></i> </a>
-                        </li>
-                    </ul>
-                    <div class="footer-download">
-                        <button title="Download the launcher for windows"
-                            onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Windows '"
-                            class="downloadbtn download"><i class="fa fa-download"></i> Download </button>
-                        <button title="Download this game as an .apk"
-                            onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Andriod '"
-                            class="andrioddownloadbtn download"><i class="fa fa-download"></i> Download</button> <br>
-                        <br>
-                    </div>
-                    <button title="Launch the game"
-                        onclick="window.location.href='Sunnyland://Launch(Launcher)?FromWebsite'"
-                        class="launchbtn launch"><i class=" fa fa-gamepad "></i> Play Now</button>
-
                 </div>
-       
-        </footer>
+                <footer>
+                    <div class="footer-content">
+                        <br>
+                        <marquee> Website designed by Max Tyson.
+                            &MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;
+                            Sunny Land desgined by Max Inc </marquee>
+                        <p> Good job you have scrolled all the way to the bottom! That must mean your intrested, Click
+                            the
+                            button below to download the game or if you want to learn more vist a different page!</p>
+                        <ul class="footer-social">
+                            <li> <a href="https://www.youtube.com/channel/UCQZBTFpZsGM15w_7hHG6MCw"><i
+                                        class="fa fa-youtube"></i></a></li>
+                            <li>
+                                <a href="https://github.com/maxtyson123"> <i class="fa fa-github"></i> </a>
+                            </li>
+                            <li>
+                                <a href="https://max-inc.itch.io/"> <i class="fa fa-gamepad"></i> </a>
+                            </li>
+                            <li>
+                                <a href="https://reddit.com/r/Max_Inc"> <i class="fa fa-reddit"></i> </a>
+                            </li>
+                        </ul>
+                        <div class="footer-download">
+                            <button title="Download the launcher for windows"
+                                onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Windows '"
+                                class="downloadbtn download"><i class="fa fa-download"></i> Download </button>
+                            <button title="Download this game as an .apk"
+                                onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Andriod '"
+                                class="andrioddownloadbtn download"><i class="fa fa-download"></i> Download</button>
+                            <br>
+                            <br>
+                        </div>
+                        <button title="Launch the game"
+                            onclick="window.location.href='Sunnyland://Launch(Launcher)?FromWebsite'"
+                            class="launchbtn launch"><i class=" fa fa-gamepad "></i> Play Now</button>
+
+                    </div>
+
+                </footer>
+                <script>setchangelog()</script>
+            </div>
+        </div>
     </div>
-        <script>setchangelog()</script>
 </body>
 
 </html>

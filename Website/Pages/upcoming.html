@@ -12,207 +12,217 @@
 </head>
 
 <body>
-  <!--Make sure this is loaded first-->
-  <div id="loader" class="loader">
-    <div class="loader-content">
-        <h1>LOADING...</h1>
-        <img width="60" height="60" class="left_to_right" src="../Images/PlayerOnPlatform.png">
-        <img width="30%" height="20px" src="../Images/platform.png">
-    </div>
-</div>
-
-    <div class="Menu sticky" id="MenuID">
-
-        <a href="../index.html">Home</a>
-        <a href="../Pages/about.html">About</a>
-        <a class="windown" href="http://sunnyland.maxinc.cf/Download/Windows/">Download</a>
-        <a class="additionalLinksCSS" href="../Pages/changelog.html">Changelog</a>
-        <a class="additionalLinksCSSActive" href="../Pages/upcoming.html">Upcoming Features</a>
-        
-        <a class="additionalLinksCSS" href="../Pages/status.html">Status</a>
-        <div id="mobileDD" class="dropdown">
-            <button title="Current Page" class="active" class="dropdownbutton">Changes
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div id="DropDownID" class="dropdown-content sticky-dropdown">
-                <a>Please Choose A Page</a>
-                <a href="../Pages/changelog.html">Changelog</a>
-                <a  title="Current Page" class="active" href="../Pages/upcoming.html">Upcoming Features</a>
-              
-                <a href="../Pages/status.html">Status</a>
+    <div id="transition" class="transitioncontainer">
+        <!--Make sure this is loaded first-->
+        <div id="loader" class="loader">
+            <div class="loader-content">
+                <h1>LOADING...</h1>
+                <img width="60" height="60" class="left_to_right" src="../Images/PlayerOnPlatform.png">
+                <img width="30%" height="20px" src="../Images/platform.png">
             </div>
         </div>
-        <a href="../Pages/qanda.html">Q&A</a>
-        <button onclick="window.location.href='http://maxserver.ml/SunnyLandLogin/login.php'" title="Go to login site"
-            class="loginbutton">Login <i class="fa fa-user"></i></button>
-        <a class="launcher" href="SunnyLand://Launch(Launcher)?FromWebsite"><i class="fa fa-gamepad"></i> Launch
-            Game</a>
-        <a title="Open Menu" href="javascript:void(0);" class="icon" onclick="openMenuMobile()">
-            <i class="fa fa-bars"></i>
-        </a>
-    </div>
 
+        <div class="Menu sticky" id="MenuID">
 
+            <a href="../index.html">Home</a>
+            <a href="../Pages/about.html">About</a>
+            <a class="windown download" href="http://sunnyland.maxinc.cf/Download/Windows/">Download</a>
+            <a class="launcher launch" href="SunnyLand://Launch(Launcher)?FromWebsite"><i class="fa fa-gamepad"></i>
+                Launch
+                Game</a>
+            <a class="additionalLinksCSS" href="../Pages/changelog.html">Changelog</a>
+            <a class="additionalLinksCSSActive" href="../Pages/upcoming.html">Upcoming Features</a>
 
-    <button onclick="topFunction()" id="scrolltotop" title="Go to top">Top</button>
-    <div class="content ">
-        <div class="video-container ">
-            <iframe class="hero-iframe "
-                src="https://www.youtube.com/embed/NpFjtGn99qk?controls=0&autoplay=1&mute=1&loop=1&playlist=NpFjtGn99qk "></iframe>
+            <a class="additionalLinksCSS" href="../Pages/status.html">Status</a>
+            <div id="mobileDD" class="dropdown">
+                <button title="Current Page" class="active" class="dropdownbutton">Changes
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div id="DropDownID" class="dropdown-content sticky-dropdown">
+                    <a>Please Choose A Page</a>
+                    <a href="../Pages/changelog.html">Changelog</a>
+                    <a title="Current Page" class="active" href="../Pages/upcoming.html">Upcoming Features</a>
+
+                    <a href="../Pages/status.html">Status</a>
+                </div>
+            </div>
+            <a href="../Pages/qanda.html">Q&A</a>
+            <a href="../Pages/demo.html">Demo</a>
+            <button onclick="window.location.href='http://maxserver.ml/SunnyLandLogin/login.php'"
+                title="Go to login site" class="loginbutton">Login <i class="fa fa-user"></i></button>
+
+            <a title="Open Menu" href="javascript:void(0);" class="icon" onclick="openMenuMobile()">
+                <i class="fa fa-bars"></i>
+            </a>
         </div>
 
-        <div id="titeltext" class="slide-from-top">
-        
+
+
+        <button onclick="topFunction()" id="scrolltotop" title="Go to top">Top</button>
+        <div class="content ">
+            <div class="video-container ">
+                <iframe class="hero-iframe "
+                    src="https://www.youtube.com/embed/NpFjtGn99qk?controls=0&autoplay=1&mute=1&loop=1&playlist=NpFjtGn99qk "></iframe>
+            </div>
+
+            <div id="titeltext" class="slide-from-top">
+
                 <h1>SunnyLand</h1>
-                <button title="Download the launcher for windows "
-                    onclick="window.location.href='http://sunnyland.maxinc.cf/Download/Windows' "
-                    class="downloadbtn "><i class="fa fa-download "></i> Download</button>
-                <button title="Download this game as an .apk "
-                    onclick="window.location.href='http://sunnyland.maxinc.cf/Download/Andriod' "
-                    class="andrioddownloadbtn "><i class="fa fa-download "></i> Download</button>
-        
-        </div>
-        <br>
-        <br>
-        <br>
-        <div class="medpara check_anim_top">
-          <div class="center">
-                <h1>Version Plans</h1>
-                <p>1.6: Ghost character of best scores for advernture mode, replays of speed runs</p>
-                <p>1.7: 10 new levels in a undergorund sort of world - maybe caves</p>
-                <p>1.8/1.9: Either multiplayer rehaul or another world </p>
-                <p>2.0: Level editor</p>
-          </div>
-        </div>
-      <div class="center">
-
-            <div class="table-container">
-                <!-- RESPONSIVE TABLE IN THE WAY THAT WHEN IT GETS TO SMALL A SCROLL BAR POPS UP AND YOU CAN SCROLL ACROSS -->
-                <h1>Upcoming Features</h1>
-                <table id="tabelID">
-                    <tr>
-                        <th>ID</th>
-                        <th>FEATURE</th>
-                        <th>STATUS</th>
-                        <th>EXPECTED REALSE VERISION</th>
-                        <th>DEATAILS</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Multiplayer</td>
-                        <td>Released</td>
-                        <td>1.5</td>
-                        <td><a href="../Pages/Feature/feature1.html">Details</a> </td>
-                    </tr>
-
-                    <tr>
-                        <td>2</td>
-                        <td>Linking Acount to game (fully)</td>
-                        <td>Under Planning</td>
-                        <td>1.8/1.9</td>
-                        <td><a href="../Pages/Feature/feature2.html">Details</a> </td>
-                    </tr>
-
-                    <tr>
-                        <td>3</td>
-                        <td>Cosmetics</td>
-                        <td>Under Planning</td>
-                        <td>1.8/1.9</td>
-                        <td><a href="../Pages/Feature/feature3.html">Details</a> </td>
-                    </tr>
-
-                    <tr>
-                        <td>4</td>
-                        <td>Multiple Worlds / New levels</td>
-                        <td>Under Planning</td>
-                        <td>1.7</td>
-                        <td><a href="../Pages/Feature/feature4.html">Details</a> </td>
-                    </tr>
-
-                    <tr>
-                        <td>5</td>
-                        <td>Replay System for Speedrunning</td>
-                        <td>Under Development</td>
-                        <td>1.6</td>
-                        <td><a href="../Pages/Feature/feature5.html">Details</a> </td>
-                    </tr>
-                </table>
+                <!-- shown on displays bigger than 600px (assumes this this a pc sized display) -->
+                <button title="Download the launcher for windows"
+                    onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Windows'"
+                    class="downloadbtn download"><i class="fa fa-download"></i> Download</button>
+                <!-- shown on displays small than or eqaul to 600px (assumes this this a tablet or phone sized display) -->
+                <button title="Download this game as an .apk"
+                    onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Andriod'"
+                    class="andrioddownloadbtn download"><i class="fa fa-download"></i> Download</button>
+                <button title="Open the game" onclick="window.location.href='Sunnyland://Launch(Launcher)?FromWebsite'"
+                    class="launchbtn launch"><i class="fa fa-gamepad"></i> Play Now</button>
 
             </div>
+            <br>
+            <br>
+            <br>
+            <div class="medpara check_anim_top">
+                <div class="center">
+                    <h1>Version Plans</h1>
+                    <p>1.6: Ghost character of best scores for advernture mode, replays of speed runs</p>
+                    <p>1.7: 10 new levels in a undergorund sort of world - maybe caves</p>
+                    <p>1.8/1.9: Either multiplayer rehaul or another world </p>
+                    <p>2.0: Level editor</p>
+                </div>
+            </div>
+            <div class="center">
+                <h1 class="check_anim_bottom">Upcoming Features</h1>
 
-      </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-      <div class="center">
-            <img class="check_anim_zoom" src="../Images/img19.png" width="80% " height="auto ">
-      </div>
-        <div class="medpara check_anim_top">
-          <div class="center">
-                <h2>Up coming Features</h2>
-                <p> In the tabel above you can a have a look over features that MAY come to the game, the fact that they
-                    are listed here means that they are LIKELY to come to Sunny Land but isnt certain. Below are states
-                    [Refer to status collum in table above]
-                    are listed, hover over them to reveal what they mean more indepth. </p>
-                <ul style="padding: none; ">
-                    <li title="Feature was confirmed but has been temporarly paused">Put on hold</li>
-                    <li title="This feature comes from a leak or hint so is to be judged uncertainly ">Leaked</li>
-                    <li title="Idea has be suggested but no offical news as if it will come to the game.">Pending</li>
-                    <li title="Feature has been acknowgled by the dev, and currently being drafted">Under Planning</li>
-                    <li title="Feature has been acknowgled by the dev, and currently being coded/desgined">Under
-                        Development</li>
-                    <li title="Finishing toches, most likly rolled out to testers">Finishing</li>
-                    <li title="Finalized and EXPECTED to be in next update">Upcoming</li>
-                    <li title="In the game now">Released</li>
-                    <li title="not Released until next big update">Held Back</li>
-                    <li title="Patched out becuase of bugs, should be in next version or two">Rolled Back</li>
+                <!-- RESPONSIVE TABLE IN THE WAY THAT WHEN IT GETS TO SMALL A SCROLL BAR POPS UP AND YOU CAN SCROLL ACROSS -->
+                <div class="table-container check_anim_bottom">
+                    <table id="tabelID">
+                        <tr>
+                            <th>ID</th>
+                            <th>FEATURE</th>
+                            <th>STATUS</th>
+                            <th>EXPECTED REALSE VERISION</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Multiplayer</td>
+                            <td>Released</td>
+                            <td>1.5</td>
+                        </tr>
 
-                </ul>
-          </div>
-        </div>
-      <div class="center">
-            <img class="check_anim_zoom" src="../Images/img10.png" width="80% " height="auto ">
-      </div>
-        <br>
-        <br>
-        <footer>
-            <div class="footer-content">
-                <br>
-                <marquee> Website designed by Max Tyson.
-                    &MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;
-                    Sunny Land desgined by Max Inc </marquee>
-                <p> Good job you have scrolled all the way to the bottom! That must mean your intrested, Click the
-                    button below to download the game or if you want to learn more vist a different page!</p>
-                <ul class="footer-social">
-                    <li> <a href="https://www.youtube.com/channel/UCQZBTFpZsGM15w_7hHG6MCw"><i
-                                class="fa fa-youtube"></i></a></li>
-                    <li>
-                        <a href="https://github.com/maxtyson123"> <i class="fa fa-github"></i> </a>
-                    </li>
-                    <li>
-                        <a href="https://max-inc.itch.io/"> <i class="fa fa-gamepad"></i> </a>
-                    </li>
-                    <li>
-                        <a href="https://reddit.com/r/Max_Inc"> <i class="fa fa-reddit"></i> </a>
-                    </li>
-                </ul>
-                <div class="footer-download">
+                        <tr>
+                            <td>2</td>
+                            <td>Linking Acount to game (fully)</td>
+                            <td>Under Planning</td>
+                            <td>1.8/1.9</td>
+                        </tr>
 
-                    <button title="Download the launcher for windows"
-                        onclick="window.location.href='http://sunnyland.maxinc.cf/Download/Windows'" class="downloadbtn">
-                        <iclass="fa fa-download"></i> Download
-                    </button>
-                    <button title="Download this game as an .apk"
-                        onclick="window.location.href='http://sunnyland.maxinc.cf/Download/Andriod'"
-                        class="andrioddownloadbtn"><i class="fa fa-download"></i> Download</button>
+                        <tr>
+                            <td>3</td>
+                            <td>Cosmetics</td>
+                            <td>Under Planning</td>
+                            <td>1.8/1.9</td>
+                        </tr>
+
+                        <tr>
+                            <td>4</td>
+                            <td>Multiple Worlds / New levels</td>
+                            <td>Under Planning</td>
+                            <td>1.7</td>
+                        </tr>
+
+                        <tr>
+                            <td>5</td>
+                            <td>Replay System for Speedrunning</td>
+                            <td>Under Development</td>
+                            <td>1.6</td>
+                        </tr>
+                    </table>
+
+                </div>
+
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="center">
+                <img class="check_anim_zoom" src="../Images/img19.png" width="80% " height="auto ">
+            </div>
+            <div class="medpara check_anim_top">
+                <div class="center">
+                    <h2>Up coming Features</h2>
+                    <p> In the tabel above you can a have a look over features that MAY come to the game, the fact that
+                        they
+                        are listed here means that they are LIKELY to come to Sunny Land but isnt certain. Below are
+                        states
+                        [Refer to status collum in table above]
+                        are listed, hover over them to reveal what they mean more indepth. </p>
+                    <ul style="padding: none; ">
+                        <li title="Feature was confirmed but has been temporarly paused">Put on hold</li>
+                        <li title="This feature comes from a leak or hint so is to be judged uncertainly ">Leaked</li>
+                        <li title="Idea has be suggested but no offical news as if it will come to the game.">Pending
+                        </li>
+                        <li title="Feature has been acknowgled by the dev, and currently being drafted">Under Planning
+                        </li>
+                        <li title="Feature has been acknowgled by the dev, and currently being coded/desgined">Under
+                            Development</li>
+                        <li title="Finishing toches, most likly rolled out to testers">Finishing</li>
+                        <li title="Finalized and EXPECTED to be in next update">Upcoming</li>
+                        <li title="In the game now">Released</li>
+                        <li title="not Released until next big update">Held Back</li>
+                        <li title="Patched out becuase of bugs, should be in next version or two">Rolled Back</li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="center">
+                <img class="check_anim_zoom" src="../Images/img10.png" width="80% " height="auto ">
+            </div>
+            <br>
+            <br>
+            <footer>
+                <div class="footer-content">
+                    <br>
+                    <marquee> Website designed by Max Tyson.
+                        &MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;
+                        Sunny Land desgined by Max Inc </marquee>
+                    <p> Good job you have scrolled all the way to the bottom! That must mean your intrested, Click the
+                        button below to download the game or if you want to learn more vist a different page!</p>
+                    <ul class="footer-social">
+                        <li> <a href="https://www.youtube.com/channel/UCQZBTFpZsGM15w_7hHG6MCw"><i
+                                    class="fa fa-youtube"></i></a></li>
+                        <li>
+                            <a href="https://github.com/maxtyson123"> <i class="fa fa-github"></i> </a>
+                        </li>
+                        <li>
+                            <a href="https://max-inc.itch.io/"> <i class="fa fa-gamepad"></i> </a>
+                        </li>
+                        <li>
+                            <a href="https://reddit.com/r/Max_Inc"> <i class="fa fa-reddit"></i> </a>
+                        </li>
+                    </ul>
+                    <div class="footer-download">
+
+                        <button title="Download the launcher for windows"
+                            onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Windows '"
+                            class="downloadbtn download"><i class="fa fa-download"></i> Download </button>
+                        <button title="Download this game as an .apk"
+                            onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Andriod '"
+                            class="andrioddownloadbtn download"><i class="fa fa-download"></i> Download</button> <br>
+                        <br>
+                    </div>
+                    <button title="Launch the game"
+                        onclick="window.location.href='Sunnyland://Launch(Launcher)?FromWebsite'"
+                        class="launchbtn launch"><i class=" fa fa-gamepad "></i> Play Now</button>
                     <br>
                     <br>
                 </div>
-            </div>
+       
         </footer>
-
+    </div>
 </body>
 
 </html>
