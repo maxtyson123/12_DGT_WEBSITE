@@ -1,10 +1,12 @@
-//JS Formatting (to be done)
+
 ///////Loading/Loader
 
 document.addEventListener("DOMContentLoaded", htmlload); //Once the html page loads
 
 function htmlload() {
-    if(window.location.href.includes("?transition")){
+    updatePageName(); //Update the pages name 
+    if(getCookie("transition") == "yes"){ // This was changed to be a cookie becuase I noticed if the user reloaded the page  then the opening transition was shown
+        setCookie("transition","no",1)
         transitionAnimate("reverse") 
         setTimeout(function () {
             document.querySelector("#transition").style.animation = "";
@@ -36,7 +38,7 @@ function loadedFully() { //Once the page FULLY loads
     loader.style.width = "300%"; //Change the width to show a zoom to the left animation
     loader.style.opacity = "0";  //Hide the loader
     document.body.style.overflow = "scroll";                //Allow the user to scroll
-    updatePageName(); //Update the pages name 
+    
     scrollFunction(); //First Scroll
     transitionSetup();
     checkDownloadedBefore();                                //Check if the user downloaded before                            
@@ -62,6 +64,11 @@ var doneB4 = 0;
 var playedB4 = 0;
 
 //site-data
+var statusData = {};
+var cookieData = getCookie("statusData");
+if(cookieData != ""){
+    statusData = JSON.parse(cookieData);
+}
 var MainSite = "ms"
 var sunnyland = "ro"
 var Login = "ls"
@@ -81,17 +88,19 @@ var setImages = false;
 var imgmode = "none"
 /////////////Functions
 function checkServicesOnload() {
-    let x = getCookie("intial-check"); //get the cookie stored 
-    if (x != 1) {   //If it doesnt exist or doesnt equal 1 run all the checks
+    //get the cookie stored 
+    if (statusData.initial != 1) {   //If it doesnt exist or doesnt equal 1 run all the checks
         Checkmaxinc()
         Checkro()
         Checkls()
         Checkpun()
         Checkpatch()
         Checkbl()
-        setCookie("intial-check", 1, 1); //change it to one so thant when reloaded the function wont run again
+        statusData.initial = 1;
+        statusData.storeddata = [];
+        setCookie("statusData", JSON.stringify(statusData), 1); //change it to one so thant when reloaded the function wont run again
     }
-    if (x == 1) {
+    if (statusData.initial == 1) {
         setStatus(MainSite)
         setStatus(sunnyland)
         setStatus(Login)
@@ -119,14 +128,33 @@ function check_site(id, site_url, site_name) {
     img.src = url;                                  //Set the images soucre to the url
     //Atempt to load image
     img.onload = function() {                      //If it loads                    
-        setCookie(id, 1, 1);                       //Set a cookie with the site id that it works 
+        updateStatusData(id,1)                       //Set a cookie with the site id that it works 
         buttontochange.className = "sercvieUp";    //Set the status style to green/serciveUp 
     }
     img.onerror = function() {                       //If it dont  work
-        setCookie(id, 2, 1);                         //Set a cookie with the site id that it works
+        updateStatusData(id,2)                         //Set a cookie with the site id that it works
         alert(site_name + ' IS DOWN AND NOT-RUNNING')//Alert the user
         buttontochange.className = "serviceDown";    //Set the status style to red/serciveDown
     }
+}
+
+function updateStatusData(id,data){
+    function StoredStatus(id,data){
+        this.id = id;
+        this.data = data;
+    }
+    updated = false;
+    for (let x = 0; x < statusData.storeddata.length; x++) {
+        if(statusData.storeddata[x].id == id){
+            statusData.storeddata[x].data = data;
+            updated = true;
+        }
+    }
+    if(!updated){
+        var newStored = new StoredStatus (id,data);
+        statusData.storeddata.push(newStored);
+    }
+    setCookie("statusData", JSON.stringify(statusData), 1);
 }
 
 function Checkmaxinc() {
@@ -231,17 +259,21 @@ function setCookie(cookie_name, cookie_info, expire_date) {
 }
 
 function setStatus(buttonStatId) { // function to set a status from cookie, used to make it more efficent.
-    let cookieID = getCookie(buttonStatId);
-    if (cookieID == 1) {
-        //If the cookie states that it has previously loaded 
-        var buttontochange = document.getElementById(buttonStatId)
-        buttontochange.className = "sercvieUp";
+    for (let x = 0; x < statusData.storeddata.length; x++) {
+        if(statusData.storeddata[x].id == buttonStatId){
+            if (statusData.storeddata[x].data == 1) {
+                //If the cookie states that it has previously loaded 
+                var buttontochange = document.getElementById(buttonStatId)
+                buttontochange.className = "sercvieUp";
+            }
+            if (statusData.storeddata[x].data == 2) {
+                //If the cookie states that it has previously been not avalible 
+                var buttontochange = document.getElementById(buttonStatId)
+                buttontochange.className = "serviceDown";
+            }
+        }
     }
-    if (cookieID == 2) {
-        //If the cookie states that it has previously been not avalible 
-        var buttontochange = document.getElementById(buttonStatId)
-        buttontochange.className = "serviceDown";
-    }
+    
 }
 
 
@@ -388,7 +420,8 @@ function updatePageName(){
 function trainstiontoPage(url){
         transitionAnimate("normal")
         setTimeout(function () {
-            window.location.href = url+"?transition";   //Hide after the transition has had time to run
+            setCookie("transition","yes",1)
+            window.location.href = url;   //Hide after the transition has had time to run
         }, 1000);
  
 }

@@ -13,331 +13,356 @@
 
 <body>
     <div id="transition" class="transitioncontainer">
-  <!--Make sure this is loaded first-->
-  <div id="loader" class="loader">
-    <div class="loader-content">
-        <h1>LOADING...</h1>
-        <img class="check_anim_bottom" width="60" height="60" class="left_to_right" src="../Images/PlayerOnPlatform.png">
-        <img class="check_anim_bottom" width="30%" height="20px" src="../Images/platform.png">
-    </div>
-</div>
-    <div class="Menu sticky" id="MenuID">
-
-        <a href="../index.html" >Home</a>
-        <a href="../Pages/about.html">About</a>
-        <a class="windown download" href="http://sunnyland.maxinc.cf/Download/Windows/">Download</a>
-        <a class="launcher launch" href="SunnyLand://Launch(Launcher)?FromWebsite"><i class="fa fa-gamepad"></i> Launch
-            Game</a>
-        <a class="additionalLinksCSS" href="../Pages/changelog.html">Changelog</a>
-                <a class="additionalLinksCSS" href="../Pages/upcoming.html">Upcoming Features</a>
-                <a class="additionalLinksCSS" href="../Pages/status.html">Status</a>
-        <div id="mobileDD" class="dropdown">
-            <button class="dropdownbutton">Changes
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div id="DropDownID" class="dropdown-content sticky-dropdown">
-                <a>Please Choose A Page</a>
-                <a href="../Pages/changelog.html">Changelog</a>
-                <a href="../Pages/upcoming.html">Upcoming Features</a>
-              
-                <a href="../Pages/status.html">Status</a>
+        <!--Make sure this is loaded first-->
+        <div id="loader" class="loader">
+            <div class="loader-content">
+                <h1>LOADING...</h1>
+                <img class="check_anim_bottom" width="60" height="60" class="left_to_right"
+                    src="../Images/PlayerOnPlatform.png">
+                <img class="check_anim_bottom" width="30%" height="20px" src="../Images/platform.png">
             </div>
         </div>
-        <a title="Current Page" class="active" href="../Pages/qanda.html">Q&A</a>
-        <a href="../Pages/demo.html">Demo</a>
-        <button onclick="window.location.href='http://maxserver.ml/sunnylandLogin/login.php'" title="Go to login site" class="loginbutton">Login <i class="fa fa-user"></i></button>
+        <div class="Menu sticky" id="MenuID">
 
-        <a title="Open Menu" href="javascript:void(0);" class="icon" onclick="openMenuMobile()">
-            <i class="fa fa-bars"></i>
-        </a>
-    </div>
+            <a href="../index.html">Home</a>
+            <a href="../Pages/about.html">About</a>
+            <a class="windown download" href="http://sunnyland.maxinc.cf/Download/Windows/">Download</a>
+            <a class="launcher launch" href="SunnyLand://Launch(Launcher)?FromWebsite"><i class="fa fa-gamepad"></i>
+                Launch
+                Game</a>
+            <a class="additionalLinksCSS" href="../Pages/changelog.html">Changelog</a>
+            <a class="additionalLinksCSS" href="../Pages/upcoming.html">Upcoming Features</a>
+            <a class="additionalLinksCSS" href="../Pages/status.html">Status</a>
+            <div id="mobileDD" class="dropdown">
+                <button class="dropdownbutton">Changes
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div id="DropDownID" class="dropdown-content sticky-dropdown">
+                    <a>Please Choose A Page</a>
+                    <a href="../Pages/changelog.html">Changelog</a>
+                    <a href="../Pages/upcoming.html">Upcoming Features</a>
 
+                    <a href="../Pages/status.html">Status</a>
+                </div>
+            </div>
+            <a title="Current Page" class="active" href="../Pages/qanda.html">Q&A</a>
+            <a href="../Pages/demo.html">Demo</a>
+            <button onclick="window.location.href='http://maxserver.ml/sunnylandLogin/login.php'" title="Go to login site"
+                class="loginbutton">Login <i class="fa fa-user"></i></button>
 
-    <button onclick="topFunction()" id="scrolltotop" title="Go to top">Top</button>
-    <div class="content">
-        <div class="video-container">
-            <iframe class="hero-iframe" src="https://www.youtube.com/embed/NpFjtGn99qk?controls=0&autoplay=1&mute=1&loop=1&playlist=NpFjtGn99qk"></iframe>
+            <a title="Open Menu" href="javascript:void(0);" class="icon" onclick="openMenuMobile()">
+                <i class="fa fa-bars"></i>
+            </a>
         </div>
+        <button onclick="topFunction()" id="scrolltotop" title="Go to top">Top</button>
+        <div class="content">
+            <div class="video-container">
+                <iframe class="hero-iframe"
+                    src="https://www.youtube.com/embed/NpFjtGn99qk?controls=0&autoplay=1&mute=1&loop=1&playlist=NpFjtGn99qk"></iframe>
+            </div>
+            <div id="titeltext">
+                <div class="center">
+                    <h1>SunnyLand</h1>
+                    <button title="Download the launcher for windows"
+                        onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Windows'"
+                        class="downloadbtn download"><i class="fa fa-download"></i> Download</button>
+                    <!-- shown on displays small than or eqaul to 600px (assumes this this a tablet or phone sized display) -->
+                    <button title="Download this game as an .apk"
+                        onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Andriod'"
+                        class="andrioddownloadbtn download"><i class="fa fa-download"></i> Download</button>
+                    <button title="Download this game as an .apk"
+                        onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Andriod'"
+                        class="launchbtn launch"><i class="fa fa-gamepad"></i> Play Now</button>
+                </div>
+            </div>
+            <div class="qanda">
+                <div class="center">
+                    <a href="../Pages/qanda.html" style="text-decoration: none; color: black;">
+                        <h2> General </h2>
+                    </a>
+                    <div class="question">
+                        <div class="qandadropdown">
+                            <button class="qheader">How do I play Sunny Land?
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div id="awnser1" class="awnserContent">
+                                <p>To play Sunny Land locate a download button, launch the launcher, sign up, Have Fun!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <div class="qandadropdown">
+                            <button class="qheader">What are the controls?
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div id="awnser1" class="awnserContent">
+                                <p>Use WASD, or Arrow Keys to move the player on keyboard, esc to open the pause menu
+                                    in-game, controler movement is underdevelopment with joystick to move and y to jump.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <div class="qandadropdown">
+                            <button class="qheader">I have found a bug how do I report it?
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div id="awnser1" class="awnserContent">
+                                <p>To report a bug you can contact us using email.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <div class="qandadropdown">
+                            <button class="qheader">Can I play with friends?
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div id="awnser1" class="awnserContent">
+                                <p>Yes you can play with your friends by creating a multiplayer lobby and they join it.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <div class="qandadropdown">
+                            <button class="qheader">How can I support the Devlopment?
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div id="awnser1" class="awnserContent">
+                                <p>You can support the game by reporting bugs, sharing it with friends or on social media.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="center">
+                    <img class="check_anim_bottom" src="../Images/img21.png" width="80%" height="auto">
+                </div>
+                <div class="download_button check_anim_bottom">
+                    <div class="center">
+                        <button title="Download the launcher for windows"
+                            onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Windows'"
+                            class="downloadbtn download"><i class="fa fa-download"></i> Download</button>
+                        <button title="Download this game as an .apk"
+                            onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Andriod'"
+                            class="andrioddownloadbtn download"><i class="fa fa-download"></i> Download</button>
+                        <button title="Launch the game"
+                            onclick="window.location.href='Sunnyland://Launch(Launcher)?FromWebsite'"
+                            class="launchbtn launch"><i class=" fa fa-gamepad "></i> Play Now</button>
+                    </div>
+                </div>
+                <div class="center">
+                    <img class="check_anim_bottom" src="../Images/img22.png" width="80%" height="auto">
+                </div>
+                <div class="qanda">
+                    <div class="center">
+                        <a href="../Pages/qanda.html" style="text-decoration: none; color: black;">
+                            <h2> Updates </h2>
+                        </a>
+                        <div class="question">
+                            <div class="qandadropdown">
+                                <button class="qheader">Are updates free?
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                                <div id="awnser1" class="awnserContent">
+                                    <p>The game is completly free to play, meaing you wont need to pay to join in on the
+                                        fun.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question">
+                            <div class="qandadropdown">
+                                <button class="qheader">How often is the game updated?
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                                <div id="awnser1" class="awnserContent">
+                                    <p>Game Development takes time so updates occur once or twice a month. Multiplayer
+                                        updates
+                                        are very anoyying to implement so dont expect a lot of those.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question">
+                            <div class="qandadropdown">
+                                <button class="qheader">How do I get the latest update?
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                                <div id="awnser1" class="awnserContent">
+                                    <p>If your playing on pc the launcher will automaticly patch the game when there is a
+                                        update
+                                        posted to our servers. If on mobile check your App/Play Store. *Multiplayer requires
+                                        the
+                                        latest version.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="center">
+                    <img class="check_anim_bottom" src="../Images/img28.png" width="80%" height="auto">
+                </div>
+                <div class="qanda">
+                    <div class="center">
+                        <a href="../Pages/qanda.html" style="text-decoration: none; color: black;">
+                            <h2> Devlopment </h2>
+                        </a>
+                        <div class="question">
+                            <div class="qandadropdown">
+                                <button class="qheader">Is Sunny Land still supported by the dev?
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                                <div id="awnser1" class="awnserContent">
+                                    <p>Yes its still underdevelopment, however once version 2.0 is released with the launch
+                                        of
+                                        level creator there will be less frequent updates</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question">
+                            <div class="qandadropdown">
+                                <button class="qheader">How long will Sunny Land be worked on?
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                                <div id="awnser1" class="awnserContent">
+                                    <p>I plan to continue to add content and features until its 2.0 release.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="center">
+                    <img class="check_anim_bottom" src="../Images/img23.png" width="80%" height="auto">
+                </div>
+                <div class="qanda">
+                    <div class="center">
+                        <a href="../Pages/qanda.html" style="text-decoration: none; color: black;">
+                            <h2> Platforms </h2>
+                        </a>
+                        <div class="question">
+                            <div class="qandadropdown">
+                                <button class="qheader">What platforms can I play on?
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                                <div id="awnser1" class="awnserContent">
+                                    <p>As of now you can only play on Windows, but MAC and Linux are coming soon. So are
+                                        Andriod
+                                        and IOS. WebGL demo also exists</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question">
+                            <div class="qandadropdown">
+                                <button class="qheader">Whats preformance like across multiple platforms?
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                                <div id="awnser1" class="awnserContent">
+                                    <p>The game is highly optimisized so most modern devices should run the game steadly</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question">
+                            <div class="qandadropdown">
+                                <button class="qheader">Does content change across different platforms?
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                                <div id="awnser1" class="awnserContent">
+                                    <p>The game wont change across platforms, however in the demo there is a limit to how
+                                        much
+                                        you can play.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="center">
+                    <img class="check_anim_bottom" src="../Images/img24.png" width="80%" height="auto">
+                </div>
+                <div class="qanda">
+                    <div class="center">
+                        <a href="../Pages/qanda.html" style="text-decoration: none; color: black;">
+                            <h2> Accounts </h2>
+                        </a>
+                        <div class="question">
+                            <div class="qandadropdown">
+                                <button class="qheader">Does it cost to make an account?
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                                <div id="awnser1" class="awnserContent">
+                                    <p>No an account is free to make, all you need is a active email adress</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question">
+                            <div class="qandadropdown">
+                                <button class="qheader">Can i use this account elsewhere?
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                                <div id="awnser1" class="awnserContent">
+                                    <p>I will try to implment accounts into games where its nessacary and most will connect
+                                        to
+                                        our main database.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question">
+                            <div class="qandadropdown">
+                                <button class="qheader">Can I use socail logins like Google and Facebook?
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                                <div id="awnser1" class="awnserContent">
+                                    <p>I plan to implment that in the future but as of now, no.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-        <div id="titeltext">
+                </div>
+            </div>
             <div class="center">
-                <h1>SunnyLand</h1>
-                <button title="Download the launcher for windows"
-                    onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Windows'"
-                    class="downloadbtn download"><i class="fa fa-download"></i> Download</button>
-                <!-- shown on displays small than or eqaul to 600px (assumes this this a tablet or phone sized display) -->
-                <button title="Download this game as an .apk"
-                    onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Andriod'"
-                    class="andrioddownloadbtn download"><i class="fa fa-download"></i> Download</button>
-                <button title="Download this game as an .apk"
-                    onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Andriod'"
-                    class="launchbtn launch"><i class="fa fa-gamepad"></i> Play Now</button>
+                <img class="check_anim_bottom" src="../Images/img29.png" width="80%" height="auto">
             </div>
-        </div>
-
-       
-
-        </div>
-
-    </div>
-
-
-
-    <div class="qanda">
-        <center>
-            <a href="../Pages/qanda.html" style="text-decoration: none; color: black;">
-                <h2> General </h2>
-            </a>
-            <div class="question">
-                <div class="qandadropdown">
-                    <button class="qheader">How do I play Sunny Land?
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                    <div id="awnser1" class="awnserContent">
-                        <p>To play Sunny Land locate a download button, launch the launcher, sign up, Have Fun!</p>
-                    </div>
-                </div>
-            </div>
-            <div class="question">
-                <div class="qandadropdown">
-                    <button class="qheader">What are the controls?
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                    <div id="awnser1" class="awnserContent">
-                        <p>Use WASD, or Arrow Keys to move the player on keyboard, esc to open the pause menu in-game, controler movement is underdevelopment with joystick to move and y to jump. </p>
-                    </div>
-                </div>
-            </div>
-            <div class="question">
-                <div class="qandadropdown">
-                    <button class="qheader">I have found a bug how do I report it?
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                    <div id="awnser1" class="awnserContent">
-                        <p>To report a bug you can contact us using email.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="question">
-                <div class="qandadropdown">
-                    <button class="qheader">Can I play with friends?
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                    <div id="awnser1" class="awnserContent">
-                        <p>Yes you can play with your friends by creating a multiplayer lobby and they join it.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="question">
-                <div class="qandadropdown">
-                    <button class="qheader">How can I support the Devlopment?
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                    <div id="awnser1" class="awnserContent">
-                        <p>You can support the game by reporting bugs, sharing it with friends or on social media.</p>
-                    </div>
-                </div>
-            </div>
-        </center>
-    </div>
-    <center>
-        <img class="check_anim_bottom" src="../Images/img21.png" width="80%" height="auto">
-    </center>
-    <div class="download_button check_anim_bottom">
-        <div class="center">
-            <button title="Download the launcher for windows" onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Windows'" class="downloadbtn download"><i class="fa fa-download"></i> Download</button>
-            <button title="Download this game as an .apk" onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Andriod'" class="andrioddownloadbtn download"><i class="fa fa-download"></i> Download</button>
-            <button title="Launch the game" onclick="window.location.href='Sunnyland://Launch(Launcher)?FromWebsite'" class="launchbtn launch"><i class=" fa fa-gamepad "></i> Play Now</button>
-         </div>
-    </div>
-    <center>
-        <img class="check_anim_bottom" src="../Images/img22.png" width="80%" height="auto">
-    </center>
-    <div class="qanda">
-        <center>
-            <a href="../Pages/qanda.html" style="text-decoration: none; color: black;">
-                <h2> Updates </h2>
-            </a>
-            <div class="question">
-                <div class="qandadropdown">
-                    <button class="qheader">Are updates free?
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                    <div id="awnser1" class="awnserContent">
-                        <p>The game is completly free to play, meaing you wont need to pay to join in on the fun.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="question">
-                <div class="qandadropdown">
-                    <button class="qheader">How often is the game updated?
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                    <div id="awnser1" class="awnserContent">
-                        <p>Game Development takes time so updates occur once or twice a month. Multiplayer updates are very anoyying to implement so dont expect a lot of those.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="question">
-                <div class="qandadropdown">
-                    <button class="qheader">How do I get the latest update?
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                    <div id="awnser1" class="awnserContent">
-                        <p>If your playing on pc the launcher will automaticly patch the game when there is a update posted to our servers. If on mobile check your App/Play Store. *Multiplayer requires the latest version.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </center>
-    </div>
-    <center>
-    <img class="check_anim_bottom" src="../Images/img28.png" width="80%" height="auto">
-</center>
-    <div class="qanda">
-        <center>
-            <a href="../Pages/qanda.html" style="text-decoration: none; color: black;">
-                <h2> Devlopment </h2>
-            </a>
-            <div class="question">
-                <div class="qandadropdown">
-                    <button class="qheader">Is Sunny Land still supported by the dev?
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                    <div id="awnser1" class="awnserContent">
-                        <p>Yes its still underdevelopment, however once version 2.0 is released with the launch of level creator there will be less frequent updates</p>
-                    </div>
-                </div>
-            </div>
-            <div class="question">
-                <div class="qandadropdown">
-                    <button class="qheader">How long will Sunny Land be worked on?
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                    <div id="awnser1" class="awnserContent">
-                        <p>I plan to continue to add content and features until its 2.0 release.</p>
-                    </div>
-                </div>
-            </div>
-        </center>
-    </div>
-    <center>
-        <img class="check_anim_bottom" src="../Images/img23.png" width="80%" height="auto">
-    </center>
-    <div class="qanda">
-        <center>
-            <a href="../Pages/qanda.html" style="text-decoration: none; color: black;">
-                <h2> Platforms </h2>
-            </a>
-            <div class="question">
-                <div class="qandadropdown">
-                    <button class="qheader">What platforms can I play on?
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                    <div id="awnser1" class="awnserContent">
-                        <p>As of now you can only play on Windows, but MAC and Linux are coming soon. So are Andriod and IOS. WebGL demo also exists</p>
-                    </div>
-                </div>
-            </div>
-            <div class="question">
-                <div class="qandadropdown">
-                    <button class="qheader">Whats preformance like across multiple platforms?
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                    <div id="awnser1" class="awnserContent">
-                        <p>The game is highly optimisized so most modern devices should run the game steadly</p>
-                    </div>
-                </div>
-            </div>
-            <div class="question">
-                <div class="qandadropdown">
-                    <button class="qheader">Does content change across different platforms?
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                    <div id="awnser1" class="awnserContent">
-                        <p>The game wont change across platforms, however in the demo there is a limit to how much you can play.</p>
-                    </div>
-                </div>
-            </div>
-        </center>
-    </div>
-    <center>
-        <img class="check_anim_bottom" src="../Images/img24.png" width="80%" height="auto">
-    </center>
-    <div class="qanda">
-        <center>
-            <a href="../Pages/qanda.html" style="text-decoration: none; color: black;">
-                <h2> Accounts </h2>
-            </a>
-            <div class="question">
-                <div class="qandadropdown">
-                    <button class="qheader">Does it cost to make an account?
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                    <div id="awnser1" class="awnserContent">
-                        <p>No an account is free to make, all you need is a  active email adress</p>
-                    </div>
-                </div>
-            </div>
-            <div class="question">
-                <div class="qandadropdown">
-                    <button class="qheader">Can i use this account elsewhere?
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                    <div id="awnser1" class="awnserContent">
-                        <p>I will try to implment accounts into games where its nessacary and most will connect to our main database.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="question">
-                <div class="qandadropdown">
-                    <button class="qheader">Can I use socail logins like Google and Facebook?
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                    <div id="awnser1" class="awnserContent">
-                        <p>I plan to implment that in the future but as of now, no.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        </center>
-    </div>
-    
-    
-    <center>
-        <img class="check_anim_bottom" src="../Images/img29.png" width="80%" height="auto">
-    </center>
-    <br>
-    <br>
-    
-    <footer>
-        <div class="footer-content">
             <br>
-            <marquee> Website designed by Max Tyson. &MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace; Sunny Land desgined by Max Inc </marquee>
-            <p> Good job you have scrolled all the way to the bottom! That must mean your intrested, Click the button below to download the game or if you want to learn more vist a different page!</p>
-            <ul class="footer-social">
-                <li> <a href="https://www.youtube.com/channel/UCQZBTFpZsGM15w_7hHG6MCw"><i class="fa fa-youtube"></i></a></li>
-                <li>
-                    <a href="https://github.com/maxtyson123"> <i class="fa fa-github"></i> </a>
-                </li>
-                <li>
-                    <a href="https://max-inc.itch.io/"> <i class="fa fa-gamepad"></i> </a>
-                </li>
-                <li>
-                    <a href="https://reddit.com/r/Max_Inc"> <i class="fa fa-reddit"></i> </a>
-                </li>
-            </ul>
-            <div class="footer-download">
+            <br>
+            <footer>
+                <div class="footer-content">
+                    <br>
+                    <marquee> Website designed by Max Tyson.
+                        &MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;
+                        Sunny Land desgined by Max Inc </marquee>
+                    <p> Good job you have scrolled all the way to the bottom! That must mean your intrested, Click the
+                        button
+                        below to download the game or if you want to learn more vist a different page!</p>
+                    <ul class="footer-social">
+                        <li> <a href="https://www.youtube.com/channel/UCQZBTFpZsGM15w_7hHG6MCw"><i
+                                    class="fa fa-youtube"></i></a></li>
+                        <li>
+                            <a href="https://github.com/maxtyson123"> <i class="fa fa-github"></i> </a>
+                        </li>
+                        <li>
+                            <a href="https://max-inc.itch.io/"> <i class="fa fa-gamepad"></i> </a>
+                        </li>
+                        <li>
+                            <a href="https://reddit.com/r/Max_Inc"> <i class="fa fa-reddit"></i> </a>
+                        </li>
+                    </ul>
+                    <div class="footer-download">
 
-                <button title="Download the launcher for windows" onclick="window.location.href='http://sunnyland.maxinc.cf/Download/Windows'" class="downloadbtn"><iclass="fa fa-download"></i> Download</button>
-                <button title="Download this game as an .apk" onclick="window.location.href='http://sunnyland.maxinc.cf/Download/Andriod'" class="andrioddownloadbtn"><i class="fa fa-download"></i> Download</button>
-                <br>
-                <br>
-            </div>
+                        <button title="Download the launcher for windows"
+                            onclick="window.location.href='http://sunnyland.maxinc.cf/Download/Windows'"
+                            class="downloadbtn">
+                            <iclass="fa fa-download"></i> Download
+                        </button>
+                        <button title="Download this game as an .apk"
+                            onclick="window.location.href='http://sunnyland.maxinc.cf/Download/Andriod'"
+                            class="andrioddownloadbtn"><i class="fa fa-download"></i> Download</button>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </footer>
         </div>
-    </footer>
-</div>
+    </div>
 </body>
 
 </html>
