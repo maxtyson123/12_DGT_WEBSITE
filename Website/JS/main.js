@@ -4,15 +4,15 @@
 document.addEventListener("DOMContentLoaded", htmlload); //Once the html page loads
 
 function htmlload() {
-    updatePageName(); //Update the pages name 
+    updatePageName(); 
     if(getCookie("transition") == "yes"){ // This was changed to be a cookie becuase I noticed if the user reloaded the page  then the opening transition was shown
         setCookie("transition","no",1)
         transitionAnimate("reverse") 
         setTimeout(function () {
-            document.querySelector("#transition").style.animation = "";
+            document.querySelector("#transition").style.animation = "";//Remove the animtion once played, this allows it to be re-run 
         }, 1100);
     }
-        if(dontloader){   //If page shouldnt have the loader on it
+        if(dontloader){   
             //Run theese functions that would usally be run  once page fully loaded
             checkDownloadedBefore();
             check_anim();
@@ -22,35 +22,35 @@ function htmlload() {
             loader.style.display = "block";
             loader.style.opacity = "1";
             loader.style.width = "100%";
-            loader.classList.add("ignoreImg") //Show the loader div
-            document.body.style.overflow = "hidden";                //Stop the user from scrolling to unloaded content
+            loader.classList.add("ignoreImg") 
+            document.body.style.overflow = "hidden";                //Stop the user from scrolling so they dont see unloaded content
         }
     
    
 }
-window.onload = function() { //Once the page FULLY loads
+window.onload = function() { 
     loadedFully();
     
 };
 
-function loadedFully() { //Once the page FULLY loads
+function loadedFully() { 
     loader = document.getElementById("loader");
     loader.style.width = "300%"; //Change the width to show a zoom to the left animation
-    loader.style.opacity = "0";  //Hide the loader
-    document.body.style.overflow = "scroll";                //Allow the user to scroll
+    loader.style.opacity = "0"; 
+    document.body.style.overflow = "scroll";               
     
     scrollFunction(); //First Scroll
     transitionSetup();
-    checkDownloadedBefore();                                //Check if the user downloaded before                            
-    check_anim();                                           //Check if any elements that should be loaded is in  veiw
+    checkDownloadedBefore();                                                         
+    check_anim();                                          
     setTimeout(function () {
-        loader.style.display = "none"; //Fully hide the loader
+        loader.style.display = "none";
         updateImage();
-    }, 250);                                                      //Wait 5ms first
+    }, 250);                                                      //Wait 2.5ms before hiding the loader so the width animation has time to play 
     
 }
-window.onscroll = function() { //When the user scrolls
-    scrollFunction(); //As a function incase called by other functions
+window.onscroll = function() { 
+    scrollFunction(); //As a function incase called by other functions, eg. scroll to top
 };
 
 
@@ -80,7 +80,7 @@ var scrolltotop = document.getElementById("scrolltotop");
 var menu = document.getElementById("MenuID");
 var dropdown = document.getElementById("DropDownID ");
 //Loader  
-    var dontloader = false;
+var dontloader = false;
 //Images
 var docWidth;
 var docWidthCache = 0;
@@ -421,27 +421,28 @@ function trainstiontoPage(url){
         transitionAnimate("normal")
         setTimeout(function () {
             setCookie("transition","yes",1)
-            window.location.href = url;   //Hide after the transition has had time to run
+            window.location.href = url;   //Go to page after the transition has had time to run
         }, 1000);
  
 }
 function transitionAnimate(type){
-    pageHeight = document.documentElement.scrollTop + (screen.height/2)
-    document.documentElement.style.setProperty("--transition-vertical-pos", pageHeight + "px");
+    pageHeight = document.documentElement.scrollTop + (screen.height/2) //Get the center of the screen, so that the animation is closing around where the user has scrolled, rather then the exact center of the page
+    document.documentElement.style.setProperty("--transition-vertical-pos", pageHeight + "px"); //Update the css varible to have the centered position
     trnasitionelemt = document.querySelector("#transition");
-    
-    trnasitionelemt.style.animation = "tranistion-close 1s 1"
+    trnasitionelemt.style.animation = "tranistion-close 1s 1"   //Play the animtion
     document.body.style.backgroundColor = "#50C878";
     document.body.style.transition = "0s";
     trnasitionelemt.style.animationFillMode = "forwards";
-    trnasitionelemt.style.animationDirection = type;
+    trnasitionelemt.style.animationDirection = type;           //Make the animtion run in passed type, eg. play backwards if opening the page
 }
 function transitionSetup(){
     var ahrefs = document.querySelectorAll("a");  
     for (let x = 0; x < ahrefs.length; x++) {    
         ahrefs[x].addEventListener("click", function(event){
-            trainstiontoPage(ahrefs[x].href);
-            event.preventDefault();
+                if(ahrefs[x].host == window.location.host){ //IF they are going to the same domain, this prevents the transtion on pages like the download one or the launcher
+                    trainstiontoPage(ahrefs[x].href);
+                    event.preventDefault(); // Stop from naviagting to the page, so there is time to show the transition
+                }
           });
     }
 }

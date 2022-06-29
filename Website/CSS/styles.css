@@ -1,848 +1,808 @@
-
-    /* CSS Foramting (TO BE DONE) */
-    /* elements */
-    /* classes */
-    /* ids */
-    /* keyframes */
-    /* media */
-    /* other */
-    /* ^all are done in alphabetical order*/
-    
-* {
-    -webkit-transition: all 0.5s ease-in-out;
-    /* Add an animation to everything, gives a cool loading style */
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-    scroll-behavior: smooth;
-    box-sizing: border-box;
-    border-radius: 10px;
-}
-
-:root{
-    --transition-vertical-pos: 800px;
-}
-
-
-.alert {
-    padding: 20px;
-    background-color: #f44336;
-    color: white;
-}
-
-.closebtn {
-    margin-left: 15px;
-    color: white;
-    font-weight: bold;
-    float: right;
-    font-size: 22px;
-    line-height: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.closebtn:hover {
-    color: black;
-}
-
-.bpandimg {
-    font-size: 32px;
-    /* Font size has to be set induvially */
-}
-
-.breiftext {
-    font-size: 32px;
-    padding: 10%;
-}
-
-.breiflink {
-    font-size: 32px;
-    padding: 0%;
-}
-
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    /*Sets the fonts */
-}
-
-h1 {
-    background: rgba(0, 0, 0, 0.5);
-    /* Gives a shadow effect, looks 2.5d ish */
-    padding: 10px;
-    font-size: 48px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.466);
-}
-
-h2 {
-    font-size: 32px;
-}
-
-button {
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.466);
-}
-
-img {
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.466);
-}
-
-iframe {
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.466);
-}
-
-.table {
-    box-shadow: 0px 8px 16px 0pb rgba(0, 0, 0, 0.466);
-}
-
-li {
-    position: relative;
-    text-align: center;
-    padding: none;
-}
-
-.launcher {
-    border-radius: 5px;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 62%, rgba(0, 212, 255, 1) 100%);
-}
-
-.launcher:hover {
-    animation: grandent 1s;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 13%, rgba(0, 212, 255, 1) 100%);
-}
-
-@keyframes grandent {
-    from {
-        background: rgb(2, 0, 36);
-        background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 62%, rgba(0, 212, 255, 1) 100%);
-    }
-    to {
-        background: rgb(2, 0, 36);
-        background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 13%, rgba(0, 212, 255, 1) 100%);
-    }
-}
-
-.Menu {
-    overflow: hidden;
-    background-color: rgb(0, 0, 0);
-    position: absolute;
-    z-index: 2;
-    /* Displays above iframe*/
-    width: 100%;
-    top: 0px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.466);
-}
-
-.Menu a {
-    /* setting the nav links to look more like a button rather than a text link */
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-.Menu a:hover {
-    /* Hover effect */
-    background-color: #ddd;
-    color: black;
-}
-
-.Menu a.active {
-    /* Shows what page you are on */
-    background-color: #50C878;
-    color: white;
-}
-
-.Menu button {
-    /* Makes the login button (and others) look like the links for theming purposes */
-    float: right;
-    display: block;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    font-size: 17px;
-    background-color: #50C878;
-    border: none;
-}
-
-.Menu button:hover {
-    /*Same with the hovering */
-    background-color: #50C878b6;
-    color: black;
-}
-
-.Menu .icon {
-    /* hides the button the shows the mobile nav*/
-    display: none;
-}
-
-.dropdown {
-    float: left;
-    overflow: hidden;
-}
-
-.dropdown .dropdownbutton {
-    /* Dropdown content and button styling */
-    font-size: 17px;
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #555;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    float: none;
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.Menu a:hover,
-.dropdown:hover,
-.dropdownbutton,
-.downloadbtn:hover,
-.andrioddownloadbtn:hover {
-    /*  Group hover effect*/
-    background-color: #555;
-    color: white;
-}
-
-.dropdown-content a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-.dropdown:hover .dropdown-content {
-    /*Sets the dropdown content's display to block when the dropdown is hovered */
-    display: block;
-}
-
-@keyframes tranistion-close{
-    0%{
-      clip-path: circle(50% at 50% var(--transition-vertical-pos));
-    }
-    100%{
-      clip-path: circle(0% at 50% var(--transition-vertical-pos));
-    }
-  }
-
-  .transitioncontainer{
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: white;
-    z-index: 4;
-  }
-
-
-
-.loader {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 3;
-    left: 0;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.9);
-    overflow-x: hidden;
-    transition: 1s;
-}
-.loader-content {
-    position: relative;
-    top: 25%;
-    width: 100%;
-    text-align: center;
-    color: white;
-}
-
-.sticky {
-    /* Class for any thing that wants to be sticky */
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 2;
-}
-
-.sticky-dropdown {
-    /* Used for the dropdown to be sticky when the nav bar is*/
-    position: fixed;
-    top: 0;
-    z-index: 1;
-}
-
-.sticky+.content {
-    padding-top: 60px;
-    padding-bottom: 0px;
-}
-
-.video-container {
-    /*Video */
-    width: 100vw;
-    height: 100vh;
-}
-
-.downloadbtn,
-.launchbtn {
-    /* Stylize the download button */
-    background-color: #50C878;
-    border: none;
-    color: white;
-    padding: 12px 30px;
-    cursor: pointer;
-    font-size: 20px;
-}
-
-.service-check {
-    /*When the service is not set */
-    background-color: #ddd;
-    border: none;
-    color: black;
-    padding: 2.5%;
-    cursor: pointer;
-    font-size: 20px;
-}
-
-.sercvieUp {
-    /* When the service is up*/
-    background-color: green;
-    border: none;
-    color: black;
-    padding: 2.5%;
-    cursor: pointer;
-    font-size: 20px;
-}
-
-.serviceDown {
-    /* When the service is down*/
-    background-color: red;
-    border: none;
-    color: black;
-    padding: 2.5%;
-    cursor: pointer;
-    font-size: 20px;
-}
-
-.serviceMat {
-    /*when the service is under matinence */
-    background-color: orange;
-    border: none;
-    color: black;
-    padding: 2.5%;
-    cursor: pointer;
-    font-size: 20px;
-}
-
-.andrioddownloadbtn {
-    /*Hidden by default*/
-    display: none;
-    background-color: #50C878;
-    border: none;
-    color: white;
-    padding: 12px 30px;
-    cursor: pointer;
-    font-size: 20px;
-}
-
-#scrolltotop {
-    /*Hidden scroll to top button */
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    z-index: 99;
-    font-size: 18px;
-    border: none;
-    outline: none;
-    background-color: #50C878;
-    color: white;
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 4px;
-}
-
-#scrolltotop:hover,
-.sercvieUp:hover,
-.service-check:hover,
-.serviceDown:hover,
-.serviceMat:hover {
-    /* More hover effects that were added later */
-    background-color: #555;
-}
-
-.hero-iframe {
-    /* iframe as hero image*/
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100vw;
-    height: 100vh;
-    transform: translate(-50%, -50%);
-}
-
-#titeltext {
-    /*Text that goes ontop of hero vido */
-    position: absolute;
-    color: #FFFFFF;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.column {
-    float: left;
-    width: 50%;
-    /* Has to eqaul to the amount of collums you have */
-    padding: 5px;
-}
-
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-.download_button {
-    padding: 5%;
-}
-
-.download_button button {
-    width: 100%;
-}
-
-body::-webkit-scrollbar {
-    display: none;
-    /* Hide the scroll bar becuase it makes some of the curves look bad*/
-}
-
-.qanda {
-    /* Restylized dropdown */
-    padding: 5%;
-    font-size: 32px;
-}
-
-.question {
-    padding: 2%;
-}
-
-.qandadropdown .qheader {
-    font-size: 32px;
-    outline: none;
-    color: #fff;
-    padding: 20px;
-    background-color: #50C878;
-    font-family: inherit;
-    margin: 0;
-    width: 90%;
-    transition: 0.2s;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.466);
-}
-
-
-.qandadropdown:hover .qheader:hover {
-    background-color: #555;
-
-}
-
-
-
-.awnserContent {
-    padding: 0;
-    height: auto;
-    color: #ddd;
-    font-size: 0px;
-    position: inherit;
-    background-color: rgb(129, 125, 125);
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.466);
-    z-index: 1;
-    transition: 0.2s;
-    border-radius: none;
-    width: 90%;
-  
-}
-
-.qandadropdown:hover .awnserContent {
-
-    color: black;
-    font-size: 32px;
-    padding: 5px;
-
-}
-
-.medpara {
-    padding: 5%;
-    font-size: 32px;
-}
-
-footer {
-    /* Footer */
-    bottom: 0px;
-    left: 0;
-    right: 0;
-    width: 100vw;
-    height: auto;
-    background-color: #555;
-    color: #fff;
-    padding-top: 50px;
-    border-radius: 0;
-}
-
-.footer-content {
-    /* Flexible for mobile*/
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-}
-
-.footer-content marquee {
-    font-size: 32px;
-    font-weight: 300;
-    text-transform: capitalize;
-}
-
-.footer-content p {
-    max-width: 500px;
-    margin: 10px auto;
-    font-size: 14px;
-}
-
-.footer-social {
-    /*Style the icons */
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px 0 30px 0;
-}
-
-.footer-social li {
-    margin: 0 10px;
-}
-
-.footer-social a {
-    text-decoration: none;
-    color: #ddd;
-    border-radius: 50%;
-    padding: 5px;
-    border: 5px solid white;
-}
-
-.footer-social a i {
-    font-size: 1rem;
-}
-
-.footer-social a:hover i {
-    color: #50C878;
-}
-
-.footer-download {
-    /*Make the footer download button also center */
-    align-items: center;
-}
-
-
-.midpage-iframe {
-    align-items: center;
-    padding: 5%;
-}
-
-.midpage-iframe-content {
-    width: 50%;
-    height: 500px;
-}
-
-#tabelID {
-    /*As an ID incase I wanted to have multiple */
-    border-collapse: collapse;
-    box-shadow: 0px 8px 16px 0pb rgba(0, 0, 0, 0.466);
-    display: block;
-    font-size: 32px;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    width: 100%
-}
-
-#tabelID td,
-th {
-    padding: 8px;
-    border: 1px solid #555;
-    border-radius: 0px;
-}
-
-.table-container {
-    padding: 5%;
-    padding-bottom: 0;
-    margin-left: 5%;
-    margin-right: 5%;
-}
-
-.mobileNavDrop {
-    display: none;
-}
-
-#tabelID tr:nth-child(even) {
-    background-color: gray;
-}
-
-#tabelID tr:hover {
-    background-color: #50C878;
-}
-
-#tabelID th {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-align: left;
-    background-color: #50C878;
-    color: white;
-}
-
-#changelog_id{
-    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.603);
-    width: 50%;
-    margin-left: 25%;
-    padding: 5px;
-}
-
-.center{
-    text-align: center;
-}
-
-
-.additionalLinksCSS {
-    /*Links that are instead of the dropdown*/
-    display: none !important;
-}
-
-.additionalLinksCSSActive {
-    /*Links that are instead of the dropdown*/
-    display: none !important;
-    background-color: #50C878;
-    color: white;
-}
-
-.hidden {
-    opacity: 0;
-}
-
-.anim-top {
-    position: relative;
-    animation: slidetop 0.4s
-}
-
-@keyframes slidetop {
-    from {
-        top: -300px;
-        opacity: 0
-    }
-    to {
-        top: 0;
-        opacity: 1
-    }
-}
-
-.anim-left {
-    position: relative;
-    animation: slideleft 0.4s
-}
-
-.left_to_right {
-    bottom: 3%;
-    position: absolute;
-    animation: linear infinite;
-    animation-name: left_to_right;
-    animation-duration: 5s;
-}
-
-@keyframes left_to_right {
-    0% {
-        left: 32.5%;
-    }
-    48% {
-        -webkit-transform: rotateY(0deg);
-    }
-    50% {
-        left: 65%;
-        -webkit-transform: rotateY(180deg);
-    }
-    98% {
-        -webkit-transform: rotateY(180deg);
-    }
-    100% {
-        left: 32.5%;
-        -webkit-transform: rotateY(0deg);
-    }
-}
-
-@keyframes slideleft {
-    from {
-        left: -300px;
-        opacity: 0
-    }
-    to {
-        left: 0;
-        opacity: 1
-    }
-}
-
-@keyframes slideright {
-    from {
-        right: -300px;
-        opacity: 0
-    }
-    to {
-        right: 0;
-        opacity: 1
-    }
-}
-
-.anim-right {
-    position: relative;
-    animation: slideright 0.4s
-}
-
-@keyframes slideright {
-    from {
-        right: -300px;
-        opacity: 0
-    }
-    to {
-        right: 0;
-        opacity: 1
-    }
-}
-
-.anim-bottom {
-    position: relative;
-    animation: slidebottom 0.4s
-}
-
-@keyframes slidebottom {
-    from {
-        bottom: -300px;
-        opacity: 0
-    }
-    to {
-        bottom: 0;
-        opacity: 1
-    }
-}
-
-.anim-zoom {
-    animation: slidezoom 0.6s
-}
-
-@keyframes slidezoom {
-    from {
-        transform: scale(0)
-    }
-    to {
-        transform: scale(1)
-    }
-}
-
-@media screen and (max-hieght: 800px) {
-    /*change this on a hieght of 800px*/
-    .footer {
-        position: static;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    /* change this on a hieght of 800px eg mobile displays*/
-    .Menu a:not(:first-child),
-    .additionalLinksCSS,
-    .additionalLinksCSSActive,
-    .dropdown {
-        display: none;
-        /*Hide on mobile*/
-    }
-    .downloadbtn {
-        display: none;
-    }
-    .Menu a.icon {
-        /*Show the nav button to the right*/
-        float: right;
-        display: block;
-    }
-    .column {
-        width: 100%;
-        height: auto;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    .launcher {
-        display: none !important;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .Menu.responsive {
-        /*Make the menu responsive */
-        position: fixed;
-        top: 0;
-        width: 100%;
-    }
-    #tabelID {
-        /*Fix it on mobile*/
-        padding: 0;
-        left: 0;
-    }
-    .Menu.responsive .icon {
-        /*Make sure the menu icon is on top*/
-        position: absolute;
-        right: 0;
-        top: 0;
-        z-index: 2;
-    }
-    .Menu.responsive {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-    .Menu.responsive a {
-        float: none;
-        display: block !important;
-        text-align: left !important;
-    }
-    .Menu.responsive button {
-        width: 100%;
-        display: block;
-        text-align: left;
-    }
-    .Menu.responsive {
-        float: none;
-    }
-    .Menu.responsive {
-        position: relative;
-    }
-    .Menu.responsive {
-        display: block;
-        width: 100%;
-        text-align: left;
-    }
-    .andrioddownloadbtn {
-        display: block;
-        /*Show the download button with the andriod link.*/
-    }
-}
+ * {
+     -webkit-transition: all 0.5s ease-in-out;
+     -moz-transition: all 0.5s ease-in-out;
+     -o-transition: all 0.5s ease-in-out;
+     transition: all 0.5s ease-in-out;
+     scroll-behavior: smooth;
+     box-sizing: border-box;
+     border-radius: 10px;
+ }
+
+ :root {
+     --transition-vertical-pos: 800px;
+ }
+
+ .alert {
+     padding: 20px;
+     background-color: #f44336;
+     color: white;
+ }
+
+ .closebtn {
+     margin-left: 15px;
+     color: white;
+     font-weight: bold;
+     float: right;
+     font-size: 22px;
+     line-height: 20px;
+     cursor: pointer;
+     transition: 0.3s;
+ }
+
+ .closebtn:hover {
+     color: black;
+ }
+
+ .bpandimg {
+     font-size: 32px;
+ }
+
+ .breiftext {
+     font-size: 32px;
+     padding: 10%;
+ }
+
+ .breiflink {
+     font-size: 32px;
+     padding: 0%;
+ }
+
+ body {
+     margin: 0;
+     font-family: Arial, Helvetica, sans-serif;
+ }
+
+ h1 {
+     background: rgba(0, 0, 0, 0.5);
+     padding: 10px;
+     font-size: 48px;
+     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.466);
+ }
+
+ h2 {
+     font-size: 32px;
+ }
+
+ button {
+     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.466);
+ }
+
+ img {
+     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.466);
+ }
+
+ iframe {
+     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.466);
+ }
+
+ .table {
+     box-shadow: 0px 8px 16px 0pb rgba(0, 0, 0, 0.466);
+ }
+
+ li {
+     position: relative;
+     text-align: center;
+     padding: none;
+ }
+
+ .launcher {
+     border-radius: 5px;
+     background: rgb(2, 0, 36);
+     background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 62%, rgba(0, 212, 255, 1) 100%);
+ }
+
+ .launcher:hover {
+     animation: grandent 1s;
+     background: rgb(2, 0, 36);
+     background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 13%, rgba(0, 212, 255, 1) 100%);
+ }
+
+ @keyframes grandent {
+     from {
+         background: rgb(2, 0, 36);
+         background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 62%, rgba(0, 212, 255, 1) 100%);
+     }
+
+     to {
+         background: rgb(2, 0, 36);
+         background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 13%, rgba(0, 212, 255, 1) 100%);
+     }
+ }
+
+ .Menu {
+     overflow: hidden;
+     background-color: rgb(0, 0, 0);
+     position: absolute;
+     z-index: 2;
+     width: 100%;
+     top: 0px;
+     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.466);
+ }
+
+ .Menu a {
+     float: left;
+     display: block;
+     color: #f2f2f2;
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: none;
+     font-size: 17px;
+ }
+
+ .Menu a:hover {
+     background-color: #ddd;
+     color: black;
+ }
+
+ .Menu a.active {
+     background-color: #50C878;
+     color: white;
+ }
+
+ .Menu button {
+     float: right;
+     display: block;
+     text-align: center;
+     padding: 14px 20px;
+     text-decoration: none;
+     font-size: 17px;
+     background-color: #50C878;
+     border: none;
+ }
+
+ .Menu button:hover {
+     background-color: #50C878b6;
+     color: black;
+ }
+
+ .Menu .icon {
+     display: none;
+ }
+
+ .dropdown {
+     float: left;
+     overflow: hidden;
+ }
+
+ .dropdown .dropdownbutton {
+     font-size: 17px;
+     border: none;
+     outline: none;
+     color: white;
+     padding: 14px 16px;
+     background-color: inherit;
+     font-family: inherit;
+     margin: 0;
+ }
+
+ .dropdown-content {
+     display: none;
+     position: absolute;
+     background-color: #555;
+     min-width: 160px;
+     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+     z-index: 1;
+ }
+
+ .dropdown-content a {
+     float: none;
+     color: white;
+     padding: 12px 16px;
+     text-decoration: none;
+     display: block;
+     text-align: left;
+ }
+
+ .Menu a:hover,
+ .dropdown:hover,
+ .dropdownbutton,
+ .downloadbtn:hover,
+ .andrioddownloadbtn:hover {
+     background-color: #555;
+     color: white;
+ }
+
+ .dropdown-content a:hover {
+     background-color: #ddd;
+     color: black;
+ }
+
+ .dropdown:hover .dropdown-content {
+     display: block;
+ }
+
+ @keyframes tranistion-close {
+     0% {
+         clip-path: circle(50% at 50% var(--transition-vertical-pos));
+     }
+
+     100% {
+         clip-path: circle(0% at 50% var(--transition-vertical-pos));
+     }
+ }
+
+ .transitioncontainer {
+     left: 0;
+     top: 0;
+     height: 100%;
+     width: 100%;
+     background-color: white;
+     z-index: 4;
+ }
+
+ .loader {
+     height: 100%;
+     width: 0;
+     position: fixed;
+     z-index: 3;
+     left: 0;
+     top: 0;
+     background-color: rgba(0, 0, 0, 0.9);
+     overflow-x: hidden;
+     transition: 1s;
+ }
+
+ .loader-content {
+     position: relative;
+     top: 25%;
+     width: 100%;
+     text-align: center;
+     color: white;
+ }
+
+ .sticky {
+     position: fixed;
+     top: 0;
+     width: 100%;
+     z-index: 2;
+ }
+
+ .sticky-dropdown {
+     position: fixed;
+     top: 0;
+     z-index: 1;
+ }
+
+ .sticky+.content {
+     padding-top: 60px;
+     padding-bottom: 0px;
+ }
+
+ .video-container {
+     width: 100vw;
+     height: 100vh;
+ }
+
+ .downloadbtn,
+ .launchbtn {
+     background-color: #50C878;
+     border: none;
+     color: white;
+     padding: 12px 30px;
+     cursor: pointer;
+     font-size: 20px;
+ }
+
+ .service-check {
+     background-color: #ddd;
+     border: none;
+     color: black;
+     padding: 2.5%;
+     cursor: pointer;
+     font-size: 20px;
+ }
+
+ .sercvieUp {
+     background-color: green;
+     border: none;
+     color: black;
+     padding: 2.5%;
+     cursor: pointer;
+     font-size: 20px;
+ }
+
+ .serviceDown {
+     background-color: red;
+     border: none;
+     color: black;
+     padding: 2.5%;
+     cursor: pointer;
+     font-size: 20px;
+ }
+
+ .serviceMat {
+     background-color: orange;
+     border: none;
+     color: black;
+     padding: 2.5%;
+     cursor: pointer;
+     font-size: 20px;
+ }
+
+ .andrioddownloadbtn {
+     display: none;
+     background-color: #50C878;
+     border: none;
+     color: white;
+     padding: 12px 30px;
+     cursor: pointer;
+     font-size: 20px;
+ }
+
+ #scrolltotop {
+     position: fixed;
+     bottom: 20px;
+     right: 30px;
+     z-index: 99;
+     font-size: 18px;
+     border: none;
+     outline: none;
+     background-color: #50C878;
+     color: white;
+     cursor: pointer;
+     padding: 15px;
+     border-radius: 4px;
+ }
+
+ #scrolltotop:hover,
+ .sercvieUp:hover,
+ .service-check:hover,
+ .serviceDown:hover,
+ .serviceMat:hover {
+     background-color: #555;
+ }
+
+ .hero-iframe {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     width: 100vw;
+     height: 100vh;
+     transform: translate(-50%, -50%);
+ }
+
+ #titeltext {
+     position: absolute;
+     color: #FFFFFF;
+     left: 50%;
+     top: 50%;
+     transform: translate(-50%, -50%);
+ }
+
+ .column {
+     float: left;
+     width: 50%;
+     padding: 5px;
+ }
+
+ .row::after {
+     content: "";
+     clear: both;
+     display: table;
+ }
+
+ .download_button {
+     padding: 5%;
+ }
+
+ .download_button button {
+     width: 100%;
+ }
+
+ body::-webkit-scrollbar {
+     display: none;
+ }
+
+ .qanda {
+     padding: 5%;
+     font-size: 32px;
+ }
+
+ .question {
+     padding: 2%;
+ }
+
+ .qandadropdown .qheader {
+     font-size: 32px;
+     outline: none;
+     color: #fff;
+     padding: 20px;
+     background-color: #50C878;
+     font-family: inherit;
+     margin: 0;
+     width: 90%;
+     transition: 0.2s;
+     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.466);
+ }
+
+ .qandadropdown:hover .qheader:hover {
+     background-color: #555;
+ }
+
+ .awnserContent {
+     padding: 0;
+     height: auto;
+     color: #ddd;
+     font-size: 0px;
+     position: inherit;
+     background-color: rgb(129, 125, 125);
+     min-width: 160px;
+     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.466);
+     z-index: 1;
+     transition: 0.2s;
+     border-radius: none;
+     width: 90%;
+     margin-left: 5%;
+ }
+
+ .qandadropdown:hover .awnserContent {
+     color: black;
+     font-size: 32px;
+     padding: 5px;
+ }
+
+ .medpara {
+     padding: 5%;
+     font-size: 32px;
+ }
+
+ footer {
+     bottom: 0px;
+     left: 0;
+     right: 0;
+     width: 100vw;
+     height: auto;
+     background-color: #555;
+     color: #fff;
+     padding-top: 50px;
+     border-radius: 0;
+ }
+
+ .footer-content {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     text-align: center;
+ }
+
+ .footer-content marquee {
+     font-size: 32px;
+     font-weight: 300;
+     text-transform: capitalize;
+ }
+
+ .footer-content p {
+     max-width: 500px;
+     margin: 10px auto;
+     font-size: 14px;
+ }
+
+ .footer-social {
+     list-style: none;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin: 10px 0 30px 0;
+ }
+
+ .footer-social li {
+     margin: 0 10px;
+ }
+
+ .footer-social a {
+     text-decoration: none;
+     color: #ddd;
+     border-radius: 50%;
+     padding: 5px;
+     border: 5px solid white;
+ }
+
+ .footer-social a i {
+     font-size: 1rem;
+ }
+
+ .footer-social a:hover i {
+     color: #50C878;
+ }
+
+ .footer-download {
+     align-items: center;
+ }
+
+ .midpage-iframe {
+     align-items: center;
+     padding: 5%;
+ }
+
+ .midpage-iframe-content {
+     width: 50%;
+     height: 500px;
+ }
+
+ #tabelID {
+     border-collapse: collapse;
+     box-shadow: 0px 8px 16px 0pb rgba(0, 0, 0, 0.466);
+     display: block;
+     font-size: 32px;
+     overflow-x: scroll;
+     overflow-y: hidden;
+     width: 100%
+ }
+
+ #tabelID td,
+ th {
+     padding: 8px;
+     border: 1px solid #555;
+     border-radius: 0px;
+ }
+
+ .table-container {
+     padding: 5%;
+     padding-bottom: 0;
+     margin-left: 5%;
+     margin-right: 5%;
+ }
+
+ .mobileNavDrop {
+     display: none;
+ }
+
+ #tabelID tr:nth-child(even) {
+     background-color: gray;
+ }
+
+ #tabelID tr:hover {
+     background-color: #50C878;
+ }
+
+ #tabelID th {
+     padding-top: 10px;
+     padding-bottom: 10px;
+     text-align: left;
+     background-color: #50C878;
+     color: white;
+ }
+
+ #changelog_id {
+     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.603);
+     width: 50%;
+     margin-left: 25%;
+     padding: 5px;
+ }
+
+ .center {
+     text-align: center;
+ }
+
+ .additionalLinksCSS {
+     display: none !important;
+ }
+
+ .additionalLinksCSSActive {
+     display: none !important;
+     background-color: #50C878;
+     color: white;
+ }
+
+ .hidden {
+     opacity: 0;
+ }
+
+ .anim-top {
+     position: relative;
+     animation: slidetop 0.4s
+ }
+
+ @keyframes slidetop {
+     from {
+         top: -300px;
+         opacity: 0
+     }
+
+     to {
+         top: 0;
+         opacity: 1
+     }
+ }
+
+ .anim-left {
+     position: relative;
+     animation: slideleft 0.4s
+ }
+
+ .left_to_right {
+     bottom: 3%;
+     position: absolute;
+     animation: linear infinite;
+     animation-name: left_to_right;
+     animation-duration: 5s;
+ }
+
+ @keyframes left_to_right {
+     0% {
+         left: 32.5%;
+     }
+
+     48% {
+         -webkit-transform: rotateY(0deg);
+     }
+
+     50% {
+         left: 65%;
+         -webkit-transform: rotateY(180deg);
+     }
+
+     98% {
+         -webkit-transform: rotateY(180deg);
+     }
+
+     100% {
+         left: 32.5%;
+         -webkit-transform: rotateY(0deg);
+     }
+ }
+
+ @keyframes slideleft {
+     from {
+         left: -300px;
+         opacity: 0
+     }
+
+     to {
+         left: 0;
+         opacity: 1
+     }
+ }
+
+ @keyframes slideright {
+     from {
+         right: -300px;
+         opacity: 0
+     }
+
+     to {
+         right: 0;
+         opacity: 1
+     }
+ }
+
+ .anim-right {
+     position: relative;
+     animation: slideright 0.4s
+ }
+
+ @keyframes slideright {
+     from {
+         right: -300px;
+         opacity: 0
+     }
+
+     to {
+         right: 0;
+         opacity: 1
+     }
+ }
+
+ .anim-bottom {
+     position: relative;
+     animation: slidebottom 0.4s
+ }
+
+ @keyframes slidebottom {
+     from {
+         bottom: -300px;
+         opacity: 0
+     }
+
+     to {
+         bottom: 0;
+         opacity: 1
+     }
+ }
+
+ .anim-zoom {
+     animation: slidezoom 0.6s
+ }
+
+ @keyframes slidezoom {
+     from {
+         transform: scale(0)
+     }
+
+     to {
+         transform: scale(1)
+     }
+ }
+
+ @media screen and (max-hieght: 800px) {
+     .footer {
+         position: static;
+     }
+ }
+
+ @media screen and (max-width: 600px) {
+
+     .Menu a:not(:first-child),
+     .additionalLinksCSS,
+     .additionalLinksCSSActive,
+     .dropdown {
+         display: none;
+     }
+
+     .downloadbtn {
+         display: none;
+     }
+
+     .Menu a.icon {
+         float: right;
+         display: block;
+     }
+
+     .column {
+         width: 100%;
+         height: auto;
+     }
+ }
+
+ @media screen and (max-width: 1000px) {
+     .launcher {
+         display: none !important;
+     }
+ }
+
+ @media screen and (max-width: 600px) {
+     .Menu.responsive {
+         position: fixed;
+         top: 0;
+         width: 100%;
+     }
+
+     #tabelID {
+         padding: 0;
+         left: 0;
+     }
+
+     .Menu.responsive .icon {
+         position: absolute;
+         right: 0;
+         top: 0;
+         z-index: 2;
+     }
+
+     .Menu.responsive {
+         float: none;
+         display: block;
+         text-align: left;
+     }
+
+     .Menu.responsive a {
+         float: none;
+         display: block !important;
+         text-align: left !important;
+     }
+
+     .Menu.responsive button {
+         width: 100%;
+         display: block;
+         text-align: left;
+     }
+
+     .Menu.responsive {
+         float: none;
+     }
+
+     .Menu.responsive {
+         position: relative;
+     }
+
+     .Menu.responsive {
+         display: block;
+         width: 100%;
+         text-align: left;
+     }
+
+     .andrioddownloadbtn {
+         display: block;
+     }
+ }
