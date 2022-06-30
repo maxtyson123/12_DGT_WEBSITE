@@ -15,7 +15,7 @@
     <div id="transition" class="transitioncontainer">
         <!-- Contained in div so the tranistion is shown over the top of the all the page elements-->
 
-        <div id="loader" class="loader">
+        <div id="loader" class="loader">  <!--Loader, must be placed at the top of the page so that it is loaded first -->
             <div class="loader-content ">
                 <h1>LOADING...</h1>
                 <img alt="Player On a Platform" width="60" height="60" class="left_to_right"
@@ -23,14 +23,14 @@
                 <img alt="PLatform Path" width="30%" height="20px" src="Images/platform.png">
             </div>
         </div>
-        <div class="Menu sticky" id="MenuID">
+        <div class="Menu sticky" id="MenuID"> <!-- Sticky Menu-->
 
             <a href="../index.html" title="Current Page" class="active">Home</a>
             <a href="../Pages/about.html">About</a>
             <a class="windown" href="http://sunnyland.maxinc.cf/Download/Windows/">Download</a>
-            <a class="additionalLinksCSS" href="Pages/changelog.html">Changelog</a>
+            <!--Mobile Replacements For DropDown-->
+            <a class="additionalLinksCSS" href="../Pages/changelog.html">Changelog</a>
             <a class="additionalLinksCSS" href="../Pages/upcoming.html">Upcoming Features</a>
-
             <a class="additionalLinksCSS" href="../Pages/status.html">Status</a>
             <div id="mobileDD" class="dropdown">
                 <button class="dropdownbutton">Changes

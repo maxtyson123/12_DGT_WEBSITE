@@ -417,6 +417,7 @@ function updatePageName(){
 
 
 }
+
 function trainstiontoPage(url){
         transitionAnimate("normal")
         setTimeout(function () {

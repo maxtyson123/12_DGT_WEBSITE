@@ -14,14 +14,14 @@
 <body>
     <div id="transition" class="transitioncontainer">
         <!--Make sure this is loaded first-->
-        <div id="loader" class="loader">
+        <div id="loader" class="loader">  <!--Loader, must be placed at the top of the page so that it is loaded first -->
             <div class="loader-content">
                 <h1>LOADING...</h1>
                 <img width="60" height="60" class="left_to_right" src="../Images/PlayerOnPlatform.png">
                 <img width="30%" height="20px" src="../Images/platform.png">
             </div>
         </div>
-        <div class="Menu sticky" id="MenuID">
+        <div class="Menu sticky" id="MenuID"> <!-- Sticky Menu-->
 
             <a href="../index.html">Home</a>
             <a href="../Pages/about.html">About</a>
@@ -29,7 +29,8 @@
             <a class="launcher launch" href="SunnyLand://Launch(Launcher)?FromWebsite"><i class="fa fa-gamepad"></i>
                 Launch
                 Game</a>
-            <a class="additionalLinksCSSActive" href="../Pages/changelog.html">Changelog</a>
+            <!--Mobile Replacements For DropDown-->
+            <a class="additionalLinksCSS" href="../Pages/changelog.html">Changelog</a>
             <a class="additionalLinksCSS" href="../Pages/upcoming.html">Upcoming Features</a>
             <a class="additionalLinksCSS" href="../Pages/status.html">Status</a>
             <div id="mobileDD" class="dropdown">
