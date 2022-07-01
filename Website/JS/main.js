@@ -309,6 +309,7 @@ async function setchangelog() {
     const response = await fetch("../External/changelog.json");         //Get the changelog
     const json = await response.json();                                 //Asyncorchisely get the changelog
     const changelogdisplay = document.querySelector("#changelog_id")    //Get the changelog  containing div
+    var alternate = 0;
     for (let x = 0; x < json.versions.length; x++) {                //For every version:     
         //Title
         changelogelemt = document.createElement('div');             //Create a new div
@@ -321,7 +322,14 @@ async function setchangelog() {
         changelogsplit = json.versions[x].changelog.split("\r\n")   //Split the versions changes into a list
         for (let x = 0; x < changelogsplit.length; x++) {           //For every listed change:
             text_lines = document.createElement("p");                   //Create a text line 
-            text_lines.classList.add("check_anim_left");                //Animate it
+            if(alternate == 0){
+                alternate = 1;
+                text_lines.classList.add("check_anim_left");                //Animate it
+            }else{
+                alternate = 0;
+                text_lines.classList.add("check_anim_right");                //Animate it
+            }
+            
             if(changelogsplit[x] != ""){                                //Check if it wasnt acidently empty
                 text_lines.innerHTML = "- "+changelogsplit[x];          //Add the details of the change
             }

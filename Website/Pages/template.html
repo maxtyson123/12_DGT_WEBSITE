@@ -15,7 +15,8 @@
     <div id="transition" class="transitioncontainer">
         <!-- Contained in div so the tranistion is shown over the top of the all the page elements-->
 
-        <div id="loader" class="loader">  <!--Loader, must be placed at the top of the page so that it is loaded first -->
+        <div id="loader" class="loader">
+            <!--Loader, must be placed at the top of the page so that it is loaded first -->
             <div class="loader-content ">
                 <h1>LOADING...</h1>
                 <img alt="Player On a Platform" width="60" height="60" class="left_to_right"
@@ -23,7 +24,8 @@
                 <img alt="PLatform Path" width="30%" height="20px" src="Images/platform.png">
             </div>
         </div>
-        <div class="Menu sticky" id="MenuID"> <!-- Sticky Menu-->
+        <div class="Menu sticky" id="MenuID">
+            <!-- Sticky Menu-->
 
             <a href="../index.html" title="Current Page" class="active">Home</a>
             <a href="../Pages/about.html">About</a>
@@ -32,7 +34,8 @@
             <a class="additionalLinksCSS" href="../Pages/changelog.html">Changelog</a>
             <a class="additionalLinksCSS" href="../Pages/upcoming.html">Upcoming Features</a>
             <a class="additionalLinksCSS" href="../Pages/status.html">Status</a>
-            <div id="mobileDD" class="dropdown">
+            <!--Hoverable Dropdown Items, Only Displayed on PC displays as mobile cant hover well -->
+            <div class="dropdown">
                 <button class="dropdownbutton">Changes
                     <i class="fa fa-caret-down"></i>
                 </button>
@@ -55,40 +58,43 @@
         </div>
 
 
+        <!--Scroll to top button, Using JS it is only displayed once user has scrolled 500px down-->
         <button onclick="topFunction()" id="scrolltotop" title="Go to top">Top</button>
-        <div class="content">
+        <div class="content center">
+            <!--Video Background, The page header-->
             <div class="video-container">
                 <iframe class="hero-iframe"
                     src="https://www.youtube.com/embed/NpFjtGn99qk?controls=0&autoplay=1&mute=1&loop=1&playlist=NpFjtGn99qk"></iframe>
             </div>
 
+            <!--Content to be shown Shown On top of video-->
             <div id="titeltext">
-                <div class="center">
-                    <h1>Sunny Land</h1>
-                    <button title="Download the launcher for windows"
-                        onclick="window.location.href='http://sunnyland.maxinc.cf/Download/Windows'"
-                        class="downloadbtn"><i class="fa fa-download"></i> Download</button>
-                    <button title="Download this game as an .apk"
-                        onclick="window.location.href='http://sunnyland.maxinc.cf/Download/Andriod'"
-                        class="andrioddownloadbtn"><i class="fa fa-download"></i> Download</button>
-                </div>
+
+                <h1>Sunny Land</h1>
+                <button title="Download the launcher for windows"
+                    onclick="window.location.href='http://sunnyland.maxinc.cf/Download/Windows'" class="downloadbtn"><i
+                        class="fa fa-download"></i> Download</button>
+                <button title="Download this game as an .apk"
+                    onclick="window.location.href='http://sunnyland.maxinc.cf/Download/Andriod'"
+                    class="andrioddownloadbtn"><i class="fa fa-download"></i> Download</button>
+
             </div>
 
-            <div class="center">
-                <div class="breiftext">
-                    <p>Small Description Small Description Small Description Small Description Small Description Small
-                        Description Small Description Small Description Small Description Small Description Small
-                        Description Small Description Small Description Small
-                        Description Small Description
-                    </p>
 
-                    <a class="breiflink" href="http://sunnyland.maxinc.cf/Download/Windows/">Download Link</a>
-                </div>
+            <div class="breiftext">
+                <p>Small Description Small Description Small Description Small Description Small Description Small
+                    Description Small Description Small Description Small Description Small Description Small
+                    Description Small Description Small Description Small
+                    Description Small Description
+                </p>
+
+                <a class="breiflink" href="http://sunnyland.maxinc.cf/Download/Windows/">Download Link</a>
             </div>
+
             <div class="bpandimg">
-                <div class="center">
-                    <h2>Images by list</h2>
-                </div>
+
+                <h2>Images by list</h2>
+
                 <div class="row">
                     <div class="column">
                         <img src="../Images/temp.png" alt="Soldiers Running Up Hill" style="width:100%; height: auto;">
@@ -123,79 +129,82 @@
 
             </div>
             <div class="download_button">
-                <div class="center">
-                    <button title="Download the launcher for windows"
-                        onclick="window.location.href='http://sunnyland.maxinc.cf/Download/Windows'"
-                        class="downloadbtn"><i class="fa fa-download"></i> Download</button>
-                    <button title="Download this game as an .apk"
-                        onclick="window.location.href='http://sunnyland.maxinc.cf/Download/Andriod'"
-                        class="andrioddownloadbtn"><i class="fa fa-download"></i> Download</button>
-                </div>
+
+                <button title="Download the launcher for windows"
+                    onclick="window.location.href='http://sunnyland.maxinc.cf/Download/Windows'" class="downloadbtn"><i
+                        class="fa fa-download"></i> Download</button>
+                <button title="Download this game as an .apk"
+                    onclick="window.location.href='http://sunnyland.maxinc.cf/Download/Andriod'"
+                    class="andrioddownloadbtn"><i class="fa fa-download"></i> Download</button>
+
             </div>
         </div>
         <div class="qanda">
-            <div class="center">
-                <a href="../Pages/qanda.html" style="text-decoration: none; color: black;">
-                    <h2> Questions And Awnsers </h2>
-                </a>
-                <div class="question">
-                    <div class="qandadropdown">
-                        <button class="qheader">Question
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div id="awnser1" class="awnserContent">
-                            <p>Awnser</p>
-                        </div>
+
+            <a href="../Pages/qanda.html" style="text-decoration: none; color: black;">
+                <h2> Questions And Awnsers </h2>
+            </a>
+            <div class="question">
+                <div class="qandadropdown">
+                    <button class="qheader">Question
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div id="awnser1" class="awnserContent">
+                        <p>Awnser</p>
                     </div>
                 </div>
             </div>
 
 
+
         </div>
-        <div class="center">
-            <img src="../Images/img3.png" width="80%" height="auto">
-        </div>
+
+        <img src="../Images/img3.png" width="80%" height="auto">
+
         <div class="medpara">
-            <div class="center">
-                <h2>Medium sized paragaph and link</h2>
-                <p> Medium sized paragaph and link Medium sized paragaph and link Medium sized paragaph and link Medium
-                    sized paragaph and link Medium sized paragaph and link Medium sized paragaph and link Medium sized
-                    paragaph and link Medium sized paragaph
-                    and link Medium sized paragaph and link Medium sized paragaph and link Medium sized paragaph and
-                    link Medium sized paragaph and link Medium sized paragaph and link Medium sized paragaph and link
-                    Medium sized paragaph and link Medium sized
-                    paragaph and link Medium sized paragaph and link Medium sized paragaph and link Medium sized
-                    paragaph and link </p>
-                <ul style="padding: none;">
-                    <li title="itemhovertext">listitem</li>
-                    <li title="itemhovertext">listitem</li>
-                    <li title="itemhovertext">listitem</li>
-                </ul>
-            </div>
+
+            <h2>Medium sized paragaph and link</h2>
+            <p> Medium sized paragaph and link Medium sized paragaph and link Medium sized paragaph and link Medium
+                sized paragaph and link Medium sized paragaph and link Medium sized paragaph and link Medium sized
+                paragaph and link Medium sized paragaph
+                and link Medium sized paragaph and link Medium sized paragaph and link Medium sized paragaph and
+                link Medium sized paragaph and link Medium sized paragaph and link Medium sized paragaph and link
+                Medium sized paragaph and link Medium sized
+                paragaph and link Medium sized paragaph and link Medium sized paragaph and link Medium sized
+                paragaph and link </p>
+            <ul style="padding: none;">
+                <li title="itemhovertext">listitem</li>
+                <li title="itemhovertext">listitem</li>
+                <li title="itemhovertext">listitem</li>
+            </ul>
+
         </div>
-        <div class="center">
-            <img src="../Images/img4.png" width="80%" height="auto">
-        </div>
+
+        <img src="../Images/img4.png" width="80%" height="auto">
+
         <br>
         <br>
         <div class="midpage-iframe">
-            <div class="center">
-                <h2>
-                    Mid Page Iframe
-                </h2>
 
-                <iframe class="midpage-iframe-content" src="../WebGL/temp.html" frameborder="0"></iframe>
-            </div>
+            <h2>
+                Mid Page Iframe
+            </h2>
+
+            <iframe class="midpage-iframe-content" src="../WebGL/temp.html" frameborder="0"></iframe>
+
         </div>
-        <footer>
+            <!--Footer-->
+            <footer>
             <div class="footer-content">
                 <br>
+                <!--Scrolling Text-->
                 <marquee> Website designed by Max Tyson.
                     &MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;
                     Sunny Land desgined by Max Inc </marquee>
                 <p> Good job you have scrolled all the way to the bottom! That must mean your intrested, Click the
                     button below to download the game or if you want to learn more vist a different page!</p>
                 <ul class="footer-social">
+                        <!--Social-->
                     <li> <a href="https://www.youtube.com/channel/UCQZBTFpZsGM15w_7hHG6MCw"><i
                                 class="fa fa-youtube"></i></a></li>
                     <li>
@@ -208,7 +217,8 @@
                         <a href="https://reddit.com/r/Max_Inc"> <i class="fa fa-reddit"></i> </a>
                     </li>
                 </ul>
-                <div class="footer-download">
+                <!--Download/Launch-->
+                    <div class="footer-download">
 
                     <button title="Download the launcher for windows"
                         onclick="window.location.href='http://sunnyland.maxinc.cf/Download/Windows'"

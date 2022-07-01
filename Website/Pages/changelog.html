@@ -33,7 +33,8 @@
             <a class="additionalLinksCSS" href="../Pages/changelog.html">Changelog</a>
             <a class="additionalLinksCSS" href="../Pages/upcoming.html">Upcoming Features</a>
             <a class="additionalLinksCSS" href="../Pages/status.html">Status</a>
-            <div id="mobileDD" class="dropdown">
+            <!--Hoverable Dropdown Items, Only Displayed on PC displays as mobile cant hover well -->
+                <div class="dropdown">
                 <button title="Current Page" class="active" class="dropdownbutton">Changes
                     <i class="fa fa-caret-down"></i>
                 </button>
@@ -46,21 +47,22 @@
             </div>
             <a href="../Pages/qanda.html">Q&A</a>
             <a href="../Pages/demo.html">Demo</a>
-            <button onclick="window.location.href='http://maxserver.ml/SunnyLandLogin/login.php'"
-                title="Go to login site" class="loginbutton">Login <i class="fa fa-user"></i></button>
+            <button onclick="window.location.href='http://maxserver.ml/SunnyLandLogin/login.php'" title="Go to login site" class="loginbutton">Login <i class="fa fa-user"></i></button>
 
             <a title="Open Menu" href="javascript:void(0);" class="icon" onclick="openMenuMobile()">
                 <i class="fa fa-bars"></i>
             </a>
         </div>
+        <!--Scroll to top button, Using JS it is only displayed once user has scrolled 500px down-->
         <button onclick="topFunction()" id="scrolltotop" title="Go to top">Top</button>
-        <div class="content ">
-            <div class="video-container ">
+        <div class="content center">
+            <!--Video Background, The page header-->
+            <div class="video-container">
                 <iframe class="hero-iframe "
                     src="https://www.youtube.com/embed/NpFjtGn99qk?controls=0&autoplay=1&mute=1&loop=1&playlist=NpFjtGn99qk "></iframe>
             </div>
-            <div id="titeltext" class="slide-from-top">
-                <div class="center">
+            <!--Content to be shown Shown On top of video-->
+            <div id="titeltext">
                     <h1>SunnyLand</h1>
                     <button title="Download the launcher for windows"
                         onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Windows'"
@@ -72,12 +74,11 @@
                     <button title="Download this game as an .apk"
                         onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Andriod'"
                         class="launchbtn launch"><i class="fa fa-gamepad"></i> Play Now</button>
-                </div>
+            
             </div>
             <br>
             <br>
             <br>
-            <div class="center">
                 <div class="midpage-iframe add_anim_zoom">
 
                     <h2>
@@ -93,9 +94,11 @@
                         launcher. Key: {N}: New feature, {F}: fixed feature, {R}: Removed feature. </p>
 
                 </div>
+                <!--Footer-->
                 <footer>
                     <div class="footer-content">
                         <br>
+                        <!--Scrolling Text-->
                         <marquee> Website designed by Max Tyson.
                             &MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;
                             Sunny Land desgined by Max Inc </marquee>
@@ -103,6 +106,7 @@
                             the
                             button below to download the game or if you want to learn more vist a different page!</p>
                         <ul class="footer-social">
+                        <!--Social-->
                             <li> <a href="https://www.youtube.com/channel/UCQZBTFpZsGM15w_7hHG6MCw"><i
                                         class="fa fa-youtube"></i></a></li>
                             <li>
@@ -115,7 +119,8 @@
                                 <a href="https://reddit.com/r/Max_Inc"> <i class="fa fa-reddit"></i> </a>
                             </li>
                         </ul>
-                        <div class="footer-download">
+                        <!--Download/Launch-->
+                    <div class="footer-download">
                             <button title="Download the launcher for windows"
                                 onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Windows '"
                                 class="downloadbtn download"><i class="fa fa-download"></i> Download </button>
@@ -133,7 +138,6 @@
 
                 </footer>
                 <script>setchangelog()</script>
-            </div>
         </div>
     </div>
 </body>

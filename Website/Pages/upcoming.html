@@ -34,7 +34,8 @@
             <a class="additionalLinksCSSActive" href="../Pages/upcoming.html">Upcoming Features</a>
 
             <a class="additionalLinksCSS" href="../Pages/status.html">Status</a>
-            <div id="mobileDD" class="dropdown">
+            <!--Hoverable Dropdown Items, Only Displayed on PC displays as mobile cant hover well -->
+                <div class="dropdown">
                 <button title="Current Page" class="active" class="dropdownbutton">Changes
                     <i class="fa fa-caret-down"></i>
                 </button>
@@ -48,8 +49,7 @@
             </div>
             <a href="../Pages/qanda.html">Q&A</a>
             <a href="../Pages/demo.html">Demo</a>
-            <button onclick="window.location.href='http://maxserver.ml/SunnyLandLogin/login.php'"
-                title="Go to login site" class="loginbutton">Login <i class="fa fa-user"></i></button>
+            <button onclick="window.location.href='http://maxserver.ml/SunnyLandLogin/login.php'" title="Go to login site" class="loginbutton">Login <i class="fa fa-user"></i></button>
 
             <a title="Open Menu" href="javascript:void(0);" class="icon" onclick="openMenuMobile()">
                 <i class="fa fa-bars"></i>
@@ -58,14 +58,17 @@
 
 
 
+        <!--Scroll to top button, Using JS it is only displayed once user has scrolled 500px down-->
         <button onclick="topFunction()" id="scrolltotop" title="Go to top">Top</button>
-        <div class="content ">
-            <div class="video-container ">
+        <div class="content center">
+            <!--Video Background, The page header-->
+            <div class="video-container">
                 <iframe class="hero-iframe "
                     src="https://www.youtube.com/embed/NpFjtGn99qk?controls=0&autoplay=1&mute=1&loop=1&playlist=NpFjtGn99qk "></iframe>
             </div>
 
-            <div id="titeltext" class="slide-from-top">
+            <!--Content to be shown Shown On top of video-->
+            <div id="titeltext">
 
                 <h1>SunnyLand</h1>
                 <!-- shown on displays bigger than 600px (assumes this this a pc sized display) -->
@@ -84,15 +87,15 @@
             <br>
             <br>
             <div class="medpara check_anim_top">
-                <div class="center">
+               
                     <h1>Version Plans</h1>
                     <p>1.6: Ghost character of best scores for advernture mode, replays of speed runs</p>
                     <p>1.7: 10 new levels in a undergorund sort of world - maybe caves</p>
                     <p>1.8/1.9: Either multiplayer rehaul or another world </p>
                     <p>2.0: Level editor</p>
-                </div>
+              
             </div>
-            <div class="center">
+          
                 <h1 class="check_anim_bottom">Upcoming Features</h1>
 
                 <!-- RESPONSIVE TABLE IN THE WAY THAT WHEN IT GETS TO SMALL A SCROLL BAR POPS UP AND YOU CAN SCROLL ACROSS -->
@@ -142,17 +145,17 @@
 
                 </div>
 
-            </div>
+         
             <br>
             <br>
             <br>
             <br>
             <br>
-            <div class="center">
+           
                 <img class="check_anim_zoom" src="../Images/img19.png" width="80% " height="auto ">
-            </div>
+      
             <div class="medpara check_anim_top">
-                <div class="center">
+          
                     <h2>Up coming Features</h2>
                     <p> In the tabel above you can a have a look over features that MAY come to the game, the fact that
                         they
@@ -176,22 +179,25 @@
                         <li title="Patched out becuase of bugs, should be in next version or two">Rolled Back</li>
 
                     </ul>
-                </div>
+           
             </div>
-            <div class="center">
+           
                 <img class="check_anim_zoom" src="../Images/img10.png" width="80% " height="auto ">
-            </div>
+        
             <br>
             <br>
+            <!--Footer-->
             <footer>
                 <div class="footer-content">
                     <br>
+                    <!--Scrolling Text-->
                     <marquee> Website designed by Max Tyson.
                         &MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;
                         Sunny Land desgined by Max Inc </marquee>
                     <p> Good job you have scrolled all the way to the bottom! That must mean your intrested, Click the
                         button below to download the game or if you want to learn more vist a different page!</p>
                     <ul class="footer-social">
+                        <!--Social-->
                         <li> <a href="https://www.youtube.com/channel/UCQZBTFpZsGM15w_7hHG6MCw"><i
                                     class="fa fa-youtube"></i></a></li>
                         <li>
@@ -204,6 +210,7 @@
                             <a href="https://reddit.com/r/Max_Inc"> <i class="fa fa-reddit"></i> </a>
                         </li>
                     </ul>
+                    <!--Download/Launch-->
                     <div class="footer-download">
 
                         <button title="Download the launcher for windows"

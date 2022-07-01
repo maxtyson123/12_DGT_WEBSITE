@@ -2,7 +2,7 @@
 <html>
 
 <!-- UPDATE mobile images to mobile version once released-->
-<!-- QandA uncendered awnser, Add comments, Fix center to be less overused, add image alts--->
+<!-- Add comments, add image alts--->
 
 
 <head>
@@ -39,7 +39,7 @@
                 <a class="additionalLinksCSS" href="Pages/status.html">Status</a>                
                 <a class="launcher launch" href="Sunnyland://Launch(Launcher)?FromWebsite"><i class="fa fa-gamepad"></i> Launch Game</a>
                 <!--Hoverable Dropdown Items, Only Displayed on PC displays as mobile cant hover well -->
-                <div class="dropdown">
+                <div id="mobileDD" class="dropdown">
                     <button class="dropdownbutton">Changes <i class="fa fa-caret-down"></i> </button>                   
                     <div id="DropDownID" class="dropdown-content sticky-dropdown">                    
                         <a>Please Choose A Page</a>
@@ -57,13 +57,13 @@
             </div>
         </div>
         <!--Scroll to top button, Using JS it is only displayed once user has scrolled 500px down-->
-        <button onclick="topFunction()" id="scrolltotop" title="Go to top">Top</button>    
-        <!--Video Background For page header-->
+        <button onclick="topFunction()" id="scrolltotop" title="Go to top">Top</button>            
         <div class="content center">
+            <!--Video Background, The page header-->
             <div class="video-container">    
                 <iframe class="hero-iframe" src="https://www.youtube.com/embed/NpFjtGn99qk?controls=0&autoplay=1&mute=1&loop=1&playlist=NpFjtGn99qk"></iframe>          
             </div>
-            <!--Content Shown On top of video-->
+            <!--Content to be shown Shown On top of video-->
             <div id="titeltext">
                 <div class="check_anim_left">
                     <h1>Sunnyland</h1>                  
@@ -246,7 +246,7 @@
                             <a href="https://reddit.com/r/Max_Inc"> <i class="fa fa-reddit"></i> </a>
                         </li>
                     </ul>
-                    <!--Download-->
+                    <!--Download/Launch-->
                     <div class="footer-download">
                         <button title="Download the launcher for windows"
                             onclick="window.location.href='http://Sunnyland.maxinc.cf/Download/Windows '"

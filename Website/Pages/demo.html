@@ -14,51 +14,63 @@
 </head>
 
 <body>
- <div id="transition" class="transitioncontainer">   <!-- Contained in div so the tranistion is shown over the top of the all the page elements-->
-        <div class="Menu sticky" id="MenuID"> <!-- Sticky Menu-->
+    <div id="transition" class="transitioncontainer">
+        <!-- Contained in div so the tranistion is shown over the top of the all the page elements-->
+        <div class="Menu sticky" id="MenuID">
+            <!-- Sticky Menu-->
+            <div class="anim-top">
+                <a href="../index.html">Home</a>
+                <a href="../Pages/about.html">About</a>
+                <a class="windown download" href="http://sunnyland.maxinc.cf/Download/Windows/">Download</a>
+                <a class="launcher launch" href="Sunnyland://Launch(Launcher)?FromWebsite"><i class="fa fa-gamepad"></i>
+                    Launch Game</a>
+                <!--Mobile Replacements For DropDown-->
+                <a class="additionalLinksCSS" href="../Pages/changelog.html">Changelog</a>
+                <a class="additionalLinksCSS" href="../Pages/upcoming.html">Upcoming Features</a>
+                <a class="additionalLinksCSS" href="../Pages/status.html">Status</a>
+                <!--Hoverable Dropdown Items, Only Displayed on PC displays as mobile cant hover well -->
+                <div class="dropdown">
+                    <button class="dropdownbutton">Changes
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div id="DropDownID" class="dropdown-content sticky-dropdown">
+                        <a>Please Choose A Page</a>
+                        <a href="../Pages/changelog.html">Changelog</a>
+                        <a href="../Pages/upcoming.html">Upcoming Features</a>
 
-            <a href="../index.html">Home</a>
-            <a href="../Pages/about.html">About</a>
-            <a class="windown download" href="http://sunnyland.maxinc.cf/Download/Windows/">Download</a>
-            <a class="launcher launch" href="SunnyLand://Launch(Launcher)?FromWebsite"><i class="fa fa-gamepad"></i>
-                Launch
-                Game</a>
-            <div class="dropdown">
-                <button class="dropdownbutton">Changes
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div id="DropDownID" class="dropdown-content sticky-dropdown">
-                    <a>Please Choose A Page</a>
-                    <a href="../Pages/changelog.html">Changelog</a>
-                    <a href="../Pages/upcoming.html">Upcoming Features</a>
-                    <a href="../Pages/status.html">Status</a>
+                        <a href="../Pages/status.html">Status</a>
+                    </div>
                 </div>
             </div>
             <a href="../Pages/qanda.html">Q&A</a>
             <a href="../Pages/demo.html" title="Current Page" class="active">Demo</a>
-            <button title="Go to login site" class="loginbutton">Login <i class="fa fa-user"></i></button>
-
+            <!--External Login in page-->
+            <button onclick="window.location.href='http://maxserver.ml/SunnylandLogin/login.php'"
+                title="Go to login site" class="loginbutton">Login <i class="fa fa-user"></i></button>
+            <!--Mobile Button to open Nav Bar-->
             <a title="Open Menu" href="javascript:void(0);" class="icon" onclick="openMenuMobile()">
                 <i class="fa fa-bars"></i>
             </a>
         </div>
-      
-            <iframe width="100%" height="90%" frameborder="0" style="margin-top: 3%;"
-                src="https://maxtyson123.github.io/Games/SunnyLand/"></iframe>
-            <button onclick="topFunction()" id="scrolltotop" title="Go to top">Top</button>
-            <div class="content">
-                <br>
-                <br>
-                
+
+        <!--Scroll to top button, Using JS it is only displayed once user has scrolled 500px down-->
+        <button onclick="topFunction()" id="scrolltotop" title="Go to top">Top</button>
+        <div class="content center">
+                 <!--Embeded Webgl Game-->
+        <iframe width="100%" height="100%" frameborder="0" style="margin-top: 2%;"
+        src="https://maxtyson123.github.io/Games/SunnyLand/"></iframe>
+            <!--Footer-->
             <footer>
                 <div class="footer-content">
                     <br>
+                    <!--Scrolling Text-->
                     <marquee> Website designed by Max Tyson.
                         &MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;
                         Recon Ops desgined by Max Inc </marquee>
                     <p> Good job you have scrolled all the way to the bottom! That must mean your intrested, Click the
                         button below to download the game or if you want to learn more vist a different page!</p>
                     <ul class="footer-social">
+                        <!--Social-->
                         <li> <a href="https://www.youtube.com/channel/UCQZBTFpZsGM15w_7hHG6MCw"><i
                                     class="fa fa-youtube"></i></a></li>
                         <li>
@@ -71,6 +83,7 @@
                             <a href="https://reddit.com/r/Maxinc_Game"> <i class="fa fa-reddit"></i> </a>
                         </li>
                     </ul>
+                    <!--Download/Launch-->
                     <div class="footer-download">
 
                         <button title="Download the launcher for windows"
