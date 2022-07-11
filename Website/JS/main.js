@@ -340,10 +340,9 @@ async function setchangelog() {
     }
     
 }
-window.addEventListener('resize', function(){
+window.addEventListener('resize', function(event) {
     updateImage();
-});
-
+}, true);
 function updateImage(){
     var images = document.querySelectorAll("img");     //Select all the images on the page
     docWidthCache = window.innerWidth;
