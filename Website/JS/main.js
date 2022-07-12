@@ -1,10 +1,14 @@
+//////////////////Document Layout
+//Loading and Loader
+//Varibles
+//Function (Alphabetical Order)
 
 ///////Loading/Loader
 
 document.addEventListener("DOMContentLoaded", htmlload); //Once the html page loads
-const loader = document.getElementById("loader");
+
 function htmlload() {
-    
+    const loader = document.getElementById("loader");
     updatePageName(); 
     if(getCookie("transition") == "yes"){ // This was changed to be a cookie becuase I noticed if the user reloaded the page  then the opening transition was shown
         setCookie("transition","no",1);
@@ -35,6 +39,7 @@ window.onload = function() {
 };
 
 function loadedFully() { 
+    const loader = document.getElementById("loader");
     loader.style.width = "300%"; //Change the width to show a zoom to the left animation
     loader.style.opacity = "0"; 
     document.body.style.overflow = "scroll";               
@@ -129,7 +134,7 @@ function check_site(id, site_url, site_name) {
     };
     img.onerror = function() {                       //If it dont  work
         updateStatusData(id,2)    ;                     //Set a cookie with the site id that it works
-        alert(site_name + ' IS DOWN AND NOT-RUNNING');//Alert the user
+        alert(site_name + " IS DOWN AND NOT-RUNNING");//Alert the user
         buttontochange.className = "serviceDown";    //Set the status style to red/serciveDown
     };
 }
@@ -154,28 +159,28 @@ function updateStatusData(id,data){
 }
 
 function Checkmaxinc() {
-    check_site("ms", 'http://maxinc.cf/logo.png', "MAIN");
+    check_site("ms", "http://maxinc.cf/logo.png", "MAIN");
 }
 
 function Checkro() {
-    check_site("ro", 'http://sunnyland.maxinc.cf/Images/ico.ico', "SUNNY LAND SITE");
+    check_site("ro", "http://sunnyland.maxinc.cf/Images/ico.ico", "SUNNY LAND SITE");
 }
 
 function Checkls() {
-    check_site("ls", 'http://www.maxserver.ml/SunnyLandLogin/ico.ico', "LOGIN SITE");
+    check_site("ls", "http://www.maxserver.ml/SunnyLandLogin/ico.ico", "LOGIN SITE");
 }
 
 function Checkpun() {
-    check_site("gs", 'https://www.photonengine.com/Content/img/nav-logo-photon.png', "MULTIPLAYR SERVICE");
+    check_site("gs", "https://www.photonengine.com/Content/img/nav-logo-photon.png", "MULTIPLAYR SERVICE");
 
 }
 
 function Checkpatch() {
-    check_site("ps", 'https://patchkit.net/img/patchkit_logo_black.png', "LAUNCHER & DOWNLOAD SERVICE");
+    check_site("ps", "https://patchkit.net/img/patchkit_logo_black.png", "LAUNCHER & DOWNLOAD SERVICE");
 }
 
 function Checkbl() {
-    //check_site("bul",'http://mfpsatmaxinc.mygamesonline.org/download.png',"BACK UP LOGIN SERVICE") 
+    //check_site("bul","http://mfpsatmaxinc.mygamesonline.org/download.png","BACK UP LOGIN SERVICE") 
     console.log("Back Up Login not active");
 }
 
@@ -197,8 +202,8 @@ function forceRecheck() { //used in the console when testing, may become a butto
 }
 function getCookie(cookieName) { //gets the cookie
     let cookie = {};
-    document.cookie.split(';').forEach(function(el) {
-        let [key, value] = el.split('=');
+    document.cookie.split(";").forEach(function(el) {
+        let [key, value] = el.split("=");
         cookie[key.trim()] = value;
     });
     return cookie[cookieName];
@@ -309,7 +314,7 @@ async function setchangelog() {
     var alternate = 0;
     for (let x = 0; x < json.versions.length; x++) {                //For every version:     
         //Title
-        const changelogelemt = document.createElement('div');             //Create a new div
+        const changelogelemt = document.createElement("div");             //Create a new div
         const title = document.createElement("h2");                       //Create a title
         title.innerHTML = json.versions[x].label;                   //Set the title to be the update version
         title.classList.add("check_anim_zoom");                     //Animate the title
@@ -337,7 +342,7 @@ async function setchangelog() {
     }
     
 }
-window.addEventListener('resize', function() {
+window.addEventListener("resize", function() {
     updateImage();
 }, true);
 function updateImage(){
