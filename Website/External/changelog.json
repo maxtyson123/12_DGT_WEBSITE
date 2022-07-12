@@ -1,1 +1,53 @@
-{"versions":[{"vid":7,"publish_date":"2022-05-23T03:47:04.755Z","label":"1.5","changelog":"{N} Multiplayer support, join your freinds in rooms of up to 4 players and race across multiple map\r\n{N} 3 new multiplayer maps \r\n{N} Version checking\r\n{N} Account linking\r\n{N} Offline play\r\n{N} WebGL demo\r\n{F} Speedrun error on level 8","publish_time":1653277624},{"vid":6,"publish_date":"2022-04-29T09:08:52.518Z","label":"1.3","changelog":"Temporarily reverted back to 1.3 whilst fixing game breaking bug","publish_time":1651223332},{"vid":5,"publish_date":"2022-04-24T08:12:49.918Z","label":"1.4","changelog":"{N} Level 9,10,Secret 2\r\n{N} Reset option when paused\r\n\r\n{F} Checkpoint flags on level 7,8\r\n{F} Reset save button\r\n{F} respawing resets level","publish_time":1650787969},{"vid":4,"publish_date":"2022-04-23T03:48:04.406Z","label":"1.3","changelog":"{N} Levels 6-8\r\n{N}Platform type: waterwheel\r\n\r\n{F}When level is locked in level selector ui, button isnt clickable\r\n{F} Diamond now plays custom sound instead of consume sound\r\n{F} Level text on secret level\r\n{F} Left path on secret level\r\n{F} Finish trigger on secret level\r\n\r\n{R} Path planning on Secret Level","publish_time":1650685684},{"vid":3,"publish_date":"2022-04-22T04:29:19.901Z","label":"1.2","changelog":"{N} Secret collectibles\r\n{N} Secret level\r\n{N}Pause menu also pauses speedrun timer, fully freezes game when speedrun to avoid abusing slow gamespeed w/ no timer\r\n\r\n{F} Fixed frog ai triggering unexpected player damage on level 4\r\n{F} Main menu UI not working if there is no save. \r\n{F} Frog animation","publish_time":1650601759},{"vid":2,"publish_date":"2022-04-21T00:57:47.351Z","label":"1.1","changelog":"{N} Speedrun Gamemode\r\n{N} Gamemode Selector\r\n{N} Highscore Pannel\r\n\r\n{F} Player hearts UI on levels 1-2","publish_time":1650502667},{"vid":1,"publish_date":"2022-04-19T23:32:59.174Z","label":"1.0","changelog":"-Intial","publish_time":1650411179}]}
+{
+    "versions": [
+        {
+            "vid": 7,
+            "publish_date": "2022-05-23T03:47:04.755Z",
+            "label": "1.5",
+            "changelog": "{N} Multiplayer support, join your freinds in rooms of up to 4 players and race across multiple map\r\n{N} 3 new multiplayer maps \r\n{N} Version checking\r\n{N} Account linking\r\n{N} Offline play\r\n{N} WebGL demo\r\n{F} Speedrun error on level 8",
+            "publish_time": 1653277624
+        },
+        {
+            "vid": 6,
+            "publish_date": "2022-04-29T09:08:52.518Z",
+            "label": "1.3",
+            "changelog": "Temporarily reverted back to 1.3 whilst fixing game breaking bug",
+            "publish_time": 1651223332
+        },
+        {
+            "vid": 5,
+            "publish_date": "2022-04-24T08:12:49.918Z",
+            "label": "1.4",
+            "changelog": "{N} Level 9,10,Secret 2\r\n{N} Reset option when paused\r\n\r\n{F} Checkpoint flags on level 7,8\r\n{F} Reset save button\r\n{F} respawing resets level",
+            "publish_time": 1650787969
+        },
+        {
+            "vid": 4,
+            "publish_date": "2022-04-23T03:48:04.406Z",
+            "label": "1.3",
+            "changelog": "{N} Levels 6-8\r\n{N}Platform type: waterwheel\r\n\r\n{F}When level is locked in level selector ui, button isnt clickable\r\n{F} Diamond now plays custom sound instead of consume sound\r\n{F} Level text on secret level\r\n{F} Left path on secret level\r\n{F} Finish trigger on secret level\r\n\r\n{R} Path planning on Secret Level",
+            "publish_time": 1650685684
+        },
+        {
+            "vid": 3,
+            "publish_date": "2022-04-22T04:29:19.901Z",
+            "label": "1.2",
+            "changelog": "{N} Secret collectibles\r\n{N} Secret level\r\n{N}Pause menu also pauses speedrun timer, fully freezes game when speedrun to avoid abusing slow gamespeed w/ no timer\r\n\r\n{F} Fixed frog ai triggering unexpected player damage on level 4\r\n{F} Main menu UI not working if there is no save. \r\n{F} Frog animation",
+            "publish_time": 1650601759
+        },
+        {
+            "vid": 2,
+            "publish_date": "2022-04-21T00:57:47.351Z",
+            "label": "1.1",
+            "changelog": "{N} Speedrun Gamemode\r\n{N} Gamemode Selector\r\n{N} Highscore Pannel\r\n\r\n{F} Player hearts UI on levels 1-2",
+            "publish_time": 1650502667
+        },
+        {
+            "vid": 1,
+            "publish_date": "2022-04-19T23:32:59.174Z",
+            "label": "1.0",
+            "changelog": "-Intial",
+            "publish_time": 1650411179
+        }
+    ]
+}
