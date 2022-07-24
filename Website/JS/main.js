@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", htmlload); //Once the html page lo
 function htmlload() {
     const loader = document.getElementById("loader");
     updatePageName(); 
+    updateImage();
     if(getCookie("transition") == "yes"){ // This was changed to be a cookie becuase I noticed if the user reloaded the page  then the opening transition was shown
         setCookie("transition","no",1);
         transitionAnimate("reverse") ;
@@ -50,7 +51,7 @@ function loadedFully() {
     check_anim();                                          
     setTimeout(function () {
         loader.style.display = "none";
-        updateImage();
+    
     }, 250);                                                      //Wait 2.5ms before hiding the loader so the width animation has time to play 
     
 }
@@ -456,3 +457,10 @@ function transitionSetup(){
           });
     }
 }
+
+function reportWindowSize() {
+    console.log(window.innerHeight);
+    console.log(window.innerWidth);
+  }
+  
+  window.onresize = reportWindowSize;
