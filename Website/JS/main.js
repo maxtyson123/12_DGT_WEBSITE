@@ -4,9 +4,14 @@
 //Function (Alphabetical Order)
 
 ///////Loading/Loader
-
+window.addEventListener('resize', updateImage);
 document.addEventListener("DOMContentLoaded", htmlload); //Once the html page loads
-
+window.onscroll = function() { 
+    scrollFunction(); //As a function incase called by other functions, eg. scroll to top
+};
+window.onload = function() {  
+    loadedFully();
+};
 function htmlload() {
     const loader = document.getElementById("loader");
     updatePageName(); 
@@ -34,11 +39,6 @@ function htmlload() {
     
    
 }
-window.onload = function() { 
-    loadedFully();
-    
-};
-
 function loadedFully() { 
     const loader = document.getElementById("loader");
     loader.style.width = "300%"; //Change the width to show a zoom to the left animation
@@ -55,12 +55,6 @@ function loadedFully() {
     }, 250);                                                      //Wait 2.5ms before hiding the loader so the width animation has time to play 
     
 }
-window.onscroll = function() { 
-    scrollFunction(); //As a function incase called by other functions, eg. scroll to top
-};
-
-
-//Listners
 
 ///////////////////Varibles
 
@@ -88,7 +82,9 @@ var dontloader = false;
 var docWidthCache = 0;
 var setImages = false;
 var imgmode = "none";
+
 /////////////Functions
+
 function checkServicesOnload() {
     //get the cookie stored 
     if (statusData.initial != 1) {   //If it doesnt exist or doesnt equal 1 run all the checks
@@ -343,25 +339,23 @@ async function setchangelog() {
     }
     
 }
-window.addEventListener("resize", function() {
-    updateImage();
-}, true);
+
 function updateImage(){
     var images = document.querySelectorAll("img");     //Select all the images on the page
     docWidthCache = window.innerWidth;
     if(docWidthCache != 0){
-        if(docWidthCache > 600){
-            if(!setImages){
-                imgmode = "Desktop";
-                setImages = true;
-            }else if(imgmode != "Desktop"){
+        if(docWidthCache > 600){ // Screen Sizes bigger then 600px
+            if(!setImages){      // If Image hasnt already been set for this size
+                imgmode = "Desktop"; //Set the Mode
+                setImages = true;  
+            }else if(imgmode != "Desktop"){ //If the images have been set, but for mobile
                 setImages = false;
                 updateImage();
             }
             else{
-                return;
+                return;             //Otherwise 
             }
-        }else if(docWidthCache <= 600){
+        }else if(docWidthCache <= 600){ // Screen Sizes smaller then 600px
             if(!setImages){
                 imgmode = "Mobile";
                 setImages = true;
@@ -458,9 +452,3 @@ function transitionSetup(){
     }
 }
 
-function reportWindowSize() {
-    console.log(window.innerHeight);
-    console.log(window.innerWidth);
-  }
-  
-  window.onresize = reportWindowSize;

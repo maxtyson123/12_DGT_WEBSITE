@@ -77,6 +77,58 @@
      border-radius: 0;
  }
 
+
+ /*Menu Has to go here as stylesheets are read line by line and dropdown is overwirtten*/
+ .Menu {
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    top: 0;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.466);
+}
+
+.Menu a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.Menu a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.Menu a.active {
+    background-color: #50C878;
+    color: white;
+}
+
+.Menu button {
+    float: right;
+    display: block;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 17px;
+    background-color: #50C878;
+    border: none;
+}
+
+.Menu button:hover {
+    background-color: #50C878b6;
+    color: black;
+}
+
+.Menu .icon {
+    display: none;
+}
+
  .alert {
      padding: 20px;
      background-color: #f44336;
@@ -369,55 +421,7 @@
  }
 
 
- .Menu {
-     overflow: hidden;
-     background-color: rgb(0, 0, 0);
-     position: absolute;
-     z-index: 2;
-     width: 100%;
-     top: 0;
-     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.466);
- }
 
- .Menu a {
-     float: left;
-     display: block;
-     color: #f2f2f2;
-     text-align: center;
-     padding: 14px 16px;
-     text-decoration: none;
-     font-size: 17px;
- }
-
- .Menu a:hover {
-     background-color: #ddd;
-     color: black;
- }
-
- .Menu a.active {
-     background-color: #50C878;
-     color: white;
- }
-
- .Menu button {
-     float: right;
-     display: block;
-     text-align: center;
-     padding: 14px 20px;
-     text-decoration: none;
-     font-size: 17px;
-     background-color: #50C878;
-     border: none;
- }
-
- .Menu button:hover {
-     background-color: #50C878b6;
-     color: black;
- }
-
- .Menu .icon {
-     display: none;
- }
 
  .medpara {
      padding: 5%;

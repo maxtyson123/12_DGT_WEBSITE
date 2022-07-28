@@ -1,6 +1,41 @@
 {
     "versions": [
         {
+            "vid": 15,
+            "publish_date": "2022-07-21T08:57:16.380Z",
+            "label": "1.9",
+            "changelog": "{N} Nickname above head in multiplayer\r\n{N} when player completes level they now are hidden for all players (Multiplayer)\r\n{N} IF host returns to lobby then all other player do\r\n{N} Host can set max players and a room password\r\n{N} Player List showing names and ready status\r\n{N} Points and progress system for multiplayer\r\n{N} Leaderboard system for multiplayer\r\n{N} Multiplayer level 4\r\n\r\n{F} Player Spawn point level 20\r\n{F} Mobile Input Now Hides if user is in a menu\r\n{F} Multiplayer now shows up if user logs in.\r\n{F} Host cant see times in multiplayer\r\n{F} Some players were invisble to others in multiplayer\r\n{F} If host disconnects room gets removed\r\n{F} Empty rooms with 0/0 players are now hidden\r\n{F} Start or ready button not showing when joining a new room\r\n",
+            "publish_time": 1658393836
+        },
+        {
+            "vid": 14,
+            "publish_date": "2022-07-19T08:10:24.728Z",
+            "label": "1.8",
+            "changelog": "{N} Levels 16-20\r\n{N} Secret Level 4\r\n{N} Login option\r\n{N} Sign Up form\r\n{N} Cloud Saving/Loading (persitance across devices)\r\n{N} Reset Password\r\n\r\n{F} Secret levels unlock all levels\r\n{F} Ghost on level 1 for mobile \r\n{F} Freecam button sprite on mobile\r\n{F} Demo is now activated if user doesnt login \r\n{F} Diamond Level Cant Be Picked Up\r\n{F} Tutorial not loading level 1 on completion\r\n{F} Dont save levels lower then current best\r\n\r\n{R} Old account linking removed",
+            "publish_time": 1658218224
+        },
+        {
+            "vid": 13,
+            "publish_date": "2022-07-16T23:18:14.294Z",
+            "label": "1.7",
+            "changelog": "{N} UnderGroud World, Level 1-5\r\n{N} Secret Level 3\r\n{N} Crouch, Interact \u0026 Freecam mobile input\r\n{N} Level transitions\r\n{N} Tutorial\r\n{N} Free Cam\r\n\r\n{F} Ghost on level 1\r\n{F} Timer Pauses on reset\r\n{F} Timer doesnt start at 0 \r\n{F} Made Level 5 Easier\r\n{F} Mobile Input acidental auto jump",
+            "publish_time": 1658013494
+        },
+        {
+            "vid": 9,
+            "publish_date": "2022-07-13T05:40:15.321Z",
+            "label": "1.6.1",
+            "changelog": "{F} UI Scaling\r\n{F} WebGL Logins",
+            "publish_time": 1657690815
+        },
+        {
+            "vid": 8,
+            "publish_date": "2022-07-13T03:33:38.464Z",
+            "label": "1.6",
+            "changelog": "{N} Speedruns in demo mode now are saved with the [DEMO] tag\r\n{N} Toggle input mode so that touch screen pcs can play and also chromebooks from googleplay\r\n{N} Ghost of best time in adventuremode\r\n\r\n\r\n{F} Level selecter now proplerly locks level 8\r\n{F} level 8 can now be completed with speedrun\r\n{F} Levels 1-3 Damage \r\n",
+            "publish_time": 1657683218
+        },
+        {
             "vid": 7,
             "publish_date": "2022-05-23T03:47:04.755Z",
             "label": "1.5",

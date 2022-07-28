@@ -1,10 +1,6 @@
 <!DOCTYPE html>
+<!-- External/_files_  is taken from sunnyland.maxinc.cf-->
 <html lang="en">
-
-<!-- UPDATE mobile images to mobile version once released-->
-<!-- Fix CSS -->
-
-
 <head>
     <title>Sunnyland | Maxinc</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,7 +35,7 @@
                 <a class="additionalLinksCSS" href="Pages/status.html">Status</a>                
                 <a class="launcher launch" href="Sunnyland://Launch(Launcher)?FromWebsite"><i class="fa fa-gamepad"></i> Launch Game</a>
                 <!--Hoverable Dropdown Items, Only Displayed on PC displays as mobile cant hover well -->
-                <div id="mobileDD" class="dropdown">
+                <div  class="dropdown">
                     <button class="dropdownbutton">Changes <i class="fa fa-caret-down"></i> </button>                   
                     <div id="DropDownID" class="dropdown-content sticky-dropdown">                    
                         <a>Please Choose A Page</a>
@@ -51,7 +47,7 @@
                 <a href="Pages/qanda.html">Q&A</a>
                 <a href="Pages/demo.html">Demo</a>
                 <!--External Login in page-->
-                <button onclick="window.location.href='http://maxserver.ml/SunnylandLogin/login.php'" title="Go to login site" class="loginbutton">Login <i class="fa fa-user"></i></button>
+                <button onclick="window.location.href='http://mfpsatmaxinc.mygamesonline.org/maxserver.ml/SunnyLandLogin'" title="Go to login site" class="loginbutton">Login <i class="fa fa-user"></i></button>
                 <!--Mobile Button to open Nav Bar-->
                 <a title="Open Menu" href="javascript:void(0);" class="icon" onclick="openMenuMobile()"><i class="fa fa-bars"></i></a>            
             </div>
@@ -84,12 +80,14 @@
             </div>
             <!--Game Blurb-->
             <div class="breiftext check_anim_bottom">
+                
                 <p>Sunnyland is a peaceful 2d platformer. Play as a fox and explore multiple levels, collect gems,
                     berries and dodge enimies like frogs and eagles. Join your friends in multiplayer races or
                     speedrun through the main levels against the clock.</p>
                 <a class="breiflink launch" href="Sunnyland://Launch(Launcher)?FromWebsite">Play free now.</a> <a
                     class="breiflink download" href="http://Sunnyland.maxinc.cf/Download/Windows">Download free
                     now.</a>
+             
             </div>
             <!--Bullet Points next to Images-->
             <div class="bpandimg">
@@ -151,11 +149,9 @@
                             game on? <i class="fa fa-caret-down "></i> </button>
                         <div class="awnserContent ">
                             
-                            <p> Sunnyland is currently only avlible for windows via its <a
-                                    href="http://Sunnyland.maxinc.cf/Download/Windows/ "> launcher.</a> But we are
-                                working on bringing it to console via WebGl on Edge. Mobile develolpment is also
-                                underway
-                                and may soon be published to the google play store. </p>
+                            <p> Sunnyland is currently avlible for windows via its <a
+                                    href="http://Sunnyland.maxinc.cf/Download/Windows/ "> launcher.</a> For andriod devices you can download it from <a href="https://play.google.com/store/apps/details?id=com.MaxInc.Sunnyland">Google Play</a>, mobile develolpment for IOS also
+                                underway. It is also coming to console via WebGl on Edge. </p>
                         </div>
                     </div>
                 </div>
@@ -172,7 +168,7 @@
                             expect? <i class="fa fa-caret-down "></i> </button>
                         <div class="awnserContent ">
                             <p> In Sunnyland you can expect many features that you would find in your other popular
-                                Platformer games such as Life system, Levels, Enimies, and much more. You can read more
+                                Platformer games such as Life system, Levels, Enimies, Multiplayer and much more. You can read more
                                 about the game <a href="Pages/about.html ">HERE</a> and
                                 about up coming features <a href="Pages/upcoming.html "> HERE</a> </p>
                         </div>
@@ -182,7 +178,7 @@
                     <div class="qandadropdown check_anim_right"> <button class="qheader ">Is my progress saved? <i
                                 class="fa fa-caret-down "></i> </button>
                         <div class="awnserContent ">
-                            <p> You progressed is saved locally, and can be reset in the settings menu. Previous levels
+                            <p> You progressed is saved locally and via the cloud, and can be reset in the settings menu. Previous levels
                                 can be replayed through the level select system.</p>
                         </div>
                     </div>
@@ -193,7 +189,6 @@
                         href="mailto:98maxt98@gmail.com "> contact support. </a></p>
 
             </div>
-            <!--Mid page image-->
             <img alt="Player Idle on Floating ISland" class="check_anim_zoom " src="Images/img3.png " style="width: 80%; height: auto;">
             <!--Text With Bullet Points-->
             <div class="medpara ">
@@ -225,11 +220,7 @@
             <!--Footer-->
             <footer>
                 <div class="footer-content"> <br>
-                    <!--Scrolling Text-->
-                    <marquee> Website designed by Max Tyson.
-                        &MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;
-                        Sunnyland desgined by Max Inc
-                    </marquee>
+                    
                     <p> Good job you have scrolled all the way to the bottom! That must mean your intrested, Click the
                         button below to download the game or if you want to learn more vist a different page!</p>
                     <ul class="footer-social">
@@ -262,6 +253,9 @@
 
                 </div>
             </footer>
+            <script>
+
+            </script>
         </div>
     </div>
 </body>
