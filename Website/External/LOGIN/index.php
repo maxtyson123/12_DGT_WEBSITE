@@ -3,7 +3,17 @@
 include("auth.php");
 include("db.php");
 
-//REMOVED PHP TO BE SECURE
+        $query = ("SELECT sl_gems, sl_deaths, sl_gamesplayed, sl_level, nick FROM `bl_game_users` WHERE name='{$_SESSION["username"]}'");
+        $result = mysqli_query($con,$query);
+        while ($row =  mysqli_fetch_array($result)){
+            $level = $row['sl_level'];
+            $games = $row['sl_gamesplayed'];
+            $deaths = $row['sl_deaths'];
+            $gems = $row['sl_gems'];
+            $nick = $row['nick'];
+            //Get the data from the sql tabel
+        }
+
 
 ?>
 <!DOCTYPE html>
@@ -18,9 +28,10 @@ include("db.php");
     <center>
         <div class="home-pannel">
 <div class="form">
-    <img src="../../Images/ico.ico">
-<h1 > ACC NAME</h1>
+    <img src="ico.ico">
+<?php echo "<h1>" . $nick . "</h1>" //Show username?>
 <div class="row">
+    <!--Cant Update Images As I havent fully implemented the in-game version of this-->
     <div class="column">
         <img src="coin.png" alt="coins" height="150px" width="150px"  style="border-radius: 35px;" >
     </div>
@@ -36,41 +47,34 @@ include("db.php");
 </div>
 <div class="row">
     <div class="column">
-        <h3>COINS</h3>
+        <h2>LEVEL</h2>
     </div>
     <div class="column">
-        <h3>DEATHS</h3>
+        <h2>GAMES</h2>
     </div>
     <div class="column">
-        <h3>KILLS</h3>
+        <h2>DEATHS</h2>
     </div>
     <div class="column">
-        <h3>SCORE</h3>
+        <h2>GEMS</h2>
     </div>
 </div>
 <div class="row">
     <div class="column">
-        <h3><?php
-
-$query1 = mysql_query("SELECT coins FROM `bl_game_users` WHERE name='{$_SESSION["username"]}'"); //USES SQL TO GET COINS FROM DB WHERE THE USERNAME IS THE ONE STORED IN THE SESSION,
-// NOTE: THIS IS NO LONGER USED IN THE PAGE BECAUSE IT WAS INEFFECIENT AND I DONT EVEN KNOW IF IT WORKS
-while($results = mysql_fetch_array($query1)){
-    echo $result['COINS'];
-}
-
-?> </h3>
+        <h3><?php echo $level;?> </h3>
     </div>
     <div class="column">
-        <h3>DEATHS</h3><!--Same WOOULD GO IN THEESE -->
+        <h3><?php echo $games;?></h3>
     </div>
     <div class="column">
-        <h3>KILLS</h3>
+        <h3><?php echo $deaths;?></h3>
     </div>
     <div class="column">
-        <h3>SCORE</h3>
+        <h3><?php echo $gems;?></h3>
     </div>
 </div>
-<button onclick="window.location.href='logout.php'">Logout</button>
+<button onclick="window.location.href='<?php echo $launch . $loginId ?>'">Launch Game</button>
+<button onclick="window.location.href='logout.php?return=<?php echo $returnurl; ?>'">Logout</button>
 </div>
 </div>
 </center>
