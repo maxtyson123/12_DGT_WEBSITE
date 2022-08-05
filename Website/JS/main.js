@@ -416,8 +416,8 @@ function updatePageName(){
         dontloader = true;
     }
     page_name = page_name.charAt(0).toUpperCase() + page_name.slice(1); //Make the first chracter uppercase
-    var current_page_title = document.title;    //Get the current title
-    document.title = current_page_title + " | " + page_name; //Add the page name
+
+    document.title = "Sunnyland | Maxinc | " + page_name; //Add the page name
 
 
 }
@@ -435,7 +435,8 @@ function transitionAnimate(type){
     document.documentElement.style.setProperty("--transition-vertical-pos", pageHeight + "px"); //Update the css varible to have the centered position
     const trnasitionelemt = document.querySelector("#transition");
     trnasitionelemt.style.animation = "tranistion-close 1s 1";   //Play the animtion
-    document.body.style.backgroundColor = "#50C878";
+    document.body.style.backgroundColor = getComputedStyle(document.documentElement)
+    .getPropertyValue('--theme-main-colour');
     document.body.style.transition = "0s";
     trnasitionelemt.style.animationFillMode = "forwards";
     trnasitionelemt.style.animationDirection = type;           //Make the animtion run in passed type, eg. play backwards if opening the page

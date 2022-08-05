@@ -22,6 +22,8 @@
 
 :root {
     --transition-vertical-pos: 800px;
+    --theme-main-colour: #50C878;
+    --theme-second-colour: #555;
 }
 
 
@@ -72,7 +74,7 @@ footer {
     right: 0;
     width: 100% ;                    /* Width 100% of the screen, alternativy coud have used vw*/  
     height: auto;                    /* Auto size based on the screen and the content*/
-    background-color: #555;        /* Set Background Colour*/
+    background-color: var(--theme-second-colour);        /* Set Background Colour*/
     color: #fff;        
     padding-top: 50px;
     border-radius: 0;                /*Dont Curve as I want edges flush with the end of the screen*/
@@ -109,7 +111,7 @@ footer {
 
 /*For the active page change bg to green*/
 .Menu a.active {
-   background-color: #50C878;
+   background-color: var(--theme-main-colour);
    color: white;
 }
 
@@ -121,7 +123,7 @@ footer {
    padding: 14px 20px;
    text-decoration: none;
    font-size: 17px;
-   background-color: #50C878;
+   background-color: var(--theme-main-colour);
    border: none;
 }
 
@@ -146,7 +148,7 @@ footer {
 /*By default hide the andriod download button*/
 .andrioddownloadbtn {
     display: none;
-    background-color: #50C878;
+    background-color: var(--theme-main-colour);
     border: none;
     color: white;
     padding: 12px 30px;
@@ -178,7 +180,7 @@ footer {
 /*Force the active mobile links to be hidden, add a background colour of green*/
 .additionalLinksCSSActive {
     display: none !important;
-    background-color: #50C878;
+    background-color: var(--theme-main-colour);
     color: white;
 }
 
@@ -258,7 +260,7 @@ footer {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #555;
+    background-color: var(--theme-second-colour);
     min-width: 160px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -286,7 +288,7 @@ footer {
 .serviceDown:hover,
 .serviceMat:hover,
 .qandadropdown:hover .qheader:hover{
-    background-color: #555;
+    background-color: var(--theme-second-colour);
     color: white;
 }
 
@@ -304,7 +306,7 @@ footer {
 /*Give the download button a themed green background with a white font. Change the cursor type to pointer to indcate it is clickable */
 .downloadbtn,
 .launchbtn {
-    background-color: #50C878;
+    background-color: var(--theme-main-colour);
     border: none;
     color: white;
     padding: 12px 30px;
@@ -368,12 +370,12 @@ footer {
 
 /* On hover make the icon color green*/
 .footer-social a:hover i {
-    color: #50C878;
+    color: var(--theme-main-colour);
 }
 
 /* On hover change the border to the green aswel*/
 .footer-social a:hover {
-    border: 5px solid #50C878;
+    border: 5px solid var(--theme-main-colour);
 }
 
 /*Center the download button */
@@ -400,13 +402,13 @@ footer {
 .launcher {
     border-radius: 5px;
     background: rgb(2, 0, 36);
-    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 62%, #50c878 100%);
+    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 62%, var(--theme-main-colour) 100%);
 }
 /* The hovered nav bar launcher button with a higher green gradient background */ 
 .launcher:hover {
     animation: grandent 1s;
     background: rgb(2, 0, 36);
-    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 13%, #50c878 100%);
+    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 13%, var(--theme-main-colour) 100%);
 }
 
 /* Position the loader on top of the display using the z index, give it 100% hight but hide it with 0% width (which is later changed with animation). Hide the horizontal overflow when the width is set vto 300% for animation, also give it a semi-transpanent background */ 
@@ -475,7 +477,7 @@ footer {
     outline: none;
     color: #fff;
     padding: 20px;
-    background-color: #50C878;
+    background-color: var(--theme-main-colour);
     font-family: inherit;
     margin: 0;
     width: 90%;
@@ -603,7 +605,7 @@ footer {
     font-size: 18px;
     border: none;
     outline: none;
-    background-color: #50C878;
+    background-color: var(--theme-main-colour);
     color: white;
     cursor: pointer;
     padding: 15px;
@@ -635,7 +637,7 @@ footer {
 th {
 
     padding: 8px;
-    border: 1px solid #555;
+    border: 1px solid var(--theme-second-colour);
     border-radius: 0;
 }
 
@@ -651,7 +653,7 @@ th {
 
 /*On hover apply the themed green background*/
 #tabelID tr:hover {
-    background-color: #50C878;
+    background-color: var(--theme-main-colour);
 }
 
 /*Make the table header green, and also with larger padding*/
@@ -659,7 +661,7 @@ th {
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: left;
-    background-color: #50C878;
+    background-color: var(--theme-main-colour);
     color: white;
 }
 
@@ -668,12 +670,12 @@ th {
     from {
         /*Begin at 62% black graditen */
         background: rgb(2, 0, 36);
-        background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 62%, #50c878 100%); 
+        background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 62%, var(--theme-main-colour) 100%); 
     }
     /*End at 13% black gradient */
     to {
         background: rgb(2, 0, 36);
-        background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 13%, #50c878 100%);
+        background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 13%, var(--theme-main-colour) 100%);
     }
 }
 
