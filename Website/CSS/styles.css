@@ -224,38 +224,25 @@ footer {
     padding: 0%;
 }
 
-
-.closebtn {
-    margin-left: 15px;
-    color: white;
-    font-weight: bold;
-    float: right;
-    font-size: 22px;
-    line-height: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.closebtn:hover {
-    color: black;
-}
-
+/*Collums used to divide up the page for the bullet points and images*/
 .column {
     float: left;
     width: 50%;
     padding: 5px;
 }
 
+/*CSS Replacement for my old <center> tags*/
 .center {
     text-align: center;
 }
 
-
+/* Float the dropdown to the left, hide the overflow to prevent a scrollbar */
 .dropdown {
     float: left;
     overflow: hidden;
 }
 
+/* Style the dropdown and the dropdown button with a white, parent inherited, 17px font */
 .dropdown .dropdownbutton {
     font-size: 17px;
     border: none;
@@ -267,6 +254,7 @@ footer {
     margin: 0;
 }
 
+/* Hide the dropdown's content by default*/
 .dropdown-content {
     display: none;
     position: absolute;
@@ -276,6 +264,7 @@ footer {
     z-index: 1;
 }
 
+/*Dont float the contents a links which normally would be inherited by its parent the nav bar which floats to the left  */
 .dropdown-content a {
     float: none;
     color: white;
@@ -285,25 +274,34 @@ footer {
     text-align: left;
 }
 
+/*Change the background on hover, also change the font colour so its visible */
 .Menu a:hover,
 .dropdown:hover,
 .dropdownbutton,
 .downloadbtn:hover,
-.andrioddownloadbtn:hover {
+.andrioddownloadbtn:hover,
+#scrolltotop:hover,
+.sercvieUp:hover,
+.service-check:hover,
+.serviceDown:hover,
+.serviceMat:hover,
+.qandadropdown:hover .qheader:hover{
     background-color: #555;
     color: white;
 }
 
+/* Dropdown content a links will hav different hovering effect as the dropdown's background is the same as the previous hover's new background */
 .dropdown-content a:hover {
     background-color: #ddd;
     color: black;
 }
 
+/*When hovered change the dropdown content's display to block which reveals the dropdown */
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-
+/*Give the download button a themed green background with a white font. Change the cursor type to pointer to indcate it is clickable */
 .downloadbtn,
 .launchbtn {
     background-color: #50C878;
@@ -314,15 +312,17 @@ footer {
     font-size: 20px;
 }
 
+/*Give the downloadbutton's container 5% spacing throug padding */
 .download_button {
     padding: 5%;
 }
 
+/*Make the button itself take up 100% of its parent elemet's display*/
 .download_button button {
     width: 100%;
 }
 
-
+/*Use flex, align and justifty to make the contentes center*/
 .footer-content {
     display: flex;
     align-items: center;
@@ -331,18 +331,14 @@ footer {
     text-align: center;
 }
 
-.footer-content marquee {
-    font-size: 32px;
-    font-weight: 300;
-    text-transform: capitalize;
-}
-
+/* Force the width of the footer's p elements to be 500px, this makes more lines and it looks neater and better centered*/
 .footer-content p {
     max-width: 500px;
     margin: 10px auto;
     font-size: 14px;
 }
 
+/* Remove the default list element styling and instead center align them horrizontally, have a 10px top and 30px bottom*/
 .footer-social {
     list-style: none;
     display: flex;
@@ -351,10 +347,12 @@ footer {
     margin: 10px 0 30px 0;
 }
 
+/*Have 10px spacing for the horizontal list items */
 .footer-social li {
     margin: 0 10px;
 }
 
+/* Remove the underline from the footer social links, also give a rounded border */
 .footer-social a {
     text-decoration: none;
     color: #ddd;
@@ -363,22 +361,32 @@ footer {
     border: 5px solid white;
 }
 
+/* Small font size so that the icons arent massive */
 .footer-social a i {
     font-size: 1rem;
 }
 
+/* On hover make the icon color green*/
 .footer-social a:hover i {
     color: #50C878;
 }
 
+/* On hover change the border to the green aswel*/
+.footer-social a:hover {
+    border: 5px solid #50C878;
+}
+
+/*Center the download button */
 .footer-download {
     align-items: center;
 }
 
+/* Hidden class is used to hide anamated elements, this uses opcatity instead of display becuase display cant be animated*/
 .hidden {
     opacity: 0;
 }
 
+/*Position the iframe video to be 100% of the veiwport, center it and also have absoulte positioning rahter then reletive */
 .hero-iframe {
     position: absolute;
     top: 50%;
@@ -388,20 +396,20 @@ footer {
     transform: translate(-50%, -50%);
 }
 
-
-
+/* The nav bar launcher button with a green gradient background */ 
 .launcher {
     border-radius: 5px;
     background: rgb(2, 0, 36);
-    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 62%, rgba(0, 212, 255, 1) 100%);
+    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 62%, #50c878 100%);
 }
-
+/* The hovered nav bar launcher button with a higher green gradient background */ 
 .launcher:hover {
     animation: grandent 1s;
     background: rgb(2, 0, 36);
-    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 13%, rgba(0, 212, 255, 1) 100%);
+    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 13%, #50c878 100%);
 }
 
+/* Position the loader on top of the display using the z index, give it 100% hight but hide it with 0% width (which is later changed with animation). Hide the horizontal overflow when the width is set vto 300% for animation, also give it a semi-transpanent background */ 
 .loader {
     height: 100%;
     width: 0;
@@ -414,6 +422,7 @@ footer {
     transition: 1s;
 }
 
+/* Position the loader's content centered*/ 
 .loader-content {
     position: relative;
     top: 25%;
@@ -422,6 +431,7 @@ footer {
     color: white;
 }
 
+/* Infintly play the left to right animation with each loop takin a toatal of 5s.  */ 
 .left_to_right {
     bottom: 3%;
     position: absolute;
@@ -430,40 +440,36 @@ footer {
     animation-duration: 5s;
 }
 
-
-
-
+/*Medium paragraph uses 5% padding to give it spacing between adjecent elements, it also uses a larger font size*/ 
 .medpara {
     padding: 5%;
     font-size: 32px;
 }
 
-
-
+/* Center the midpage iframe container child elements and have spacing around it  */ 
 .midpage-iframe {
     align-items: center;
     padding: 5%;
 }
 
+/* Give the iframe 50% width but set the max hieght to 500px*/ 
 .midpage-iframe-content {
     width: 50%;
     height: 500px;
 }
 
-.mobileNavDrop {
-    display: none;
-}
-
-
+/* Q and A container has a larger text size and some spacing*/ 
 .qanda {
     padding: 5%;
     font-size: 32px;
 }
 
+/*Fill out the question so its size is simmalr to the question header */ 
 .question {
     padding: 2%;
 }
 
+/*Give the question header a large white inhertied font, the background is green and it takes up 90% of the containers width. It also has a box shadow */ 
 .qandadropdown .qheader {
     font-size: 32px;
     outline: none;
@@ -477,24 +483,21 @@ footer {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.466);
 }
 
-.qandadropdown:hover .qheader:hover {
-    background-color: #555;
-}
-
-
+/* On the drodown hover set the text size to 32 and colour to black */ 
 .qandadropdown:hover .awnserContent {
     color: black;
     font-size: 32px;
     padding: 5px;
 }
 
+/*Clear the row after */
 .row::after {
     content: "";
     clear: both;
     display: table;
 }
 
-
+/*Sticky element is fixed to the top of the screen, it is layered above the main elements */
 .sticky {
     position: fixed;
     top: 0;
@@ -502,18 +505,20 @@ footer {
     z-index: 2;
 }
 
+/*Sticky drop down has the same styling as normal dropdown but with lower layering and no max width */
 .sticky-dropdown {
     position: fixed;
     top: 0;
     z-index: 1;
 }
 
+/*Change the content to have extra padding on the top */
 .sticky+.content {
     padding-top: 60px;
     padding-bottom: 0;
 }
 
-
+/*Default Service check, used for when the JS is check the site */
 .service-check {
     background-color: #ddd;
     border: none;
@@ -523,6 +528,7 @@ footer {
     font-size: 20px;
 }
 
+/* When the service is up change the bg to green, also keep the normal button styling */
 .sercvieUp {
     background-color: green;
     border: none;
@@ -532,6 +538,7 @@ footer {
     font-size: 20px;
 }
 
+/* When the service is down change the bg to red, also keep the normal button styling */
 .serviceDown {
     background-color: red;
     border: none;
@@ -541,6 +548,7 @@ footer {
     font-size: 20px;
 }
 
+/* When the service is under mantientce change the bg to orange, also keep the normal button styling. This matenice has to be set manually */
 .serviceMat {
     background-color: orange;
     border: none;
@@ -550,10 +558,12 @@ footer {
     font-size: 20px;
 }
 
+/* When the service is up change the bg to green, also keep the normal button styling */
 .table {
     box-shadow: 0 8px 16px 0p rgba(0, 0, 0, 0.466);
 }
 
+/* Transition container that holds all the elements to not be effected by the colour and movement which is aplied to the body */
 .transitioncontainer {
     left: 0;
     top: 0;
@@ -563,19 +573,20 @@ footer {
     z-index: 4;
 }
 
+/* the table container is used to center the table with spacing on the sides */
 .table-container {
     padding: 5%;
     padding-bottom: 0;
     margin-left: 5%;
     margin-right: 5%;
 }
-
+/* The video container is 100% of the intial weiew width and veiw hight */
 .video-container {
     width: 100vw;
     height: 100vh;
 }
 
-
+/* Add a shadowed border to the changelog */
 #changelog_id {
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.603);
     width: 50%;
@@ -583,11 +594,12 @@ footer {
     padding: 5px;
 }
 
+/*Fixidly position the scroll to top button in the bottom right of the screen, show it above the page contents but below the transition and loader, add a oiinter cursor and rounded corners. */
 #scrolltotop {
     position: fixed;
     bottom: 20px;
     right: 30px;
-    z-index: 99;
+    z-index: 2;
     font-size: 18px;
     border: none;
     outline: none;
@@ -598,16 +610,7 @@ footer {
     border-radius: 4px;
 }
 
-#scrolltotop:hover,
-.sercvieUp:hover,
-.service-check:hover,
-.serviceDown:hover,
-.serviceMat:hover {
-    background-color: #555;
-}
-
-
-
+/* Position the title text above the iframe, centered  */
 #titeltext {
     position: absolute;
     color: #FFFFFF;
@@ -616,6 +619,7 @@ footer {
     transform: translate(-50%, -50%);
 }
 
+/*Collapse the tables borders, scroll horizontally but not vertically and also have a box shadow */
 #tabelID {
     border-collapse: collapse;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.466);
@@ -626,21 +630,31 @@ footer {
     width: 100%
 }
 
+/*Remove the border radius and give a black background for the table text and header*/
 #tabelID td,
 th {
+
     padding: 8px;
     border: 1px solid #555;
     border-radius: 0;
 }
 
+/*Alternate each even table row and give it a darker gray background*/
 #tabelID tr:nth-child(even) {
     background-color: gray;
 }
 
+/*Make the table text eleemtns 100%, this is not usally seen and is just to fix the table on high res displays and/or larger screens*/
+#tabelID td{
+    width: 100%;
+}
+
+/*On hover apply the themed green background*/
 #tabelID tr:hover {
     background-color: #50C878;
 }
 
+/*Make the table header green, and also with larger padding*/
 #tabelID th {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -649,64 +663,58 @@ th {
     color: white;
 }
 
-@keyframes grandent {
+/* Gradient Animation Used by the launcher hover button*/
+@keyframes grandent { 
     from {
+        /*Begin at 62% black graditen */
         background: rgb(2, 0, 36);
-        background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 62%, rgba(0, 212, 255, 1) 100%);
+        background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 62%, #50c878 100%); 
     }
-
+    /*End at 13% black gradient */
     to {
         background: rgb(2, 0, 36);
-        background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 13%, rgba(0, 212, 255, 1) 100%);
+        background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 13%, #50c878 100%);
     }
 }
 
+/* Transition animation, can be reversed to give the effect of an opening transition rather then a closed one*/
 @keyframes tranistion-close {
     0% {
-        clip-path: circle(50% at 50% var(--transition-vertical-pos));
+        clip-path: circle(50% at 50% var(--transition-vertical-pos));  /*Begin a clip circle with 50%  radius. Center at 50% width and hieght at the position set by the JS */
     }
 
     100% {
-        clip-path: circle(0% at 50% var(--transition-vertical-pos));
+        clip-path: circle(0% at 50% var(--transition-vertical-pos)); /*End a clip circle with 0%  radius. Center at 50% width and hieght at the position set by the JS */
     }
 }
 
-@keyframes slidetop {
-    from {
-        top: -300px;
-        opacity: 0
-    }
 
-    to {
-        top: 0;
-        opacity: 1
-    }
-}
-
+/*The element is offest by 32% from the left of the screen and then its slowly incremented to 65% offest , Then it is flipped and starts making it's way back to the start    */
 @keyframes left_to_right {
     0% {
-        left: 32.5%;
+        left: 32.5%; /*Start Position (where the path begin) */
     }
 
     48% {
-        -webkit-transform: rotateY(0deg);
+        -webkit-transform: rotateY(0deg); /*Make sure the rotation is not changed until the right moment, otherwise it would be increased slowly */
     }
 
     50% {
-        left: 65%;
-        -webkit-transform: rotateY(180deg);
+        left: 65%; /*End position */
+        -webkit-transform: rotateY(180deg); /*Flip the elemet */
     }
 
     98% {
-        -webkit-transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg);/*Make sure the rotation is not changed until the right moment, otherwise it would be increased slowly */
     }
 
     100% {
-        left: 32.5%;
-        -webkit-transform: rotateY(0deg);
+        left: 32.5%;/* Reset the position*/
+        -webkit-transform: rotateY(0deg); /* Reset the rotation */
     }
 }
 
+/*left sliding effect by changin the opcity and sliding the element to the left by changing its left placement */
 @keyframes slideleft {
     from {
         left: -300px;
@@ -719,6 +727,7 @@ th {
     }
 }
 
+/*Right sliding effect by changin the opcity and sliding the element to the right by changing its right placement */
 @keyframes slideright {
     from {
         right: -300px;
@@ -732,20 +741,7 @@ th {
 }
 
 
-@keyframes slideright {
-    from {
-        right: -300px;
-        opacity: 0
-    }
-
-    to {
-        right: 0;
-        opacity: 1
-    }
-}
-
-
-
+/*Bottom sliding effect by changin the opcity and sliding the element up by changing its bottom placement */
 @keyframes slidebottom {
     from {
         bottom: -300px;
@@ -758,8 +754,20 @@ th {
     }
 }
 
+/*Top sliding effect by changin the opcity and sliding the element down by changing its top placement */
+@keyframes slidetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
 
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
 
+/*Zoom animation effect by changing the scale */
 @keyframes slidezoom {
     from {
         transform: scale(0)
@@ -769,50 +777,30 @@ th {
         transform: scale(1)
     }
 }
-
+/* If the page is smaller then 800px make the footer static*/
 @media screen and (max-hieght: 800px) {
     .footer {
         position: static;
     }
 }
 
-@media screen and (max-width: 600px) {
-
-    .Menu a:not(:first-child),
-    .additionalLinksCSS,
-    .additionalLinksCSSActive,
-    .dropdown {
-        display: none;
-    }
-
-    .downloadbtn {
-        display: none;
-    }
-
-    .Menu a.icon {
-        float: right;
-        display: block;
-    }
-
-    .column {
-        width: 100%;
-        height: auto;
-    }
-}
-
+/* Hide the Nav Bar Launcher On Smaller Screens*/
 @media screen and (max-width: 1000px) {
     .launcher {
         display: none !important;
     }
 }
 
+/* For Mobile Screens */
 @media screen and (max-width: 600px) {
 
+    /* Dont center table on smaller screens as this will make the table very samll */
     #tabelID {
         padding: 0;
         left: 0;
     }
 
+    /* Show the button that opens the mobile nav menu */        
     .Menu.responsive .icon {
         position: absolute;
         right: 0;
@@ -820,18 +808,27 @@ th {
         z-index: 2;
     }
 
+    /* Place the button that opens the mobile nav menu to the right, next to the login button */
+    .Menu a.icon {
+        float: right;
+        display: block;
+    }
+
+    /* Remove the left alignment */  
     .Menu.responsive a {
         float: none;
         display: block !important;
         text-align: left !important;
     }
 
+    /* Align the login button to the left if the mobile veiw is open, instead of the normal right alignment */ 
     .Menu.responsive button {
         width: 100%;
         display: block;
         text-align: left;
     }
 
+    /*When the menu is responsive, give it a fixed position  */  
     .Menu.responsive {
        position: fixed;
        top: 0;
@@ -842,7 +839,28 @@ th {
        position: relative;
     }
 
+    /* Show the andriod download button */  
     .andrioddownloadbtn {
         display: block;
+    }
+
+    /* Hide the normal download button */
+    .downloadbtn {
+        display: none;
+    }
+
+    /*Hide the other nav links, dropdown and also the dropdown replacements */
+    .Menu a:not(:first-child),
+    .additionalLinksCSS,
+    .additionalLinksCSSActive,
+    .dropdown {
+        display: none;
+    }
+
+
+    /*Make the collums take up 100% of the screen */
+    .column {
+        width: 100%;
+        height: auto;
     }
 }
