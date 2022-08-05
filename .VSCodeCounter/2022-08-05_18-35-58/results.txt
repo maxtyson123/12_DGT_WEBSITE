@@ -1,0 +1,91 @@
+Date : 2022-08-05 18:35:58
+Directory : c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE
+Total : 47 files,  6728 codes, 362 comments, 971 blanks, all 8061 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| HTML       |         29 |      4,231 |        154 |        566 |      4,951 |
+| CSS        |          4 |      1,401 |        155 |        278 |      1,834 |
+| JavaScript |          4 |        676 |         31 |        112 |        819 |
+| PHP        |          9 |        332 |         22 |         15 |        369 |
+| JSON       |          1 |         88 |          0 |          0 |         88 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++--------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                         | files      | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                            |         47 |      6,728 |        362 |        971 |      8,061 |
+| Website                                                                                                      |         18 |      2,849 |        245 |        390 |      3,484 |
+| Website\CSS                                                                                                  |          1 |        639 |        110 |        119 |        868 |
+| Website\External                                                                                             |          7 |        381 |          8 |         31 |        420 |
+| Website\External\LOGIN                                                                                       |          5 |        280 |          8 |         28 |        316 |
+| Website\External\LOGIN\css                                                                                   |          1 |         85 |          0 |         17 |        102 |
+| Website\JS                                                                                                   |          2 |        438 |         23 |         67 |        528 |
+| Website\Pages                                                                                                |          7 |      1,171 |         82 |        152 |      1,405 |
+| http.reconops.maxinc.cf                                                                                      |         29 |      3,879 |        117 |        581 |      4,577 |
+| http.reconops.maxinc.cf\CSS                                                                                  |          1 |        592 |         45 |        125 |        762 |
+| http.reconops.maxinc.cf\External                                                                             |         10 |        481 |         16 |         56 |        553 |
+| http.reconops.maxinc.cf\External\LOGIN                                                                       |          8 |        309 |         14 |         21 |        344 |
+| http.reconops.maxinc.cf\External\LOGIN\css                                                                   |          1 |         85 |          0 |         17 |        102 |
+| http.reconops.maxinc.cf\JS                                                                                   |          2 |        238 |          8 |         45 |        291 |
+| http.reconops.maxinc.cf\Pages                                                                                |         14 |      2,322 |          1 |        331 |      2,654 |
+| http.reconops.maxinc.cf\Pages\Feature                                                                        |          6 |        901 |          0 |        156 |      1,057 |
+| http.reconops.maxinc.cf\WebGL                                                                                |          1 |         16 |          0 |          4 |         20 |
++--------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++--------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                                     | language   | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\Website\CSS\styles.css                               | CSS        |        639 |        110 |        119 |        868 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\Website\External\LOGIN\auth.php                      | PHP        |          6 |          0 |          0 |          6 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\Website\External\LOGIN\css\style.css                 | CSS        |         85 |          0 |         17 |        102 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\Website\External\LOGIN\index.php                     | PHP        |         81 |          2 |          3 |         86 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\Website\External\LOGIN\login.php                     | PHP        |        101 |          4 |          8 |        113 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\Website\External\LOGIN\logout.php                    | PHP        |          7 |          2 |          0 |          9 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\Website\External\changelog.json                      | JSON       |         88 |          0 |          0 |         88 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\Website\External\playedgame.html                     | HTML       |         13 |          0 |          3 |         16 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\Website\JS\main.js                                   | JavaScript |        372 |         23 |         61 |        456 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\Website\JS\mweb.js                                   | JavaScript |         66 |          0 |          6 |         72 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\Website\Pages\about.html                             | HTML       |        149 |         12 |         16 |        177 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\Website\Pages\changelog.html                         | HTML       |        120 |         11 |         11 |        142 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\Website\Pages\demo.html                              | HTML       |         80 |         11 |          4 |         95 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\Website\Pages\qanda.html                             | HTML       |        323 |         10 |         32 |        365 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\Website\Pages\status.html                            | HTML       |        125 |         12 |         20 |        157 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\Website\Pages\template.html                          | HTML       |        186 |         13 |         36 |        235 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\Website\Pages\upcoming.html                          | HTML       |        188 |         13 |         33 |        234 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\Website\index.html                                   | HTML       |        220 |         22 |         21 |        263 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\http.reconops.maxinc.cf\CSS\styles.css               | CSS        |        592 |         45 |        125 |        762 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\http.reconops.maxinc.cf\External\LOGIN\auth.php      | PHP        |          6 |          0 |          0 |          6 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\http.reconops.maxinc.cf\External\LOGIN\css\style.css | CSS        |         85 |          0 |         17 |        102 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\http.reconops.maxinc.cf\External\LOGIN\db.php        | PHP        |          7 |          3 |          0 |         10 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\http.reconops.maxinc.cf\External\LOGIN\index.html    | HTML       |         62 |          0 |          0 |         62 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\http.reconops.maxinc.cf\External\LOGIN\index.php     | PHP        |         71 |          3 |          4 |         78 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\http.reconops.maxinc.cf\External\LOGIN\login.html    | HTML       |         25 |          0 |          0 |         25 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\http.reconops.maxinc.cf\External\LOGIN\login.php     | PHP        |         46 |          6 |          0 |         52 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\http.reconops.maxinc.cf\External\LOGIN\logout.php    | PHP        |          7 |          2 |          0 |          9 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\http.reconops.maxinc.cf\External\changelog.html      | HTML       |         34 |          1 |          9 |         44 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\http.reconops.maxinc.cf\External\notice.html         | HTML       |        138 |          1 |         26 |        165 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\http.reconops.maxinc.cf\JS\main.js                   | JavaScript |        172 |          8 |         39 |        219 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\http.reconops.maxinc.cf\JS\mweb.js                   | JavaScript |         66 |          0 |          6 |         72 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\http.reconops.maxinc.cf\Pages\Feature\feature0.html  | HTML       |        150 |          0 |         26 |        176 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\http.reconops.maxinc.cf\Pages\Feature\feature1.html  | HTML       |        151 |          0 |         26 |        177 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\http.reconops.maxinc.cf\Pages\Feature\feature2.html  | HTML       |        150 |          0 |         26 |        176 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\http.reconops.maxinc.cf\Pages\Feature\feature3.html  | HTML       |        150 |          0 |         26 |        176 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\http.reconops.maxinc.cf\Pages\Feature\feature4.html  | HTML       |        150 |          0 |         26 |        176 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\http.reconops.maxinc.cf\Pages\Feature\feature5.html  | HTML       |        150 |          0 |         26 |        176 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\http.reconops.maxinc.cf\Pages\about.html             | HTML       |        164 |          0 |         10 |        174 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\http.reconops.maxinc.cf\Pages\changelog.html         | HTML       |        170 |          0 |         22 |        192 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\http.reconops.maxinc.cf\Pages\login.html             | HTML       |        106 |          0 |         19 |        125 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\http.reconops.maxinc.cf\Pages\notices.html           | HTML       |        131 |          0 |         21 |        152 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\http.reconops.maxinc.cf\Pages\qanda.html             | HTML       |        335 |          0 |         30 |        365 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\http.reconops.maxinc.cf\Pages\status.html            | HTML       |        141 |          1 |         23 |        165 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\http.reconops.maxinc.cf\Pages\template.html          | HTML       |        204 |          0 |         28 |        232 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\http.reconops.maxinc.cf\Pages\upcoming.html          | HTML       |        170 |          0 |         22 |        192 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\http.reconops.maxinc.cf\WebGL\temp.html              | HTML       |         16 |          0 |          4 |         20 |
+| c:\Users\98max\OneDrive\Documents\GitHub\12_DGT_WEBSITE\http.reconops.maxinc.cf\index.html                   | HTML       |        230 |         47 |         20 |        297 |
+| Total                                                                                                        |            |      6,728 |        362 |        971 |      8,061 |
++--------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
